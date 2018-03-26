@@ -1,0 +1,26 @@
+	
+	<div class="CTAbanner" id="CTAbanner">
+		<div class="col-md-12">
+			<div class="CTAleft">
+				<p>
+					<a href="/Blogger/Good-Data-Environment" class="CTAlink">What six things do you need for a good data environment <img class="Question-mark" style="height: 25px" src="\img\QM.png"></a>
+				</p>
+			</div>
+			<div class="CTAright">
+				<a class="btn Lumen-text" id="ExitCTA" style="font-weight: bold">X</a>
+			</div>
+		</div>
+	</div> 
+
+<!-- Close banner and move contact button down -->
+<script type="text/javascript">
+$(function() {
+	var CTA = $(".contactBtn");
+    var CTAbanner = $(".CTAbanner");
+	$( "#ExitCTA" ).click(function() {
+	    CTA.removeClass("ContactBtn").addClass("contactBtnCTA");
+        CTAbanner.removeClass("CTAbanner").addClass("CTAclosed");
+
+	});
+});
+</script>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Vizi Education - Quick Start Guide</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="assets/images/Vizi/Flavicon_v01.png">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/ViziStyles.css">
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-pink">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+
+        <header id="header" class="header" style="background-color: #B0D2EB">
+            <div class="container" >
+                    <div class="branding">
+                        <div class="branding">
+                        <img style='width:20%; min-width: 200px' src="assets/images/Vizi/Vizi-DarkBlue.png" alt="Generic image">
+                    </div><!--//branding-->
+                    </div><!--//branding-->
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Quick Start</li>
+                    </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+
+        <div class="doc-wrapper">
+            <div class="container">
+                
+                <div id="doc-header" class="doc-header text-center">
+                    <div class="row">
+                        <h2 class="Lumen-Header" style="font-size:400%">Vizi Quick Start Guide for you School</h2>
+                    </div>
+                    <div class="row">
+                        <h2 class="Lumen-Header" style="font-size:400%"></h2>
+                    </div>
+
+                    <div class="row">   
+                        <div class="meta"><i class="fa fa-clock-o"></i> Last updated: 1st Oct, 2017</div>
+                    </div>
+                </div><!--//doc-header-->
+
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            
+                            <section id="Welcome-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading">Get Going!</h3>
+                                <div class="section-block">
+                                    <p>Hey there! Welcome to Vizi. You should have been given a walkthrough of the key features of Vizi's user interface when you first log in. We're now going to walk through some of the key steps and features to get you started. As well as this quick start guide, you also have access to:
+                                        <ul>
+                                            <!-- @if($user->admin_flag==true) --><li><a href="Manual.html">Setting up</a> - a guide to all things admin in Vizi</li> <!-- @endif -->
+                                            <!-- @if($user->admin_flag==true && $user->MIS_flag==true) --><li><a href="MIS_Integration.html">MIS integration</a> - a guide to all things admin in Vizi</li> <!-- @endif -->
+                                            <li><a href="UsingVizi">Using Vizi</a> - how to use and make the most out of Vizi</li>
+                                            <li><a href="faqs">FAQs</a> - Answers to some of your pressing questions</li>
+                                            <li><a>Understanding deletions</a> - Get to know the impact of deleting data in Vizi</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </section><!--//doc-section-->
+
+                            <!-- @if($user->admin_flag==true && $user->MIS_flag==true) -->
+
+                            <section id="MIS-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading section-title">MIS integration</h3>
+                                
+                                <div id="MISData"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Integrating with your MIS</h3>
+                                        <div class="section-block">
+                                            <p>
+                                             Vizi will connect to your current MIS and take the relevant data from your MIS to help populate Vizi and keep it up to date. <br><br>
+                                             To start the process, you need to go to your <a href="MIS_integration.html">MIS portal</a>. Here, you can connect to your MIS, decide what data you want to link to Vizi and manage the continuing integration with your MIS. <br>
+                                             <ul>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">1&ensp;</span>Click the connect to MIS button. This will take you to the Vizi Groupcall website.<br><br></li>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">2&ensp;</span>Here you can login into Groupcall or sign-up if you are a new user.<br><br></li>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">3&ensp;</span>Next you will confirm the 'scopes' that you want to integrate with Vizi. A 'scope' is a data type that is currently recorded in your MIS. For example, a scope can be 'User name' or 'Groups'.<br><br></li>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">4&ensp;</span>Once you have confirmed the data you wish to integrate with Vizi, you will be directed back to your Vizi MIS integration page. You will see the scopes that you have selected to download appear in your 'integration list'. There will be a download status against each scope. Once each scope has been downloaded you will be able to assign logins to users.<br><br></li>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">5&ensp;</span>Once all your scopes are complete, click the 'Assign logins' button. This will reveal a list of all users that have an assoicated email address. You can select the users you wish to receive a login and click the 'Confirm logins' button to create logins for these users. Each selected user will be sent an email with their login details.<br><br>
+                                                 There is no limit to the number of logins you can assign, but each user is restricted to one login. It is easy to assign a user a login if they do not have an email address when you link to your MIS. See the <a href="Manual.html#Users">Adding Users</a> of the setting up guide to find out more. <br><br></li>
+                                                 <li style="list-style-type: none"><span style="color: grey; font-size: 20px">6&ensp;</span>Select whether you want the data to auto-sync with your MIS by selecting the auto-sync checkbox. We highly recommend doing this so that your data stays up to date!<br><br></li>
+                                             </ul>
+                                             Once you have setup MIS integration all of the data you have connected to will appear in Vizi. Users can login and will be able to view their groups and details about users.
+                                             <br><br>
+                                             There are a few other bits of information you will need to configure in Vizi to begin using it...
+                                            </p>
+                                        </div>
+                                </div><!--//section-block-->
+
+                            </section><!--//doc-section--> 
+
+                            <!-- @endif -->
+
+                            <!-- @if($user->admin_flag==true) -->
+
+
+                            <section id="SettingUp-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading section-title">Setting up Vizi</h3>
+                                
+                                <div id="Data"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Required fields</h3>
+                                        <div class="section-block">
+                                            <p>
+                                            To enjoy the full functionality of Vizi, the following elements must be set up. These elements can be found in the admin tools section in the sidebar. We recommend completing them in the following order. It'll only take a few minutes! (For most of these elements there are some preloaded)
+                                            <br><br>
+                                            Click on an element to view the more detail on how to setup.<br><br>
+                                                <ul>  
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#GradeTypes">Grade types and Grade</a> - Add your grading systems to Vizi. Create as many grade types as you wish or stick with the ones that are already there. After creating a grade type, add the grades </li>
+                                                    
+                                                    <!-- @if($user->MIS_flag!==true) -->
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Subjects">Subjects </a> - Add your subjects to Vizi. Subjects are allocated to your groups and users and used to filter and sort your data.</li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Users">Users</a> - Add users to Vizi. Users can be students and teachers.</li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#GroupTypes">Group Types</a> - Add your school's group types. You can create as many group types as you wish. You can then create groups for these groups types. For example, a group type might be 'Sets', for which you can create multiple sets. Different group types can have different properties.</li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Groups">Groups</a> - </li>
+                                                    <!-- @endif -->
+
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Performancemetrics">Performance metrics</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#AssessmentTypes">Assessment Types</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Assessmentstates">Assessment states</a> - </li>
+                                                </ul> 
+                                            </p>
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <div id="Data"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Optional fields</h3>
+                                        <div class="section-block">
+                                            <p>
+                                            You can set up the following elements to get more from Vizi. Setting up these will allow you to make the most of the calendar and view your data at a higher level using collections.
+                                               <ul>  
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Collections">Collections</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Years">Years</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span><a href="Manual.html#Terms">Terms</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span> <a href="Manual.html#EventTypes">Event Types</a> - </li>
+                                                    <li style="list-style-type: none"><span style="color: grey; font-size: 20px">-&ensp;</span> <a href="Manual.html#Calendar">Calendar setup</a> - </li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <!-- @if($user->MIS_flag!==true) -->
+                                <div id="Logins"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Assigning logins</h3>
+                                        <div class="section-block">
+                                            <p>Logins are assigned on the creation of new users or editing of exisiting users.
+                                            See the <a href="Manual.html#Users">Users</a> section for more detail.</p>
+                                        </div>
+                                </div><!--//section-block-->
+                                <!-- @endif -->
+
+                            </section><!--//doc-section--> 
+
+                            <!-- @endif -->
+
+                            <section id="Recording-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading section-title">Roles and permissions</h3>
+                                
+                                <!-- @if($user->admin_flag==true) -->
+
+                                <div id="NewAssessment"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Admin</h3>
+                                        <div class="section-block">
+                                            <br><br>
+                                            <p>
+                                                Vizi Champion
+                                                Adding/removing admins
+                                            </p>
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <!-- @endif -->
+
+                                <div id="AddMarks"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">What you can see</h3>
+                                        <div class="section-block">
+                                            <p>
+                                            When you login in to Vizi you will be able to set assessments for and view marks for
+                                            </p>
+                                        </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section--> 
+
+                            <section id="Recording-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading section-title">Adding assessments</h3>
+                                
+                                <div id="NewAssessment"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Adding assessments</h3>
+                                        <div class="section-block">
+                                            ONCE YOU HAVE YOUR DATA ADDED
+                                            <br><br>
+                                            <p>Entering marks and recording data is the heart and soul of Vizi. The more data is recorded the more you can get out of Vizi and the easier it becomes to see trends and patterns in your data. To record your marks you create assessments. An assessment is anything for which you have recorded performance, so could be some homework or just the behaviour of your students in a class. 
+                                            <br><br>New assessments can be added by selecting one of your groups in the sidebar. This will take you to the group homepage, you then select the markbook in the navbar. This will show all your previous marks for that group and give you the option to add a new assessment! Fill in the details and you can start recording marks.
+                                            </p>
+                                            <img src="assets/images/Vizi/Quickstart/AddAssessment.png" style="width: 75%;">
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <div id="AddMarks"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Add marks</h3>
+                                        <div class="section-block">
+                                            <p>Once an assessment has been created you can record your marks. Go ahead and enter your marks and comments and click 'Update Marks'. These marks will now be included in your markbook, your dashboard and Vizi will analyse them and start to give you feedback when it spots something interesting!</p>
+                                            <img src="assets/images/Vizi/Quickstart/Entermarks.png" style="width: 75%;">
+                                        </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section--> 
+
+                            <section id="Looking-section" class="doc-section">
+                                <h3 class="Lumen-SubHeading section-title">Looking at your data</h3>
+                                
+                                <div id="Timeline"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Timeline</h3>
+                                        <div class="section-block">
+                                            <p>When you go to your homepage, or the homepage of any of your groups you'll see a timeline. The timeline shows information relating to all of your students or students specific to a particular group. This information is generated by other users and by Vizi itself.</p>
+                                            <img src="assets/images/Vizi/Quickstart/Entermarks.png" style="width: 75%;">
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <div id="Dashboards"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey">Dashboards</h3>
+                                        <div class="section-block">
+                                            <p>Your dashboards offer a portal into all the data collected by you and other teachers on your students. You can view your dashboards by selecting a collection, group or user and selecting dashboard in the navbar. Then, you can do all sorts with your data, create charts, filter data, look at data from every which way, rearrange your dashboard to suit you and ultimately use it to draw some insight. 
+                                            <br><br>They're great for showing off at parents evening, you can see all the assessments, topics, subjects for you student, drill down and display areas of stregnth and weakness.
+                                            <br><br>
+                                            You can find out more on how to use your dashboars in the <a href="UsingVizi.html#Dashboards-Section">User Vizi Guide</a>.</p>
+                                            <img src="assets/images/Vizi/Quickstart/Entermarks.png" style="width: 75%;">
+                                        </div>
+                                </div><!--//section-block-->
+
+                                <div id="Exporting"  class="section-block">
+                                    <h3 class="Lumen-SubHeading" style="color: grey"><span style="font-size: 36px">1 </span>Exporting data</h3>
+                                        <div class="section-block">
+                                            <p>Exporting all this data is as easy as a click of the button. At the bottom of every dashboard there is a table showing the data that is in your dashboard. This table is dynamic and as you add elements and filter your dashboard it will update to show exactly what is being shown in the dashboard. Use the buttons at the top of the table to download the data in your desired format.</p>
+                                            <img src="assets/images/Vizi/Quickstart/Entermarks.png" style="width: 75%;">
+                                        </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu Lumen-text" data-spy="affix">
+                                <li><a class="scrollto" href="#Welcome-section">Get going!</a></li>
+                               
+                                <li>
+                                    <a class="scrollto" href="#MIS-section">MIS integration</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class='scrollto' href='#DataMIS'>Integrating with your MIS</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+
+                                <li>
+                                    <a class="scrollto" href="#SettingUp-section">Setting up</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class='scrollto' href='#Data'>Required fields</a></li>
+                                        <li><a class='scrollto' href='#Data'>Optional fields</a></li>
+                                        <li><a class='scrollto' href='#Logins'>Logins</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#Recording-section">Roles and permissions</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class='scrollto' href='#NewAssessment'>Admin</a></li>
+                                        <li><a class='scrollto' href='#AddMarks'>What you can see</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#Recording-section">Adding assessments</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class='scrollto' href='#NewAssessment'>New assessment</a></li>
+                                        <li><a class='scrollto' href='#AddMarks'>Add marks</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#Looking-section">Looking at your data</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class='scrollto' href='#Timeline'>Timeline</a></li>
+                                        <li><a class='scrollto' href='#Dashboard'>Dashboards</a></li>
+                                        <li><a class='scrollto' href='#Exporting'>Exporting data</a></li>
+
+                                    </ul><!--//nav-->
+                                </li>
+
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer class="footer">
+            <div class="container">
+                <div class="row" style="padding-top: 50px">
+                    <div class="col-md-12 Lumen-text">
+                        <h3  class='Lumen-SubHeading'> Quick Links</h3>
+                        <div>
+                            <a href="Quickstart.html" style='color:#2c3e50' ><br>Quick start guide<br></a>
+                            <a href="Manual.html" style='color:#2c3e50'>Setting up<br></a>
+                            <a href="UsingVizi.html" style='color:#2c3e50'>Using Vizi<br></a>
+                            <a href="faqs.html" style='color:#2c3e50'>FAQs<br></a>
+                            <a href="Docs.html" style='color:#2c3e50'>Vizi docs<br></a>
+                            <a href="Account.html" style='color:#2c3e50'>Your Account</a>
+                            <div style="font-size: 10px; padding-left: 0px; text-align: right; color: black" class="col-md-3 col-md-offset-9"> <br><br><span class="glyphicon glyphicon-sunglasses"></span> Made with Vizi Education and PrettyDocs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer><!--//footer-->
+
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+

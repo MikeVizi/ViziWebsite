@@ -1,0 +1,71 @@
+
+	<!-- social logos -->
+	<div class="socialBtn">
+		<a href="https://twitter.com/ViziEducation" style="text-decoration: none" target="_blank"> <img style="height: 50px" src="\img\social\Twitter.png"> </a>
+		<br><br>
+		<a href="https://medium.com/@ViziEducation" target="_blank"> <img style="height: 50px" src="\img\social\MediumS.png"> </a>
+	</div> 
+
+	<!-- Contact button -->
+	<div class="contactBtnCTA" id="contactBtn">
+		<a href="#contact">
+			<img class="img_scroll" style="height: 70px" src="\img\contactBtn.png">
+		</a>
+	</div>
+
+	<!-- ArrowUp button -->
+	<div class="arrowHidden hidden-xs hidden-sm" id="arrowBtn">
+		<a href="#intro">
+			<img class="img_scroll" style="height: 50px" src="\img\arrowUp.png">
+		</a>
+	</div>
+
+<script type="text/javascript">
+	$(function() {
+    //caches a jQuery object containing the header element
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var contactBtn = $("#contactBtn");
+    	var contactDiv = $("#contact");
+    	var contactPos = contactDiv.offset().top;
+
+        if (scroll >= contactPos -500) {
+        	contactBtn.css("display", "none");
+        } else {
+            contactBtn.css("display", "");
+        }
+    });
+});
+
+
+// Arrow
+$(function() {
+    //caches a jQuery object containing the header element
+    var upArrow = $("#arrowBtn");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll <= 500) {
+        	upArrow.removeClass('arrowBtn').addClass("arrowHidden");
+        } else {
+            upArrow.removeClass("arrowHidden").addClass('arrowBtn');
+        }
+    });
+});
+
+
+//SmoothScroll
+$('a[href*=#]').click(function SmoothScroll() {
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	&& location.hostname == this.hostname) {
+			var $target = $(this.hash);
+			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+			if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({scrollTop: targetOffset}, 600);
+					return false;
+			}
+	}
+});
+
+</script>

@@ -1,0 +1,82 @@
+<!-- NavBar-->	
+	<nav class="navbar-default navbar-blue" role="navigation">		
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle Padding-large" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="https://vizi.education"><img class="Logo-large" src="\img\Logo\Vizi-White.png" alt="Generic placeholder image"></a>
+			</div>	
+
+			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse Padding-large">
+				<ul class="nav navbar-nav Lumen-text">
+				    <li class="dropdown">
+				        <a id="navClick" class="dropdown-toggle Font-large Ham" data-toggle="dropdown" href="/Why-Vizi">Why Vizi</a>
+				        <ul class="dropdown-menu dropdown-menu-right Lumen-text" style="margin-left: 20px; font-size: 25px">
+					        <li><a id="navOverview" style="display: none; padding-bottom: 10px" href="/Why-Vizi" style="">Overview</a></li>
+					        <li><a href="/Markbook-story" style="padding-bottom: 10px">Markbook</a></li>
+					        <li><a href="/Dashboard-story" style="padding-bottom: 10px">Dashboard</a></li>
+					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Feedback</a></li>
+				        </ul>
+				    </li>
+					<li class="menuItem Font-large Ham"><a href="/About-Us">About Us</a></li>
+					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/Blog">Blog</a></li>
+					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/Getting-Vizi">Get Vizi</a></li>
+					<li class="menuItem Font-large Ham" style='font-weight:bold'><a href="https://vizi.school">Login</a></li>
+					<!--<li class="menuItem Lumen-text Font-large" style="font-weight:bold"><a href="https://vizi.school">Start for free!</a></li>-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<script type="text/javascript">
+	// Navbar JS	
+
+//SmoothScroll
+$('a[href*=#]').click(function SmoothScroll() {
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	&& location.hostname == this.hostname) {
+			var $target = $(this.hash);
+			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+			if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({scrollTop: targetOffset}, 600);
+					return false;
+			}
+	}
+});
+
+//navbar class changes on scroll
+$(function() {
+    var Logo = $(".Logo-large");
+    var Padding =$(".Padding-large")
+  	var fontSize =$(".Font-large")
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+        	Logo.removeClass('Logo-large').addClass("Logo-small");
+       		Padding.removeClass('Padding-large').addClass("Padding-small");
+        } else {
+            Logo.removeClass("Logo-small").addClass('Logo-large');
+           	Padding.removeClass('Padding-small').addClass("Padding-large");
+        }
+    });
+});
+
+// Add data-toggle - dropdown to navbar when below 1000px
+$('#navClick').on("click", function() {
+	var width = $(window).width();
+
+	if ( width >= 1000) {
+		$(".dropdown-toggle").attr("data-toggle", "");
+	}
+	else {
+		$(".dropdown-toggle").attr("data-toggle", "dropdown");
+		$("#navOverview").css("display" , "");
+	}
+});
+</script>

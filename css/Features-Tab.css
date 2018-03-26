@@ -1,0 +1,65 @@
+
+/*
+.Selector-Buttons {
+    text-align: center;
+    white-space: nowrap;
+    overflow: auto;
+    padding-bottom: 0px
+}
+*/
+
+.Features-btn {
+
+    width: auto;
+    border-radius: 0px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 150%;
+    display: inline-block;
+}
+
+.Features-btn:hover {
+     background: #febc41;
+     border-color: #febc41;
+     outline:0;
+}
+
+.Features-btn:active {
+     background: #febc41;
+     border-color: #febc41;
+     outline:0;
+}
+
+.btn-activated {
+     background: #febc41;
+     border-color: #febc41;
+     outline:0;
+     color: white;
+}
+
+.Features-btn:focus {
+     background: #febc41;
+     border-color: #febc41;
+     outline:0 !important;
+}
+
+/* scrollbar */
+.mcs-horizontal-example{
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.mcs-horizontal-example .item{
+  display: inline-block;
+}
+
+/* scrollbar */
+.mcs-vertical-example{
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.mcs-vertical-example .item{
+  display: inline-block;
+}
