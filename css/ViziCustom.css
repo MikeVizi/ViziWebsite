@@ -90,12 +90,10 @@ h1.blogHeader {
  }
 
 h2.blogSub {
-
     font-family: 'Quicksand', sans-serif;
     color: #2c3e50;
     font-weight: 800;
-    font-size: 25px;
-
+    font-size: 30px;
 }
 
 .blogLogo {
@@ -108,6 +106,17 @@ h2.blogSub {
     .blogLogo {
          min-width: 150px;
     }
+}
+
+.blogNumber {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a.blogLink {
+  font-weight: bold;
+
+  color: #febc41
 }
 
 /*Custom navbar*/
@@ -697,7 +706,6 @@ background-color: white
 
 .viziBold {
   font-weight: bold;
-  
 }
 
 .colourMarkbook {
@@ -777,12 +785,13 @@ background-color: white
   }
 }
 
-/*More infop button*/
+/*More info button*/
 
 .moreBtn {
   color:  black;
-
 }
+
+/*Vizi styles*/
 
 h1.Lumen-Title {
 
@@ -793,28 +802,24 @@ h1.Lumen-Title {
 }
 
 h2.Lumen-Header {
-
   font-family: 'Montserrat', sans-serif;
   font-size:500%;
     font-weight:600;
 }
 
 @media  (max-width: 768px){
-
   h2.Lumen-Header { 
       font-size: 10vw;
      }
  }
 
  h2.storyHeader {
-
   font-family: 'Montserrat', sans-serif;
   font-size:50px;
   font-weight:600;
 }
 
 @media  (max-width: 768px){
-
   h2.storyHeader { 
       font-size: 10vw;
      }
@@ -823,14 +828,12 @@ h2.Lumen-Header {
  /*Question on splash*/
 
  h2.Lumen-Question {
-
   font-family: 'Montserrat', sans-serif;
   font-size:50px;
-    font-weight:600;
+  font-weight:600;
 }
 
 @media  (max-width: 550px){
-
   h2.Lumen-Question { 
       font-size: 10vw;
      }
@@ -839,7 +842,6 @@ h2.Lumen-Header {
 /*General subheadings*/
 
 h3.Lumen-SubHeading {
-
   font-family: 'Quicksand', sans-serif;
     color: #2c3e50;
     font-weight: 800;
@@ -970,19 +972,20 @@ img.Lumen-Centre {
 
 /*Design gif*/
 
-.designGif {
-  position:absolute;
-  background: white;
+.designButton {
+  opacity: 0.2;
+  width: 200px;
+  margin-right: 100%; 
+  padding-top: 100px;
 }
 
-.designGif:hover {
-  opacity:0;
+.designButton:hover {
+  opacity:1.0;
 }
 
 
 /*Vizi Scroll*/
 
 .viziScroll {
-
   font-style: italic;
 }
