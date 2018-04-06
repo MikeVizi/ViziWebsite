@@ -21,6 +21,10 @@
 	
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+
+   	<!-- jquery load -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/viziCallUps.js"></script>
  
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -42,10 +46,7 @@
 	
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="css/magnific-popup.css"> 
-	<script src="js/modernizr-2.8.3.min.js"></script>  
-
-	<!-- jquery load -->
-	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/modernizr-2.8.3.min.js"></script> 
 	<script src="js/viziJS.js"></script>
 
 </head>
@@ -58,7 +59,7 @@
 	</div>
 
 	<!-- NavBar-->	
-	<nav class="navbar-default navbar-transparent" role="navigation">		
+	<nav class="navbar-default navbar-blue" role="navigation">		
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle Padding-large" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -73,27 +74,25 @@
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse Padding-large">
 				<ul class="nav navbar-nav Lumen-text">
 				    <li class="dropdown">
-				        <a class="dropdown-toggle Font-large Ham" data-toggle="dropdown" href="WhyVizi">Why Vizi</a>
+				        <a id="navClick" class="dropdown-toggle Font-large Ham" data-toggle="dropdown" href="/Why-Vizi">Why Vizi</a>
 				        <ul class="dropdown-menu dropdown-menu-right Lumen-text" style="margin-left: 20px; font-size: 25px">
-					        <li><a id="navOverview" style="display: none; padding-bottom: 10px" href="WhyVizi" style="">Overview</a></li>
-					        <li><a href="Markbook-story" style="padding-bottom: 10px">Markbook</a></li>
-					        <li><a href="Dashboard-story" style="padding-bottom: 10px">Dashboard</a></li>
-					        <li><a href="Feedback-story" style="padding-bottom: 10px">Feedback</a></li>
+					        <li><a id="navOverview" style="display: none; padding-bottom: 10px" href="/Why-Vizi" style="">Overview</a></li>
+					        <li><a href="/Markbook-story" style="padding-bottom: 10px">Markbook</a></li>
+					        <li><a href="/Dashboard-story" style="padding-bottom: 10px">Dashboard</a></li>
+					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Feedback</a></li>
 				        </ul>
 				    </li>
 					<li class="menuItem Font-large Ham"><a href="/About-Us">About Us</a></li>
 					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/Blog">Blog</a></li>
-					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/getVizi">Get Vizi</a></li>
-					<li class="menuItem Font-large Ham" style='font-weight:bold'><a href="#contact">Login</a></li>
+					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/Getting-Vizi">Get Vizi</a></li>
+					<li class="menuItem Font-large Ham" style='font-weight:bold'><a href="https://vizi.school">Login</a></li>
 					<!--<li class="menuItem Lumen-text Font-large" style="font-weight:bold"><a href="https://vizi.school">Start for free!</a></li>-->
 				</ul>
 			</div>
 		</div>
 	</nav>
-
 	<!-- FullScreen -->
     <div class="intro-header" id="intro">
-
     <!-- Logo and strap line -->
     	<div class="container" style="padding-top: 75px">
 			<div class="col-md-8 col-xs-12 wow fadeInRightBig text-left-md wrap_title" data-animation-delay="200" >
@@ -103,29 +102,13 @@
 				<div> 
 					<a class="btn btn-primary Lumen-text" href="#" data-toggle="modal" data-target="#PreviewModal">Request a demo!</a>
 				</div>
-					<h3 class='Lumen-Strap' style="padding-top:25px">
-						Vizi is the intelligent markbook for primary and secondary schools and individual teachers. 
-					</h3>
-				</div>
-			</div>
+				<h3 class='Lumen-Strap' style="padding-top:25px">
+					Vizi is the intelligent markbook for primary and secondary schools and individual teachers. 
+				</h3>
+			</div>  
 		</div>
     </div>
 
-	<div class="CTAbanner" id="CTAbanner">
-		<div class="col-md-12">
-			<div class="CTAleft">
-				<p>
-					What six things do you need for a good data environment <img class="Question-mark" style="height: 25px" src="\img\QM.png">
-					<a href="/Blogger/Good-Data-Environment" class="CTAlink">Click here and find out more...</a>
-				</p>
-			</div>
-			<div class="CTAright">
-				<a class="btn Lumen-text" id="ExitCTA" style="font-weight: bold">X</a>
-			</div>
-		</div>
-	</div> 
-
-   	<!-- CTA buttons -->
 	<div class="socialBtn">
 		<a href="https://twitter.com/ViziEducation" style="text-decoration: none" target="_blank"> <img style="height: 50px" src="img\social\Twitter.png"> </a>
 		<br><br>
@@ -145,7 +128,65 @@
 			<img class="img_scroll" style="height: 50px" src="img\arrowUp.png">
 		</a>
 	</div>
-	
+
+   	<!-- CTA banner -->
+	<div class="CTAbanner" id="CTAbanner">
+		<div class="col-md-12">
+			<div class="CTAleft">
+				<p>
+					<a href="/Blogger/Good-Data-Environment" class="CTAlink">What six things do you need for a good data environment <img class="Question-mark" style="height: 25px" src="\img\QM.png"></a>
+				</p>
+			</div>
+			<div class="CTAright">
+				<a class="btn Lumen-text" id="ExitCTA" style="font-weight: bold">X</a>
+			</div>
+		</div>
+	</div> 	
+
+
+	<!-- intro vid -->
+
+	<div  id="videoContainer" class="content-section-a clearfix" >
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-8">
+					<div style="padding:0px 10px 0px 10px;">
+						<div class="col-md-12" style="border: 5px solid #febc41;max-width: 100%">
+							<div class="videoWrapper" >
+								<iframe id="introVid" src="https://player.vimeo.com/video/262428203" width="100%" frameborder="0" frameborder="0" webkitallowfullscreen	 mozallowfullscreen allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 Lumen-text verticalVizi">
+					<p style="padding-top: 20px">
+						This is a video 
+					</p>
+					<p>
+						<a id="markbookCTA" class="blogLink" href="Markbook-story.html" style="display: none">This is a link to the markbook video --> </a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+    var markbookCTA = document.getElementById("markbookCTA");
+
+    player.on('ended', function() {
+      markbookCTA.style.display = "";
+    });
+
+    player.getVideoTitle().then(function(title) {
+      console.log('title:', title);
+    });
+  </script>
+
    	<!-- Three offerings -->
 	<div  id="whatis" class="content-section-b clearfix" style="padding-top: 25px;" >
         <div class="container">
@@ -157,7 +198,7 @@
 					<p class="Lumen-text" style="padding-bottom: 20px">
 						<span style="font-weight: bold">Simple</span>, <span style="font-weight: bold">intuative</span>, <span style="font-weight: bold">customisable</span> and <span style="font-weight: bold">accessible</span> markbook.
 					</p>
-					<div class="Feature-grab">
+					<div class="Feature-grab" style="text-align: center;">
 						<a href="Markbook-story">
 							<div class="Feature-grab-overlay">
 								<img style="width: 100%; max-width: 500px" src="img\screengrabs\markbook.png">
@@ -306,60 +347,18 @@
 						Performance data shouldn't be used as a hammer to critisise, rather a constant resource that can be used to drive improvement.
 					</p>
 				</div>
-				<div class="col-md-6 hidden-xs verticalVizi100">   
-					<img style="width: 100%" class="featureGif" src="img\intro\coffeeBackground.jpg">
+				<div class="col-md-6 hidden-xs verticalVizi50">   
+					<img style="width: 100%" src="img\intro\moreMarkbook2.png">
 				</div>
         	</div>
         	<div></div>
-	    		<a class="btn btn-primary Lumen-text" href="features">Sign up for free! </a>
+	    		<a class="btn btn-primary Lumen-text" href="Getting-Vizi">Sign up for free! </a>
 	    	</div>
         </div>
     </div>
 
-	<!-- Preview modal -->
-	<div id="PreviewModal" class="modal fade" role="dialog">
-	    <div class="modal-dialog" >
-		    <div class="modal-content" style='background: url("img/intro/Lumen_Address_Background.jpg"); background-size: 170%; border-radius: 0px'>
-			    <form role="form" action="https://formspree.io/mike@vizi.education" method="post" >
-				    <div class="modal-header" style="border: 0px;">
-				        <button type="button" class="close" data-dismiss="modal">&times; x </button>
-				        <p class="Lumen-text" style="font-size: 30px; text-align: center; padding-top: 20px; padding-bottom: 20px">Interested in finding out more about Vizi? <span style="font-weight: bold">Lets arrange a call</span>.</p>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<label for="InputName" class="Lumen-text" style='color:#2c3e50'>Your Name</label>
-									<div class="input-group">	
-										<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-										<span class="input-group-addon"><i class="form-control-feedback"></i></span>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="InputName" class="Lumen-text" style='color:#2c3e50'>Your School</label>
-									<div class="input-group">	
-										<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter School" required>
-										<span class="input-group-addon"><i class="form-control-feedback"></i></span>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="InputEmail" class="Lumen-text" style='color:#2c3e50'>Your Email</label>
-									<div class="input-group">
-										<input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Your email" required  >
-										<span class="input-group-addon"><i class="form-control-feedback"></i></span>
-									</div>
-								</div>
-							</div> 	
-						</div>
-			  		</div>
-			  		<div class="modal-footer" style="border: 0px">
-						<input type="submit" name="submit" id="submit" value="Send" class="btn btn-primary" style="">
-						<input type="hidden" name="_next" value="#">
-						<input type="hidden" name="_subject" value="Video Request" />
-						<!-- <input type="hidden" name="_cc" value="chris@vizi.education" /> -->
-					</div>
-				</form>
-		    </div>
-	    </div>
-	</div> 
+    <!-- demoRequest -->
+	<div id ="generalPreview"></div>
 
 	<!-- Contact -->
 	<div id="contact" class="content-section-a" style="border-top: 0; border-bottom: 0">
@@ -373,7 +372,7 @@
 			</div>
 
 			<div class="row">
-				<form role="form" action="https://formspree.io/mike@vizi.education" method="post" >
+				<form role="form" action="https://formspree.io/mike@vizi.education" method="post">
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="InputName" class="Lumen-text" style='color:#2c3e50'>Your Name</label>
@@ -400,41 +399,22 @@
 						</div>
 						<input type="submit" name="submit" id="submit" value="Send" class="btn wow tada btn-embossed btn-primary pull-right">
 						<input type="hidden" name="_next" value="https://vizi.education/Thanks">
-						<input type="hidden" name="_cc" value="chris@vizi.education" />
-					</div>
+						<input type="hidden" name="_subject" value="Contact form" />
+<!-- 						<input type="hidden" name="_cc" value="chris@vizi.education" />
+ -->					</div>
 				</form>
 			</div> 
 		</div>
 	</div>
-
 	<!-- Footer -->
-	<div class="content-section-b footer footer-distributed" style='background: url("/img/intro/Lumen_Address_Background.jpg") no-repeat right ; background-size: 70%; padding-bottom: 30px'>
-		<div class="container" >
-			<div class="row">
-				<div class="col-md-12 Lumen-text">
-						<h3  class='Lumen-SubHeading'> Quick Links</h3>
-						<div>
-							<a href="https://vizi.education" style='color:#2c3e50' ><br>Home<br></a>
-							<a href="/Blog" style='color:#2c3e50'> Blog<br></a>
-							<a href="/Pricing" style='color:#2c3e50'> Getting Vizi<br></a>
-							<a href="/WhyVizi" style='color:#2c3e50'> Why Vizi?<br></a>
-							<a href="/FAQs" style='color:#2c3e50'> FAQs<br></a>
-							<a href="/Security" style='color:#2c3e50'> Security<br><br></a>
-							<a href="https://twitter.com/ViziEducation" target="_blank"> <img style="width: 60px; padding-top: 10px" src="/img/social/Twitter.png"></a>   
-	                        <p style="font-size: 10px; text-align: center;"><br><span> <img style="height:15px;" src="/img/Flavicon_Skeleton.png"></img></span> Made with Vizi Education. Vizi Education - All Rights Reserved 2016 - 2018.</p>
-	                        </div>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+	<div id ="generalFooter"></div>
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/script.js"></script>
+
+	<!-- References	 -->
 
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="js/jquery.corner.js"></script> 
@@ -444,25 +424,11 @@
 	</script>
 	<script src="js/classie.js"></script>
 
-	<!-- Footer -->
-	<script> 
-    $(function(){       
-      $("#generalFooter").load("References/Footer.html"); 
-    });
-    </script>
-
-    <!-- Findoutmore -->
-	<script> 
-    $(function(){       
-      $("#Finoutmore").load("References/Findoutmore.html"); 
-    });
-    </script>
 
 	<!-- Magnific Popup core JS file -->
 	<script src="js/jquery.magnific-popup.js"></script> 
 
 	<!-- Click Hide -->
-   	
    	<script>
    	
    	$(document).on('click',function(){
