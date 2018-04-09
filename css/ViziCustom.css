@@ -115,7 +115,6 @@ h2.blogSub {
 
 a.blogLink {
   font-weight: bold;
-
   color: #febc41
 }
 
@@ -518,6 +517,14 @@ a.CTAlink {
   padding: 100px 0px 100px 0px;
   color: #2c3e50;
   background: url(../img/intro/introVizi3.png) repeat center center;
+  text-align: center;
+}
+
+.introVizi4 {
+  height: auto; /* Full Page */
+  padding: 100px 0px 100px 0px;
+  color: #2c3e50;
+  background: url(../img/intro/introVizi4.jpg) repeat center center;
   text-align: center;
 }
 
