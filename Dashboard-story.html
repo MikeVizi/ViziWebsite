@@ -19,6 +19,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ViziCustom.css" rel="stylesheet">
+    <link href="css/Features-Tab.css" rel="stylesheet">
 
     <!-- jquery load -->
 	<script src="js/jquery-1.10.2.js"></script>
@@ -33,11 +34,7 @@
 	
     <!-- Custom CSS-->
     <link href="css/general.css" rel="stylesheet">
-
-    <!-- Blog -->
     <link href="css/Blog.css" rel="stylesheet">
-	
-	<!-- Owl-Carousel -->
     <link href="css/custom.css" rel="stylesheet">
 	<link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
@@ -46,7 +43,6 @@
 	
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="css/magnific-popup.css"> 
-	<script src="js/jquery-1.10.2.js"></script>
 
 	<!-- Modernizr /-->
 	<script src="js/modernizr-2.8.3.min.js"></script>  
@@ -71,36 +67,63 @@
 	<!-- Intro -->
 
 	 <div id ="intro" class="introVizi3">
-	    <div class="container" style="padding-top: 40px">
-            <div class="row"> 
-                <div class="col-md-6 col-xs-12 text-left-md">
-		            <div class="Lumen-text" style="text-align: left;">
-					    <li class="dropdown" style="list-style-type: none;">
-					        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #2c3e50; font-weight: bold; text-decoration: none">
-					        	<div>
-						        	<span id="schoolType">
-						        				
-						        	</span>
-						        	<span class="caret"></span>
-					       		 </div>
-					        </a>
-					        <ul class="dropdown-menu dropdown-menu-left">
-					          <li><a href="Dashboard-story">Primary</a></li>
-					          <li><a href="Dashboard-story">Secondary</a></li>
-					          <li><a href="Dashboard-story">Tutor</a></li>
-					        </ul>
-					    </li>
-					</div> 
-					<h2 class='Lumen-Header section-heading' style="color:#2C3E50; padding-top: 30px">
+	    <div class="container">
+	        <div class="col-md-5 text-left-md"> 
+	           	<div class="row"> 
+					<h2 class='Lumen-Header section-heading' style="color:#2C3E50;">
 						Dashboard
 					</h2>
-					<h3 class='Lumen-Strap' style="font-size:25px; color:#2C3E50; padding-bottom: 20px">
-						Take a look at Vizi dashboards in action and understand the power of good data visualisation. 
+				</div>
+				<div class="row" style="padding-bottom: 20px">
+					<h3 class='Lumen-Strap' style="font-size:25px; color:#2C3E50;">
+						Take a look at Vizi dashboards in action and see the value of good data visualisation!
 					</h3>
 				</div>
-            </div>
-		 </div>
-	 </div>
+	        </div>	
+			<div class="col-md-7 col-xs-12">
+				<!-- Carousel -->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-left: 0px" >
+				  	<div class="carousel-inner" style="min-height: auto; width: auto">
+					    <div class="item" id="markbookVid">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264741296" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item active" id="dashboardVid">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264740558" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item" id="feedbackVid">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/253224147" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id ="Selector" style="padding: 10px 0px 0px 0px">
+					<div class="row">
+						<div class="Selector-Buttons">
+							 <button id="markbookButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Markbook</span></button>
+							 <button id="dashboardButton" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Dashboards</span></button>
+							 <button id="feedbackButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Feedback</span></button>
+						</div>
+					 </div>
+				 </div>
+        	</div>
+		</div>
+	</div>
 
 	 <script>
 		var i = 0;
@@ -116,16 +139,57 @@
 		});
 	</script>
 
+	<!-- This needs to work by deactivating the current and playing the next - not fixed in line, whilst counting how many plays and stopping on 3. -->
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+	    var iframe = document.getElementById("firstVid");
+	    var player = new Vimeo.Player(iframe);
+	    var firstButton = document.getElementById("dashboardButton");
+	   	var nextButton = document.getElementById("feedbackButton");
+	   	var firstVid  = document.getElementById("dashboardVid");
+	   	var nextVid  = document.getElementById("feedbackVid");
+
+	    player.on('ended', function() {
+	    	firstButton.classList.remove ("btn-activated");
+	   		firstVid.classList.remove ("active");
+
+	      	nextButton.classList.add ("btn-activated");
+	      	nextVid.classList.add ("active");
+	    });
+	    player.getVideoTitle().then(function(title) {
+	      console.log('title:', title);
+	    });
+	</script>
+
 	<!-- Do more -->
-	<div id ="Domore" class="content-section-a" style="padding-bottom: 0px">
-	    <div class="storyContainer">		
-			<div class="row" style="padding: 0px 0px 50px 0px;">
-				<div class="col-md-6 col-xs-12 text-left-md storyLeft" >
+	<div id ="first" class="content-section-a" style="padding-top: 40px;">
+	    <div class="container">	
+	    	<div class="row" style="padding-left: 15px">
+	            <div class="Lumen-text" style="text-align: left;">
+				    <li class="dropdown" style="list-style-type: none;">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #2c3e50; font-weight: bold; text-decoration: none">
+				        	<div>
+					        	<span id="schoolType">
+					        				
+					        	</span>
+					        	<span class="caret"></span>
+				       		 </div>
+				        </a>
+				        <ul class="dropdown-menu dropdown-menu-left">
+				          <li><a href="Markbook-story#first">Primary</a></li>
+				          <li><a href="Markbook-story#first">Secondary</a></li>
+				          <li><a href="Markbook-story#first">Tutor</a></li>
+				        </ul>
+				    </li>	
+				</div> 
+			</div>	
+			<div class="row" style="padding-top: 40px">
+				<div class="col-md-6 col-xs-12">
 					<h2 class= 'storyHeader'>Data visualisation lets you uncover insights instantly.</h2>
 					<br><br>
 					<hr/>
 					<br><br>
-                    <p class="Lumen-text lead" style="margin-left: 9rem">
+                    <p class="Lumen-text lead">
                     	Humans are a <b>visual species</b>, we are adapted to spot trends and patterns. Even now, human pattern spotting abilities outmatch those of computers in many fields.<br><br>
                     	Using good data visualisation allows you to <b>understand and retain information quickly</b>, pick out anomalies and identify trends in your data. It can help to explain complex ideas and bring large datasets to life!
                     	<br><br>
@@ -133,44 +197,51 @@
                     	<br><br> Like all good data visualisation, the dashboards are <b>intuitive and insightful</b>. They are built with deep visualisation knowledge, experience and best practice - no 3D pie charts in sight!
                     </p>
 				</div>
-				<div class="col-md-6 col-xs-12 text-center-sm verticalVizi wow fadeInDown" style="text-align: center;">
+				<div class="col-md-6 col-xs-12 text-center-sm verticalVizi50 wow fadeInDown" style="text-align: center;">
 					<img style="max-height: 700px; max-width: 100%" src="img/screengrabs/Dashboard/whyDataViz.png">
 				</div>
 			</div>
-			
+		</div>
+	</div>
+
+	<div id ="" class="content-section-b">
+	    <div class="container">	
 			<!-- row -->
-			<div class="row" style="padding: 50px 0px 50px 0px; background-color: white">	
-				<div class="col-sm-12 col-xs-12 hidden-md hidden-lg storyRight">
+			<div class="row">	
+				<div class="col-md-7 col-xs-12 wow fadeInDown hidden-xs hidden-sm">
+					<img style="max-width: 100%" src="img/screengrabs/Dashboard/Levels.png">
+				</div>
+				<div class="col-md-5 verticalVizi50">
 					<h2 class= 'Lumen-Header' style="font-size: 30px">Insight at every level</h2>
 					<hr/>
 		      		<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Any level</h4>
+					      		<h3 class="storySubheading">Any level</h3>
 		                    	<p class="Lumen-text lead">
 									When you search Vizi for a student or a form, set, house, year group, subject... your data is all there, displayed in a <b>Vizi dashboard</b>.
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Auto generated</h4>
+					      		<h3 class="storySubheading">Auto generated</h3>
 		                    	<p class="Lumen-text lead" >
 									 Vizi will generate these dashboards based on the data you have entered, showing you the <b>key information</b> relating to <b>your students</b>.
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Save time</h4>
+					      		<h3 class="storySubheading">Save time</h3>
 		                    	<p class="Lumen-text lead">
 									Having the tools to quickly and effectively visualise your data <b>saves a huge amount of time</b>.
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Your data, for you</h4>
+					      		<h3 class="storySubheading">Your data, for you</h3>
 		                    	<p class="Lumen-text lead">
 									You no longer have to rely on complex Excel workbooks or your resident data expert. It is all there, ready for you to use!. 
 		                    	</p>
@@ -178,85 +249,49 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-6 col-xs-12 wow fadeInDown hidden-xs" style="text-align: center;">
-					<img style="max-width: 100%; max-height: 400px " src="img/screengrabs/Dashboard/Levels.png">
+				<div class="col-md-6 col-xs-12 wow fadeInDown hidden-lg hidden-md">
+					<img style="max-width: 100%" src="img/screengrabs/Dashboard/Levels.png">
 				</div>
-
-				<div class="col-md-6 text-left-md hidden-xs hidden-sm storyRight verticalVizi50">
-					<h2 class= 'Lumen-Header' style="font-size: 30px">Insight at every level</h2>
-					<hr/>
-		      		<div class="row">
-						<div class="col-md-6">
-					      	<div class="Lumen-text">
-					      		<h4>Any level</h4>
-		                    	<p class="Lumen-text lead">
-									When you search Vizi for a student or a form, set, house, year group, subject... your data is all there, displayed in a <b>Vizi dashboard</b>.
-		                    	</p>
-		                    </div>
-						</div>
-						<div class="col-md-6">
-					      	<div class="Lumen-text">
-					      		<h4>Auto generated</h4>
-		                    	<p class="Lumen-text lead" >
-									 Vizi will generate these dashboards based on the data you have entered, showing you the <b>key information</b> relating to <b>your students</b>.
-		                    	</p>
-		                    </div>
-						</div>
-						<div class="col-md-6">
-					      	<div class="Lumen-text">
-					      		<h4>Save time</h4>
-		                    	<p class="Lumen-text lead">
-									Having the tools to quickly and effectively visualise your data <b>saves a huge amount of time</b>.
-		                    	</p>
-		                    </div>
-						</div>
-						<div class="col-md-6">
-					      	<div class="Lumen-text">
-					      		<h4>Your data, for you</h4>
-		                    	<p class="Lumen-text lead">
-									You no longer have to rely on complex Excel workbooks or your resident data expert. It is all there, ready for you to use!. 
-		                    	</p>
-		                    </div>
-						</div>
-					</div>
-		   		</div>
 			</div>
+		</div>
+	</div>
 
+	<div id ="" class="content-section-a">
+	    <div class="container">	
 			<!-- row -->
-			<div class="row" style="padding: 50px 0px 50px 0px; background-color: white;">
-				<div class="col-md-6 col-sm-12 storyLeft verticalVizi50">
+			<div class="row">
+				<div class="col-md-5 col-sm-12">
 					<h2 class= 'Lumen-Header' style="font-size: 30px">Create your own</h2>
 					<hr/>
 
 		      		<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Your story</h4>
+					      		<h3 class="storySubheading">Your story</h3>
 		                    	<p class="Lumen-text lead">
 									Create, modify and save your own Vizi dashboards to tell your own story. 
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Your data</h4>
+					      		<h3 class="storySubheading">Your data</h3>
 		                    	<p class="Lumen-text lead" >
 									 You can show different performance metrics or grade types and show your data by topic or assessment type. 
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Your  dashboards</h4>
+					      		<h3 class="storySubheading">Your  dashboards</h3>
 		                    	<p class="Lumen-text lead">
 									Move and resize charts and graphs on your dashboard to create a view that suits you.
 		                    	</p>
 		                    </div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 					      	<div class="Lumen-text">
-					      		<h4>Your insight</h4>
+					      		<h3 class="storySubheading">Your insight</h3>
 		                    	<p class="Lumen-text lead">
 									Showing off student performance at parents evening or displaying whole school performance to regulatory bodies has never been easier. 
 		                    	</p>
@@ -264,101 +299,99 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-xs-12 wow fadeInDown hidden-xs" style="padding-right: 0px">
+				<div class="col-md-7 col-xs-12 wow fadeInDown verticalVizi50">
 					<img style="width: 100%;" src="img/screengrabs/Dashboard/createOwn2.png">
 				</div>
 			</div>
+		</div>
+	</div>
 
 			<!-- Feature 1 -->
-			<div id ="Addfeatures"  class="content-section-b" style="border-top: 0; border-bottom: 0">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<h2 class='Lumen-Header' style="padding: 20px 0px 0px 0px; font-size: 40px">Student insight, instantly...</h2>
-						</div>
+	<div class="content-section-b" id ="Addfeatures">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class='Lumen-Header' style="padding: 20px 0px 0px 0px; font-size: 40px">Student insight, instantly...</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 Lumen-text" style="padding-bottom: 30px">
+					<p style="font-size: 20px">Vizi allows you to cut and dice the data as you see fit and add new charts to allow you to ask the questions you want to.</p>
+				</div>
+			</div>
+			<!-- /.row -->
+			<div class="row text-left-md text-center-sm">				
+				<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" style="min-height: 400px">
+				  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/colour.png" alt="Generic placeholder image">
+				  	<h3 class='storySubheading'>Colour</h3>
+				  	<p class="Lumen-text">Add colour to your dashboards to let you see who is above or below target, or any other performance metrics you have.</p>
+				</div>
+
+				<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style="min-height: 400px">
+				  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/trends.png" alt="Generic placeholder image">
+				 	<h3 class='storySubheading'>Trends</h3>
+				  	<p class="Lumen-text">Use trend analysis and line charts to monitor student performance over time.</p>
+				</div>
+
+				<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style="min-height: 400px" >
+				  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/fields.png" alt="Generic placeholder image">
+				 	<h3 class='storySubheading'>Custom fields</h3>
+				  	<p class="Lumen-text">Add your own custom fields to students and then use them on the dashboard. You could have charts for birth month, SEN ratings, even favourite biscuit! </p>
+				</div>
+
+				<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style="min-height: 400px" >
+				  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/gradeTypes.png" alt="Generic placeholder image">
+				 	<h3 class='storySubheading'>Grade types</h3>
+				  	<p class="Lumen-text">Display any grade type you have on the dashboards, or even a combination.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class='Lumen-Header' style="text-align:right; font-size: 40px">...at any level of detail</h2>
+					<br><br>
+				</div>
+			</div>
+			<div class="row text-left-md text-center-sm">		
+				<div class="col-md-12">
+					<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" style="min-height: 450px">
+					  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/student.png" alt="Generic placeholder image">
+					  	<h3 class='storySubheading'>Student</h3>
+					  	<p class="Lumen-text">Focus on one student, what subjects are they doing well in and where are they falling behind. Student dashboards allow you to see the whole academic picture.</p>
 					</div>
-					<div class="row">
-						<div class="col-md-12 Lumen-text" style="padding-bottom: 30px">
-							<p style="font-size: 20px">Vizi allows you to cut and dice the data as you see fit and add new charts to allow you to ask the questions you want to.</p>
-						</div>
-					</div>
-					<!-- /.row -->
-					<div class="row text-left-md text-center-sm">				
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management'> <img style='width:70%' class='Lumen-Centre' src="img/icon/Calendar.png" alt="Generic placeholder image"></a>
-						  	<h3 class='Lumen-SubHeading-thin'>Colour</h3>
-						  	<p class="Lumen-text">Add colour to your dashboards to let you see who is above or below target, or any other performance metrics you have.</p>
-						  	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Merit_System'>View Details</a></p>-->
-						</div>
 
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature2'> <img style='width:70%' class='Lumen-Centre' src="img/icon/Insight.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Trends</h3>
-						  	<p class="Lumen-text">Use trend analysis and line charts to monitor student performance over time.</p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
-
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature3'> <img style='width:70%' class='Lumen-Centre' src="img/icon/Timeline.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Custom fields</h3>
-						  	<p class="Lumen-text">Add your own custom fields to students and then use them on the dashboard. You could have charts for birth month, SEN ratings, even favourite biscuit! </p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
-
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature4'> <img style='width:70%' class='Lumen-Centre' src="img/icon/TaskManagement.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Grade types</h3>
-						  	<p class="Lumen-text">Display any grade type you have on the dashboards, or even a combination.</p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" style="min-height: 450px" >
+					  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/group.png" alt="Generic placeholder image">
+					 	<h3 class='storySubheading'>Group</h3>
+					  	<p class="Lumen-text">View your set's performance as the year goes by, which topics need extra work, who is struggling/excelling?</p>
 					</div>
 
-					<div class="row">
-						<div class="col-md-12">
-							<h2 class='Lumen-Header' style="text-align:right;padding: 20px 0px 0px 0px; font-size: 40px">...at any level of detail</h2>
-						</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" style="min-height: 450px" >
+					  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/collection.png" alt="Generic placeholder image">
+					 	<h3 class='storySubheading'>Collection</h3>
+					  	<p class="Lumen-text">See academic data for departments, faculties, even the entire school with collections. Get the whole picture with collection dashboards.</p>
 					</div>
-					<div class="row text-left-md text-center-sm">				
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature5'> <img style='width:70%' class='Lumen-Centre' src="img/icon/ClassLayout.png" alt="Generic placeholder image"></a>
-						  	<h3 class='Lumen-SubHeading-thin'>Student</h3>
-						  	<p class="Lumen-text">Focus on one student, what subjects are they doing well in and where are they falling behind. Student dashboards allow you to see the whole academic picture for one individual.</p>
-						  	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Merit_System'>View Details</a></p>-->
-						</div>
 
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature6'> <img style='width:70%' class='Lumen-Centre' src="img/icon/StudentInfo.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Group</h3>
-						  	<p class="Lumen-text">View your set's performance as the year goes by, which topics need extra work, who is struggling/excelling?</p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
-
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature7'> <img style='width:70%' class='Lumen-Centre' src="img/icon/Guardian.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Collection</h3>
-						  	<p class="Lumen-text">See academic data for departments, faculties, even the entire school with collections. Get the whole picture with collection dashboards.</p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
-
-						<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown"  style='padding-bottom:40px'>
-						  	<a  href='School-management?feature8'> <img style='width:70%' class='Lumen-Centre' src="img/icon/IntegrationV01.png" alt="Generic placeholder image"></a>
-						 	<h3 class='Lumen-SubHeading-thin'>Breakdown</h3>
-						  	<p class="Lumen-text">Want to dive into the detail? Breakdown dashboards let you see the performance for an individual assessment, such as a mock exam. Which sections did students perform well on and which parts were tougher?</p>
-						 	<!--<p><a class="btn btn-embossed btn-primary view" role="button" data-toggle='modal' data-target='#Interactive_Timeline'>View Details</a></p>-->
-						</div>
+					<div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" style="min-height: 450px" >
+					  	<img class='Lumen-Centre' style="width: 60%" src="img/screengrabs/Dashboard/breakdowns.png" alt="Generic placeholder image">
+					 	<h3 class='storySubheading'>Breakdown</h3>
+					  	<p class="Lumen-text">Breakdown dashboards let you see the performance for an individual assessment, such as a mock exam. Which sections did students perform well on and which parts were tougher?</p>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+
 			<!-- row -->
-			<div class="row" style="padding-top:20px; background-color: white">
-				<div class="col-md-12 text-left-md storyLeft" style="padding-right: 20px">
+	<div class="content-section-a">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-left-md" style="padding-right: 20px">
 					<h2 class='storyHeader'>How is Vizi's visualisation different?</h2>
 					<hr>
-
 		      		<div class="row">
 						<div class="col-md-4">
 					      	<div class="Lumen-text">
-					      		<h4 style="text-align:center;">Day to day</h4>
+					      		<h3 class="storySubheading">Day to day</h3>
 		                    	<p class="Lumen-text lead">									
 				                	Vizi revolves around getting insight from normally untapped data in your markbook and making it truly accessible to every teacher, making the markbook a day to day resource.<br><br>We believe data should be useful every day in improving student outcomes, not just at year end.
 		                    	</p>
@@ -366,7 +399,7 @@
 						</div>
 						<div class="col-md-4">
 					      	<div class="Lumen-text">
-					      		<h4 style="text-align:center;">Dynamic</h4>
+					      		<h3 class="storySubheading">Dynamic</h3>
 		                    	<p class="Lumen-text lead" >
 				                	Vizi's dashboards are dynamic. Static charts and graphs can only show data from a single perspective. Vizi allows you to explore your data and create different views and outlooks all from the same dashboard. Take a look at our <a style="color: #febc41" href="Why-Vizi">video</a> to see more.
 		                    	</p>
@@ -374,21 +407,17 @@
 						</div>
 						<div class="col-md-4">
 					      	<div class="Lumen-text">
-					      		<h4 style="text-align:center;">For everyone</h4>
+					      		<h3 class="storySubheading">For everyone</h3>
 		                    	<p class="Lumen-text lead">
 				                	Vizi dashboards display your data in real-time, so you can monitor student progress and make a difference when it really matters. <br><br>All teachers store their data in the same place, in the same format and have the same tools to understand their data.<br><br> This empowers teachers to use their markbook as an everyday resource, one that can be used to improve teaching, not just to retrospectively judge performance.
 		                    	</p>
 		                    </div>
 						</div>
 					</div>
-					<br><br>
 				</div>
-					<hr>
-
 			</div>
 		</div> 
 	</div>
-</div>
 
 	<!-- Contact -->
 	<div id ="generalContact"></div>
@@ -401,6 +430,7 @@
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/Popup.js"></script>
+	<script src="js/Features-Carousel.js"></script>
 
 	<!-- Other -->
 	<script type="text/javascript" src="js/jquery.corner.js"></script> 
@@ -411,7 +441,15 @@
 	<script src="js/classie.js"></script>
 
 	<!-- Magnific Popup core JS file -->
-	<script src="js/jquery.magnific-popup.js"></script> 
+	<script src="js/jquery.magnific-popup.js"></script>
+
+	<!-- Carousel buttons -->
+	<script type="text/javascript">
+	   $('.Features-btn').on("click", function(){
+	   		$('.Features-btn').removeClass("btn-activated");
+	   		$(this).addClass("btn-activated");
+	   });	
+	</script> 
 
 	<!-- Click Hide -->
    	<script>

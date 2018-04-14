@@ -83,6 +83,7 @@
 					        <hr/>
 					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Portals</a></li>
 					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Resources</a></li>
+					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Support</a></li>
 				        </ul>
 				    </li>
 					<li class="menuItem Font-large Ham"><a href="/About-Us">About Us</a></li>
@@ -151,23 +152,25 @@
 
 	<div  id="videoContainer" class="content-section-a clearfix" >
         <div class="container">
+	        <div class="row">
+	            <div class="col-md-12 wow bounce" style="padding-bottom: 40px">  
+	                <h2 class="Lumen-Question">Take a look at Vizi</h2>
+				</div>
+			</div>			
         	<div class="row">
-        		<div class="col-md-8">
-					<div style="padding:0px 10px 0px 10px;">
-						<div class="col-md-12" style="border: 5px solid #febc41;max-width: 100%">
-							<div class="videoWrapper" >
-								<iframe id="introVid" src="https://player.vimeo.com/video/262428203" width="100%" frameborder="0" frameborder="0" webkitallowfullscreen	 mozallowfullscreen allowfullscreen>
-								</iframe>
-							</div>
+        		<div class="col-md-8 col-md-offset-2" id="introVideoContainer">
+					<div class="col-md-12" style="border: 5px solid #febc41; max-width: 100%">
+						<div class="videoWrapper" >
+							<iframe id="introVid" src="https://player.vimeo.com/video/262428203" width="100%" frameborder="0" frameborder="0" webkitallowfullscreen	 mozallowfullscreen allowfullscreen>
+							</iframe>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 Lumen-text verticalVizi">
-					<p style="padding-top: 20px">
-						This is a video 
-					</p>
+				<div class="Lumen-text verticalVizi" style="padding-left: 0px">
 					<p>
-						<a id="markbookCTA" class="blogLink" href="Markbook-story.html" style="display: none">This is a link to the markbook video --> </a>
+						<a id="markbookCTA" class="blogLink" href="Markbook-story.html" style="display:none">
+							<img src="img/3Darrowright.png" style="width: 100px"> 
+						</a>
 					</p>
 				</div>
 			</div>
@@ -180,9 +183,11 @@
     var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
     var markbookCTA = document.getElementById("markbookCTA");
+    var introVideoContainer = document.getElementById("introVideoContainer");
 
     player.on('ended', function() {
       markbookCTA.style.display = "";
+      introVideoContainer.classList.add ("introVideo")
     });
 
     player.getVideoTitle().then(function(title) {
@@ -259,7 +264,7 @@
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-md-12 wow bounce" style="padding-bottom: 40px">  
-	                    <h2 class="Lumen-Question">Do more with your data...</h2>
+	                <h2 class="Lumen-Question">Do more with your data...</h2>
 				</div>
 			</div>			
 

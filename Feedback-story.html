@@ -19,6 +19,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ViziCustom.css" rel="stylesheet">
+    <link href="css/Features-Tab.css" rel="stylesheet">
+
     <!-- jquery load -->
 	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/viziCallUps.js"></script>
@@ -69,37 +71,64 @@
 	<div id ="generalButtons"></div>
 
 	<!-- Intro -->
-	<div id ="intro" class="introVizi3">
-	    <div class="container" style="padding-top: 40px">
-	        <div class="row"> 
-	            <div class="col-md-12 text-left-md">   
-		            <div class="Lumen-text" style="text-align: right;">
-					    <li class="dropdown" style="list-style-type: none;">
-					        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #2c3e50; font-weight: bold; text-decoration: none">
-					        	<div>
-						        	<span id="schoolType">
-						        				
-						        	</span>
-						        	<span class="caret"></span>
-					       		 </div>
-					        </a>
-					        <ul class="dropdown-menu dropdown-menu-right">
-					          <li><a href="Feedback-story">Primary</a></li>
-					          <li><a href="Feedback-story">Secondary</a></li>
-					          <li><a href="Feedback-story">Tutor</a></li>
-					        </ul>
-					    </li>
-					</div>  
-				<h2 class='Lumen-Header section-heading' style="color:#2C3E50;">
-					Feedback
-				</h2>
-					<h3 class='Lumen-Strap' style="font-size:25px; color:#2C3E50; padding-bottom: 20px">
-						Vizi analyses your markbook for you, giving you real-time feedback on your students' performance. 
+<div id ="intro" class="introVizi3">
+	    <div class="container">
+	        <div class="col-md-5 text-left-md"> 
+	           	<div class="row"> 
+					<h2 class='Lumen-Header section-heading' style="color:#2C3E50;">
+						Feedback
+					</h2>
+				</div>
+				<div class="row" style="padding-bottom: 20px">
+					<h3 class='Lumen-Strap' style="font-size:25px; color:#2C3E50;">
+						Vizi analyses your markbook for you, giving you real-time feedback on student performance. 
 					</h3>
 				</div>
 	        </div>	
-		 </div>
-	 </div>
+			<div class="col-md-7 col-xs-12">
+				<!-- Carousel -->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-left: 0px" >
+				  	<div class="carousel-inner" style="min-height: auto; width: auto">
+					    <div class="item" id="markbookVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264741296" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item" id="dashboardVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264740558" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item active" id="feedbackVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/253224147" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id ="Selector" style="padding: 10px 0px 0px 0px">
+					<div class="row">
+						<div class="Selector-Buttons">
+							 <button id="markbookButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Markbook</span></button>
+							 <button id="dashboardButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Dashboards</span></button>
+							 <button id="feedbackButton" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Feedback</span></button>
+						</div>
+					 </div>
+				 </div>
+        	</div>
+		</div>
+	</div>
 
 	 <script>
 		var i = 0;
@@ -115,10 +144,50 @@
 		});
 	</script>
 
+	<!-- This needs to work by deactivating the current and playing the next - not fixed in line, whilst counting how many plays and stopping on 3. -->
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+	    var iframe = document.getElementById("firstVid");
+	    var player = new Vimeo.Player(iframe);
+	    var firstButton = document.getElementById("feedbackButton");
+	   	var nextButton = document.getElementById("markbookButton");
+	   	var firstVid  = document.getElementById("feedbackVid");
+	   	var nextVid  = document.getElementById("markbookVid");
+
+	    player.on('ended', function() {
+	    	firstButton.classList.remove ("btn-activated");
+	   		firstVid.classList.remove ("active");
+
+	      	nextButton.classList.add ("btn-activated");
+	      	nextVid.classList.add ("active");
+	    });
+	    player.getVideoTitle().then(function(title) {
+	      console.log('title:', title);
+	    });
+	</script>
+
 	<!-- Do more -->
 	<div id ="story" class="content-section-a" style="padding-bottom: 40px;">
 	    <div class="container">	
-	
+	    	<div class="row" style="padding-left: 15px">
+	            <div class="Lumen-text" style="text-align: left;">
+				    <li class="dropdown" style="list-style-type: none;">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #2c3e50; font-weight: bold; text-decoration: none">
+				        	<div>
+					        	<span id="schoolType">
+					        				
+					        	</span>
+					        	<span class="caret"></span>
+				       		 </div>
+				        </a>
+				        <ul class="dropdown-menu dropdown-menu-left">
+				          <li><a href="Markbook-story#first">Primary</a></li>
+				          <li><a href="Markbook-story#first">Secondary</a></li>
+				          <li><a href="Markbook-story#first">Tutor</a></li>
+				        </ul>
+				    </li>	
+				</div> 
+			</div>
 			<!-- row -->
 			<div class="row" style="height: auto; min-height: 450px">
 				<div class="col-md-5 col-xs-12 verticalVizi50">
@@ -371,6 +440,7 @@
 	  }
 	  </script>
 
+	<!-- Next section -->
 	<div id ="Domore" class="content-section-b">
 	    <div class="container">	
 			<!-- row -->
@@ -382,7 +452,7 @@
 			<div class="col-sm-12 col-xs-12 hidden-md hidden-lg ">
              	<h2 class= 'Lumen-Header' style="font-size: 30px">React, in real-time</h2>
              	<hr/>
-                <p class="Lumen-text" style="margin-left: 9rem">
+                <p class="Lumen-text lead" style="margin-left: 9rem">
 					At Vizi we do not restrict you to year-end or term-end analysis - that can often be too late. Vizi provides you with automated real-time feedback on your students' performance. <br><br>Intervention when intervention counts.
 					<br><br>
 				</p>
@@ -395,15 +465,15 @@
 			<div class="col-md-6 col-sm-12 col-xs-12 hidden-xs hidden-sm">
              	<h2 class= 'Lumen-Header' style="font-size: 30px">React, in real-time</h2>
              	<hr/>
-                <p class="Lumen-text" style="margin-left: 9rem">
-					At Vizi we do not restrict you to year-end or term-end analysis - that can often be too late. Vizi provides you with automated real-time feedback on your students' performance. <br><br>Intervention when intervention counts.
+                <p class="Lumen-text lead" style="margin-left: 9rem">
+					At Vizi we do not restrict you to year-end or term-end analysis - that can often be too late. Vizi provides you with automated real-time feedback on your students' performance. <br><br><span class="viziBold">Intervention when intervention counts.</span>
 					<br><br>
 				</p>
 			</div>
 			<div class="col-md-6 col-sm-12 col-xs-12">
 				<h2 class= 'Lumen-Header' style="font-size: 30px">Uncover new insights</h2>
 				<hr/>
-                <p class="Lumen-text" style="margin-left: 9rem">
+                <p class="Lumen-text lead" style="margin-left: 9rem">
 					With the extensive workload teachers now face, it can be easy to miss small changes in performance – changes that could be down to social issues, nerves, health or a new found understanding of a subject! <br><br>Using data analytics, Vizi picks out these peaks and troughs, giving you the opportunity to intervene, provide encouragement or commend good work!
 					<br><br>
 				</p>
@@ -411,8 +481,8 @@
 			<div class="col-md-6 col-sm-12 col-xs-12">
 				<h2 class= 'Lumen-Header' style="font-size: 30px">Cross group opportunities for intervention</h2>
 				<hr/>
-                <p class="Lumen-text" style="margin-left: 9rem">
-					With the right permissions, teachers can receive <b>cross group</b> messages about students, maybe those students who are in their form.<br><br>  Cross group messages pull academic achievement for students across all their groups, giving you a truer picture of their current performance.
+                <p class="Lumen-text lead" style="margin-left: 9rem">
+					With the right permissions, teachers can receive messages about students, maybe those students who are in their form.<br><br>  Cross group messages pull academic achievement for students across all their groups, giving you a truer picture of their current performance.
 					<br><br>
 					If a student in your form had handed in assessments over the past two weeks, across all subjects, markedly below their average... wouldn't you want to know?
 				</p>
@@ -432,6 +502,7 @@
 	<script src="js/script.js"></script>
 	<script src="js/Popup.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/Features-Carousel.js"></script>
 
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="js/jquery.corner.js"></script> 
@@ -455,9 +526,16 @@
 	});
 	</script>
 
-<!-- // New scroll bar -->	
- <script type="text/javascript">
+	<!-- Carousel buttons -->
+	<script type="text/javascript">
+	   $('.Features-btn').on("click", function(){
+	   		$('.Features-btn').removeClass("btn-activated");
+	   		$(this).addClass("btn-activated");
+	   });	
+	</script> 
 
+	<!-- // New scroll bar -->	
+ 	<script type="text/javascript">
 	(function($){
 	  $(window).on("load",function(){
 	    $(".mcs-horizontal-example").mCustomScrollbar({
@@ -483,9 +561,7 @@
 	    }
 	  });
 	})(jQuery);
-
 	</script>
-
 
 </body>
 
