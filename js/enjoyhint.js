@@ -1,4 +1,4 @@
-var enjoyhint = function (_options) {
+var EnjoyHint = function (_options) {
 
     var $event_element;
     var that = this;
