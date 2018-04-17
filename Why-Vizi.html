@@ -79,37 +79,37 @@
 				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-left: 0px" >
 				  	<div class="carousel-inner" style="min-height: auto; width: auto">
 
-					    <div class="item active" id="markbookVid" style="border: 5px solid #febc41;">
+					    <div class="item active" id="vid_div_0" style="border: 5px solid #febc41;">
 							<div class="row" style="padding: 0px 30px 0px 30px"> 
 								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/262428203" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									<iframe src="https://player.vimeo.com/video/262428203" id="vid_0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 									</iframe>
 								</div>
 							</div>
 						</div>
 
-					    <div class="item" id="markbookVid" style="border: 5px solid #febc41;">
+					    <div class="item" id="vid_div_1" style="border: 5px solid #febc41;">
 							<div class="row" style="padding: 0px 30px 0px 30px"> 
 								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264741296" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									<iframe src="https://player.vimeo.com/video/264741296" id="vid_1" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 									</iframe>
 								</div>
 							</div>
 						</div>
 
-					    <div class="item" id="dashboardVid" style="border: 5px solid #febc41;">
+					    <div class="item" id="vid_div_2" style="border: 5px solid #febc41;">
 							<div class="row" style="padding: 0px 30px 0px 30px"> 
 								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264740558" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									<iframe src="https://player.vimeo.com/video/264740558" id="vid_2" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 									</iframe>
 								</div>
 							</div>
 						</div>
 
-					    <div class="item" id="feedbackVid" style="border: 5px solid #febc41;">
+					    <div class="item" id="vid_div_3" style="border: 5px solid #febc41;">
 							<div class="row" style="padding: 0px 30px 0px 30px"> 
 								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264748184" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									<iframe src="https://player.vimeo.com/video/264748184" id="vid_3" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 									</iframe>
 								</div>
 							</div>
@@ -119,10 +119,10 @@
 				<div id ="Selector" style="padding: 10px 0px 0px 0px">
 					<div class="row">
 						<div class="Selector-Buttons">
-							<button id="markbookButton" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Intro!</span></button>
-							<button id="markbookButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Markbook</span></button>
-							<button id="dashboardButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Dashboards</span></button>
-							<button id="feedbackButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Feedback</span></button>
+							<button id="vid_button_0" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Intro!</span></button>
+							<button id="vid_button_1" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Markbook</span></button>
+							<button id="vid_button_2" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Dashboards</span></button>
+							<button id="vid_button_3" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Feedback</span></button>
 						</div>
 					 </div>
 				 </div>
@@ -133,21 +133,28 @@
 
 	<script src="https://player.vimeo.com/api/player.js"></script>
 	<script>
-	    var iframe = document.getElementById("firstVid");
-	    var player = new Vimeo.Player(iframe);
-	    var firstButton = document.getElementById("markbookButton");
-	   	var nextButton = document.getElementById("dashboardButton");
-	   	var firstVid  = document.getElementById("markbookVid");
-	   	var nextVid  = document.getElementById("dashboardVid");
+		function PlayVid(i){
+		    var iframe = document.getElementById("vid_"+i);
+		    var player = new Vimeo.Player(iframe);
+		    var firstButton = document.getElementById("vid_button_"+i);
+		   	var nextButton = document.getElementById("vid_button_"+(i+1));
+		   	var firstVid  = document.getElementById("vid_div_"+i);
+		   	var nextVid  = document.getElementById("vid_div_"+(i+1));
 
-	    player.on('ended', function() {
-	    	firstButton.classList.remove ("btn-activated");
-	   		firstVid.classList.remove ("active");
+		    player.on('ended', function() {
+		    	firstButton.classList.remove ("btn-activated");
+		   		firstVid.classList.remove ("active");
 
-	      	nextButton.classList.add ("btn-activated");
-	      	nextVid.classList.add ("active");
-	    });
-	    });
+		      	nextButton.classList.add ("btn-activated");
+		      	nextVid.classList.add ("active");
+		      	i++;
+		      	if(i<3){
+			      	PlayVid(i);		      		
+		      	}
+		    });
+		}
+
+		PlayVid(0);
 	</script>
 
 	<!-- Key features -->
