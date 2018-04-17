@@ -19,6 +19,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ViziCustom.css" rel="stylesheet">
+    <link href="css/Features-Tab.css" rel="stylesheet">
 
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -73,17 +74,81 @@
 						Make more of your Markbook. Take a look at Vizi in action in our short demo video.   
 					</h3>
 				</div>
-				<div style="padding:0px 10px 0px 10px;">
-					<div class="col-md-6 col-xs-12">
-						<div class="videoWrapper" >
-							<iframe src="https://player.vimeo.com/video/253224147" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</iframe>
+			<div class="col-md-6 col-xs-12">
+				<!-- Carousel -->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-left: 0px" >
+				  	<div class="carousel-inner" style="min-height: auto; width: auto">
+
+					    <div class="item active" id="markbookVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/262428203" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item" id="markbookVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264741296" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item" id="dashboardVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264740558" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+					    <div class="item" id="feedbackVid" style="border: 5px solid #febc41;">
+							<div class="row" style="padding: 0px 30px 0px 30px"> 
+								<div class="videoWrapper">
+									<iframe src="https://player.vimeo.com/video/264748184" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+									</iframe>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div id ="Selector" style="padding: 10px 0px 0px 0px">
+					<div class="row">
+						<div class="Selector-Buttons">
+							<button id="markbookButton" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Intro!</span></button>
+							<button id="markbookButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Markbook</span></button>
+							<button id="dashboardButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Dashboards</span></button>
+							<button id="feedbackButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Feedback</span></button>
+						</div>
+					 </div>
+				 </div>
+        	</div>
             </div>	
 		 </div>
 	 </div>
+
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+	    var iframe = document.getElementById("firstVid");
+	    var player = new Vimeo.Player(iframe);
+	    var firstButton = document.getElementById("markbookButton");
+	   	var nextButton = document.getElementById("dashboardButton");
+	   	var firstVid  = document.getElementById("markbookVid");
+	   	var nextVid  = document.getElementById("dashboardVid");
+
+	    player.on('ended', function() {
+	    	firstButton.classList.remove ("btn-activated");
+	   		firstVid.classList.remove ("active");
+
+	      	nextButton.classList.add ("btn-activated");
+	      	nextVid.classList.add ("active");
+	    });
+	    });
+	</script>
 
 	<!-- Key features -->
 	<div id ="Domore" class="content-section-a">
@@ -673,34 +738,6 @@
 	<script src="js/Features-Carousel.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
 
-	<!-- Footer -->
-	<script> 
-    $(function(){       
-      $("#generalFooter").load("References/Footer.html"); 
-    });
-    </script>
-
-    <!-- Navbar -->
-	<script> 
-    $(function(){       
-	   $("#generalNavbar").load("References/Navbar.html"); 
-    });
-    </script>
-
-    <!-- Contact -->
-    <script> 
-    $(function(){       
-	   $("#generalContact").load("References/Contact.html"); 
-    });
-    </script>
-
-    <!-- Buttons -->
-
-	<script> 
-    $(function(){       
-	   $("#generalButtons").load("References/Buttons.html"); 
-    });
-    </script>
 
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="js/jquery.corner.js"></script> 
