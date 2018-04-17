@@ -30,7 +30,7 @@
    	<!-- jquery load -->
 	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/viziCallUps.js"></script>
-	<script src="js/enjoyhint.js"></script>
+	<script type="text/javascript" src="js/enjoyhint.js"></script>
 	
 	<!-- css -->	
     <link href="css/general.css" rel="stylesheet">
@@ -43,9 +43,6 @@
 	
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="css/magnific-popup.css"> 
-
-	<!-- jquery load -->
-	<script src="js/jquery-1.10.2.js"></script>
 
 	<!-- Modernizr /-->
 	<script src="js/modernizr-2.8.3.min.js"></script>  
@@ -94,9 +91,9 @@
 						Tooltips on every page walk you through how to use and get insight from every feature. Use them on your computer, tablet or phone to get the most out of Vizi. 
 					</p>
 					<br><br>
-					<a class="btn btn-primary Lumen-text" id="exampleLink">Try me out! (tips)</a>
+					<button style="display:none" onclick="Tooltips()" class="btn btn-primary Lumen-text" id="exampleLink">Try me out! (tips)</button>
 				</div>
-				<div class="col-md-8 col-sm-12 col-xs-12" style="text-align: center;">
+				<div id="tip-1" class="col-md-8 col-sm-12 col-xs-12" style="text-align: center;">
 					<img style="width: 100%" src="img/screengrabs/support/tooltips.png">
 				</div>
 			</div>
@@ -132,7 +129,7 @@
 
 		<!-- Why -->
 	<div id="story" class="content-section-a" style="border-top: 0; border-bottom: 0">
-		<div class="container">
+		<div id="tip-2" class="container">
 			<div class="col-md-4 col-sm-12 col-xs-12">
              	<h2 class="Lumen-Header viziSubheading" style="font-size: 50px">Interactive guide</h2>
              	<hr/>
@@ -184,7 +181,9 @@
 
 	<!-- In page jquery -->
    <script type="text/javascript">
+
    	// Click out of menu to hide it
+
    $(document).on('click',function(){
    		var mobile_menu_visible = $('.collapse.in').length == 1
 
@@ -193,6 +192,36 @@
    			$('.collapse').collapse('hide');
    		}
 	});
+
+   function Tooltips(){
+	   	//initialize instance
+	    var enjoyhint_instance = new EnjoyHint({});
+	    var offset = 0;
+
+		var enjoyhint_script_steps = [];
+
+	    enjoyhint_script_steps.push({
+	      'next #tip-1' : "Tooltips are a clear way of showing users how to navigate through Vizi."
+	    });    
+
+
+	    enjoyhint_script_steps.push({
+	      'next #tip-2' : "They can point out easy to miss sections of pages."
+	    });      
+
+
+	    enjoyhint_script_steps.push({
+	      'next #exampleLink' : "And point out key functionality."
+	    });     
+
+	   enjoyhint_script_steps[enjoyhint_script_steps.length-1]["nextButton"] = {text:"Close"};
+
+	    //set script config
+	    enjoyhint_instance.set(enjoyhint_script_steps);
+
+	    //run Enjoyhint script
+	    enjoyhint_instance.run(); 
+   }
 	</script>
 
 </body>
