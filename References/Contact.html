@@ -35,20 +35,22 @@
 							<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 						</div>
 					</div>
-					<button type="button" name="submit" id="contact_submit" class="btn wow tada btn-embossed btn-primary pull-right">Send</button>
-					<input type="hidden" name="_next" value="https://vizi.education/Thanks">
-					<input type="hidden" name="_subject" value="Contact form" />
-<!-- 						<input type="hidden" name="_cc" value="chris@vizi.education" />
--->					</div>
+				</div>
 			</div> 
 		</div>
 	</div>
 
 	<script>
 		$('#contact_submit').click(function(){
+
 			var from = $('#InputName').val();
 			var email = $('#InputEmail').val();
 			var message = $('#InputMessage').val();
+
+			var from = $('#InputName').val();
+			var email = $('#InputEmail').val();
+			var message = $('#InputMessage').val();
+
 			if(from==""||email==""||message==""){
 				alert("Please fill in all fields before submitting.");
 				return false;
@@ -61,10 +63,12 @@
 				alert("Please enter a name shorter than 160 characters.");
 				return false;
 			}
+
 			if(from.length>280){
 				alert("Please enter a message shorter than 280 characters.");
 				return false;
 			}
+
 	        $.ajax({
 	            type: "POST",
 	            url: "https://vizi.school/website/message",
@@ -82,8 +86,11 @@
 				  }
 	        }); 
 		});
+
 		function isEmail(email) {
 		  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		  return regex.test(email);
 		}
+
 	</script>
+
