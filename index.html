@@ -66,7 +66,7 @@
     	<div class="container" style="padding-top: 75px">
 			<div class="col-md-6 col-xs-12 wow fadeInRightBig text-left-md wrap_title" data-animation-delay="200" >
 				<h2 class='Lumen-Header' style="color:#2C3E50;">
-					Can you get more from your markbook <img class="Question-mark" src="img\QM.png">
+					Can you get more from your markbook?
 				</h2>
 				<div> 
 					<a class="btn btn-primary Lumen-text" href="#" data-toggle="modal" data-target="#PreviewModal">Request a demo!</a>
@@ -75,16 +75,33 @@
 					Vizi is the intelligent markbook for primary and secondary schools and individual teachers. 
 				</h3>
 			</div>  
-			<div style="padding:0px 10px 0px 10px;">
-				<div class="col-md-6 col-xs-12">
+			<div>
+				<div class="col-md-6 col-xs-12" id="">
 					<div class="videoWrapper verticalVizi">
-						<iframe src="https://player.vimeo.com/video/262428203" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+						<iframe src="https://player.vimeo.com/video/262428203" id="introVideoContainer" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 						</iframe>
+					</div>
+					<div class="Lumen-text">
+						<a id="markbookCTA" class="blogLink markbookCTAHidden" href="Markbook-story">
+								<img src="img/3Darrowright.png" style="width: 100px"> 
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
     </div>
+
+	<script src="https://player.vimeo.com/api/player.js"></script>
+		  	<script>
+		    var iframe = document.querySelector('iframe');
+		    var player = new Vimeo.Player(iframe);
+		    var markbookCTA = document.getElementById("markbookCTA");
+
+		    player.on('ended', function() {
+		      markbookCTA.classList.add ("markbookCTAReveal");
+		      markbookCTA.classList.remove ("markbookCTAHidden");
+		    });
+	</script>
 
    	<div id ="generalCTA"></div>
 
@@ -235,14 +252,26 @@
                     	Vizi uses real-time analytics to spot when trends are appearing, both positive and negative, allowing you to <span style="font-weight: bold; color: #febc41">act and impact.</span> 
 					</p>
 				</div>
+				<div class="col-md-12 Lumen-text">
+					<a class="btn btn-primary Lumen-text" href="Why-Vizi">Why Vizi</a>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Blog carousel -->
+	<div class="bannerBackground2">
+		<div class="container">			
+			<div class="row">	
+				<h2 class="Lumen-Question" style="color: white">
+					Vizi works with all major MIS systems like CMIS, SIMs and Integris, so there is no duplication of work.
+				</h2>
+			</div>
+		</div>
+	</div>
 	
 	<!-- banner -->
-	<div  id="whatis" class="content-section-b" style="padding: 20px 0px 40px 0px">
+	<div  id="whatis" class="content-section-b">
         <div class="container">
             <div class="row"> 
                 <div class="col-md-6 wrap_title wow text-left-md wrap_title"  >   

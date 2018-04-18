@@ -75,57 +75,25 @@
 	    <div class="container">
 	        <div class="col-md-5 text-left-md"> 
 	           	<div class="row"> 
-					<h2 class='Lumen-Header section-heading' style="color:#2C3E50;">
+					<h2 class='Lumen-Header' style="color:#2C3E50;">
 						Feedback
 					</h2>
 				</div>
-				<div class="row" style="padding-bottom: 20px">
+				<div class="row" style="padding-right:20px">
 					<h3 class='Lumen-Strap' style="font-size:25px; color:#2C3E50;">
 						Vizi analyses your markbook for you, giving you real-time feedback on student performance. 
 					</h3>
 				</div>
 	        </div>	
 			<div class="col-md-7 col-xs-12">
-				<!-- Carousel -->
-				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-left: 0px" >
-				  	<div class="carousel-inner" style="min-height: auto; width: auto">
-					    <div class="item" id="markbookVid" style="border: 5px solid #febc41;">
-							<div class="row" style="padding: 0px 30px 0px 30px"> 
-								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264741296" id="" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-									</iframe>
-								</div>
-							</div>
-						</div>
-
-					    <div class="item" id="dashboardVid" style="border: 5px solid #febc41;">
-							<div class="row" style="padding: 0px 30px 0px 30px"> 
-								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264740558" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-									</iframe>
-								</div>
-							</div>
-						</div>
-
-					    <div class="item active" id="feedbackVid" style="border: 5px solid #febc41;">
-							<div class="row" style="padding: 0px 30px 0px 30px"> 
-								<div class="videoWrapper">
-									<iframe src="https://player.vimeo.com/video/264748184" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-									</iframe>
-								</div>
-							</div>
+			    <div id="feedbackVid">
+					<div class="row"> 
+						<div class="videoWrapper">
+							<iframe src="https://player.vimeo.com/video/264748184" id="firstVid" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+							</iframe>
 						</div>
 					</div>
 				</div>
-				<div id ="Selector" style="padding: 10px 0px 0px 0px">
-					<div class="row">
-						<div class="Selector-Buttons">
-							 <button id="markbookButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Markbook</span></button>
-							 <button id="dashboardButton" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>Dashboards</span></button>
-							 <button id="feedbackButton" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Feedback</span></button>
-						</div>
-					 </div>
-				 </div>
         	</div>
 		</div>
 	</div>
@@ -144,32 +112,10 @@
 		});
 	</script>
 
-	<!-- This needs to work by deactivating the current and playing the next - not fixed in line, whilst counting how many plays and stopping on 3. -->
-	<script src="https://player.vimeo.com/api/player.js"></script>
-	<script>
-	    var iframe = document.getElementById("firstVid");
-	    var player = new Vimeo.Player(iframe);
-	    var firstButton = document.getElementById("feedbackButton");
-	   	var nextButton = document.getElementById("markbookButton");
-	   	var firstVid  = document.getElementById("feedbackVid");
-	   	var nextVid  = document.getElementById("markbookVid");
-
-	    player.on('ended', function() {
-	    	firstButton.classList.remove ("btn-activated");
-	   		firstVid.classList.remove ("active");
-
-	      	nextButton.classList.add ("btn-activated");
-	      	nextVid.classList.add ("active");
-	    });
-	    player.getVideoTitle().then(function(title) {
-	      console.log('title:', title);
-	    });
-	</script>
-
 	<!-- Do more -->
-	<div id ="story" class="content-section-a" style="padding-bottom: 40px;">
+	<div id ="story" class="content-section-a">
 	    <div class="container">	
-	    	<div class="row" style="padding-left: 15px">
+	    	<div class="row" style="padding-left: 15px; display: none">
 	            <div class="Lumen-text" style="text-align: left;">
 				    <li class="dropdown" style="list-style-type: none;">
 				        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #2c3e50; font-weight: bold; text-decoration: none">
@@ -489,6 +435,18 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="bannerBackground4">
+		<div class="container">			
+			<div class="row" style="padding-bottom: 20px">	
+				<h2 class="Lumen-Question" style="color: white">
+					Like what you see? Sign up to Vizi for FREE for a limited time only.
+			</div>
+			<div class="row">	
+				<a class="btn btn-primary Lumen-text" style="background-color: white; color: #2A3B4C" href="Getting-Vizi">Get Vizi</a>
+			</div>
+		</div>
+	</div>		
 
 	<!-- Contact -->
 	<div id ="generalContact"></div>

@@ -354,19 +354,17 @@ a.CTAlink {
 }
 
 
-.introVideo {
-  padding-right: 100px;
+.markbookCTAReveal {
+  display: all;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
-  @media (max-width: 500px) {
-  .introVideo {
-  padding-right: 768px
-
-  }
+.markbookCTAHidden {
+  display: none
 }
+
 
 /*Overlay*/
 .Feature-grab {
@@ -853,9 +851,9 @@ h2.Lumen-Header {
     font-weight:600;
 }
 
-@media  (max-width: 768px){
+@media  (max-width: 500px){
   h2.Lumen-Header { 
-      font-size: 10vw;
+      font-size: 15vw;
      }
  }
 

@@ -148,8 +148,13 @@
 		      	nextButton.classList.add ("btn-activated");
 		      	nextVid.classList.add ("active");
 		      	i++;
+		      	var iframe = document.getElementById("vid_"+i);
+		   		var player = new Vimeo.Player(iframe);
+
+		      	player.play(nextVid)
+
 		      	if(i<3){
-			      	PlayVid(i);		      		
+			      	PlayVid(i);  	      		
 		      	}
 		    });
 		}
@@ -275,7 +280,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12 text-right-md text-center-sm">
-					<img style="width: 100%;" class="verticalVizi50" src="img/screengrabs/markbook.png">
+					<a href="Markbook-story"><img style="width: 100%;" class="verticalVizi50" src="img/screengrabs/markbook.png"></a>
 				</div>
 			</div>
 		</div>
@@ -286,7 +291,7 @@
 		<!-- row -->
 			<div class="row">
 				<div class="col-md-6 col-sm-12 col-xs-12 text-right-md hidden-xs hidden-sm verticalVizi">
-					<img style="width: 100%" src="img\screengrabs\dashboard.PNG">
+					<a href="Dashboard-story"><img style="width: 100%" src="img\screengrabs\dashboard.PNG"></a>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12">
 	             	<a href="Dashboard-story" style="text-decoration: none; color: #18BC9C">
@@ -400,12 +405,23 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12 text-center-sm text-right-md hidden-lg hidden-md">
-					<img style="width: 100%" src="img\screengrabs\dashboard.PNG">
+					<a href="Dashboard-story"><img style="width: 100%" src="img\screengrabs\dashboard.PNG"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 			
+	<div class="bannerBackground4">
+		<div class="container">			
+			<div class="row">	
+				<h2 class="Lumen-Question" style="color: white">
+					Vizi will build up your assessment resources and organise them for you. 
+			</div>
+			<div class="row">	
+				<a class="btn btn-primary Lumen-text" style="background-color: white; color: #2A3B4C" href="Portals">Vizi Resources</a>
+			</div>
+		</div>
+	</div>			
 
 	<div id ="Domore" class="content-section-a">
 	    <div class="container">		
@@ -517,12 +533,14 @@
 				</div>
 
 				<div class="col-md-6 col-sm-12 col-xs-12 text-center-sm text-right-md">
-					<img style="width: 100%" class="verticalVizi100" src="img\screengrabs\feedback.png">
+					<a href="Feedback-story"><img style="width: 100%" class="verticalVizi100" src="img\screengrabs\feedback.png"></a>
 				</div>
 
 			</div>	
 		</div>
 	</div>
+
+
 
 			<!-- row -->
 	<div class="content-section-b">
@@ -606,7 +624,7 @@
 					                    	</p>
 					                    </div>
 									</div>
-									<div class="color-md-6">
+									<div class="col-md-6">
 								      	<div class="Lumen-text">
 								      		<h3 class="storySubheading">Integration</h3>
 					                    	<p class="Lumen-text lead" >
@@ -662,6 +680,18 @@
         	</div>
         </div>
     </div>
+
+	<div class="bannerBackground4">
+		<div class="container">			
+			<div class="row" style="padding-bottom: 20px">	
+				<h2 class="Lumen-Question" style="color: white">
+					Share homework and resources with your students - all on one platform.
+			</div>
+			<div class="row">	
+				<a class="btn btn-primary Lumen-text" style="background-color: white; color: #2A3B4C" href="Portals">Vizi Portals</a>
+			</div>
+		</div>
+	</div>
 
 	<!--
 	<div id ="Addfeatures"  class="content-section-b" style="border-top: 0; border-bottom: 0">
