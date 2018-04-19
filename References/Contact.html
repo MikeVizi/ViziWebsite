@@ -2,20 +2,18 @@
 	<!-- Contact -->
 	<div id="contact" class="content-section-a" style="border-top: 0; border-bottom: 0">
 		<div class="container">
-
 			<div class="row">
 				<div class="col-sm-12 wow text-center wrap_title" style='padding-bottom:10px'>
 					<h2 class='Lumen-Header' style='color:#2c3e50'>Contact Us</h2>
 					<p class="lead Lumen-text Lumen-profile" style="margin-top:0; color:#2C3E50">For any queries or to demo Vizi, please get in touch.</p>
 				</div>
-			</div>
-
+			</div>	
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
 						<label for="InputName" class="Lumen-text" style='color:#2c3e50'>Your Name</label>
 						<div class="input-group">	
-							<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+							<input type="text" name="InputNameContact" id="InputNameContact" class="form-control" placeholder="Enter Name" required>
 							<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 						</div>
 					</div>
@@ -23,7 +21,7 @@
 					<div class="form-group">
 						<label for="InputEmail" class="Lumen-text" style='color:#2c3e50'>Your Email</label>
 						<div class="input-group">
-							<input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Your email" required  >
+							<input type="email" name="InputEmailContact" id="InputEmailContact" class="form-control" placeholder="Your email" required>
 							<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 						</div>
 					</div>
@@ -31,10 +29,11 @@
 					<div class="form-group">
 						<label for="InputMessage" class="Lumen-text" style='color:#2c3e50'>Message</label>
 						<div class="input-group">
-							<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+							<textarea name="InputMessageContact" id="InputMessageContact" class="form-control" rows="5" required></textarea>
 							<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 						</div>
 					</div>
+					<button type="button" name="submit" id="contact_submit" class="btn wow tada btn-embossed btn-primary pull-right">Send</button>
 				</div>
 			</div> 
 		</div>
@@ -42,15 +41,9 @@
 
 	<script>
 		$('#contact_submit').click(function(){
-
-			var from = $('#InputName').val();
-			var email = $('#InputEmail').val();
-			var message = $('#InputMessage').val();
-
-			var from = $('#InputName').val();
-			var email = $('#InputEmail').val();
-			var message = $('#InputMessage').val();
-
+			var from = $('#InputNameContact').val();
+			var email = $('#InputEmailContact').val();
+			var message = $('#InputMessageContact').val();
 			if(from==""||email==""||message==""){
 				alert("Please fill in all fields before submitting.");
 				return false;
@@ -63,12 +56,10 @@
 				alert("Please enter a name shorter than 160 characters.");
 				return false;
 			}
-
 			if(from.length>280){
 				alert("Please enter a message shorter than 280 characters.");
 				return false;
 			}
-
 	        $.ajax({
 	            type: "POST",
 	            url: "https://vizi.school/website/message",
@@ -86,11 +77,9 @@
 				  }
 	        }); 
 		});
-
 		function isEmail(email) {
 		  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		  return regex.test(email);
 		}
-
 	</script>
 
