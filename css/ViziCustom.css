@@ -570,6 +570,19 @@ a.CTAlink {
   background-color: #B0D2EB;
 }
 
+ h2.viziBanner {
+  font-family: 'Montserrat', sans-serif;
+  font-size:40px;
+  font-weight:400;
+  color: white;
+}
+
+@media  (max-width: 550px){
+  h2.viziBanner { 
+      font-size: 10vw;
+     }
+ }
+
 /*Tabs*/
 
 button:focus,

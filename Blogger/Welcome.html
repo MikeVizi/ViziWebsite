@@ -81,6 +81,7 @@
             </div>
 
     <!-- Blog entries -->
+    		<div class="col-md-9">
 		        <div class="row" id="intro"> 
 		       		 <div class="col-md-4 wrap_title wow text-left-md wrap_title">
 		        		<img style="width:90%;padding-top: 25px" src="../img/blog/Blog1Pic.jpg">
@@ -98,6 +99,107 @@
 					</div>
 				</div>	
 		    </div>
+				<!-- Blog post sidebar -->
+						<div class="col-md-3 hidden-sm hidden-xs" ">
+							<div class="row" style="padding: 20px 0px 20px 0px;">
+								<h2 class="Lumen-Header text-center" style="font-size: 30px">
+									Popular posts
+								</h2>
+							</div>
+							<div class="row" style="padding-bottom: 40px; border-left: solid 2px #febc41">
+								<a href="Getting-to-know-1-9" style="text-decoration: none">
+									<div class="example-2 card">
+									    <div class="wrapper"> 
+									      	<div class="header-blog">
+									        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
+									          		<p>2nd April 2018</p>
+									        	</div>
+									      	</div>
+							        		<div class="content" style="padding: 0px 20px 0px 30px">
+						          				<h2 class="Lumen-Question" style="font-size: 30px">Time to get my head around the 9-1 grading system</h2>
+						          			</div>
+									    </div>
+									</div>
+								</a>
+							</div>
+							<div class="row" style="border-left: solid 2px #febc41">
+								<a href="Good-Data_Environment" style="text-decoration: none">
+									<div class="example-2 card">
+									    <div class="wrapper"> 
+									      	<div class="header-blog">
+									        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
+									          		<p>4th Jan 2018</p>
+									        	</div>
+									      	</div>
+							        		<div class="content" style="padding: 0px 20px 0px 30px">
+						          				<h2 class="Lumen-Question" style="font-size: 30px">6 steps to follow to create a good data environment for your school</h2>
+						          			</div>
+									    </div>
+									</div>
+								</a>
+							</div>
+						</div>
+				    </div>
+		    	</div>
+			</div>
+			<div class="content-section-a" style="padding: 20px 0px 20px 0px">
+				<div class="container">
+					<!-- blog post CTA -->
+					<div class="row col-md-6">
+						<h3 class="storySubheading">
+							Want to find out more about data visualisation in schools? Enter your email address below to sign-up to our monthly newsletter on everything data in education!
+						</h3>
+						<form role="form" method="post" >
+							<div class="form-group">
+								<div class="input-group">	
+									<input type="text" name="InputEmail" id="InputEmail" class="form-control" placeholder="Email" required>
+									<span class="input-group-addon"><i class="form-control-feedback"></i></span>
+								</div>
+							</div>
+						  	<div>
+								<button type="button" name="submit" id="contact_submit" class="btn wow tada btn-embossed btn-primary pull-right">Subscribe</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="col-md-6 hidden-sm hidden-xs text-center">
+						<img style="width: 50%" src="../img/blog/newsletter.png">
+					</div>
+
+					<script>
+						$('#contact_submit').click(function(){
+							var email = $('#InputEmail').val();
+							if(email==""){
+								alert("Please fill in all fields before submitting.");
+								return false;
+							}
+							if(!isEmail(email)){
+								alert("Please enter a valid email address.");
+								return false;
+							}
+					        $.ajax({
+					            type: "POST",
+					            url: "https://vizi.school/website/message",
+							    crossDomain: true,
+							    dataType: 'json',
+					            data: { 
+					                    "message_subscribe" : email,
+					                  },
+					            success: function( msg ) {
+					                window.location.href="https://vizi.education/Thanks.html";
+					            },
+								  error: function(){
+					                window.location.href="https://vizi.education/Thanks.html";
+								  }
+					        }); 
+						});
+						function isEmail(email) {
+						  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+						  return regex.test(email);
+						}
+					</script>
+				</div>
+			</div>
     	</div>
 	</div>
 
