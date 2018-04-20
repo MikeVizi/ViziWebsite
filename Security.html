@@ -71,19 +71,20 @@
 
 
 <!-- intro -->
-
 <div id ="Security" class="introVizi3"">
-    <div class="container" style="text-align: left">
-        <div class="row" style="padding-bottom:30px"> 
-            <div>   
-				<h2 class="section-heading; Lumen-Header">Security</h2>
-			</div>
-			<div class="Lumen-text">
-				<p>
-					Find details on our data security policies and terms and conditions below. If you have any questions, please get in touch using the contact form.</a> 
-				</p>
-			</div>
-        </div>	
+    <div class="container">
+	    <div class="col-md-12 text-left-md">
+	        <div class="row" style="padding-bottom:30px"> 
+	            <div>   
+					<h2 class="section-heading; Lumen-Header">Security</h2>
+				</div>
+				<div class="Lumen-text">
+					<p>
+						Find details on our data security policies and terms and conditions below. If you have any questions, please get in touch using the contact form.</a> 
+					</p>
+				</div>
+	        </div>	
+	    </div>
 	</div>
 </div>
 
@@ -95,7 +96,7 @@
 
 				 <button id="Policy1" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>GDPR</span></button>
 
-				 <button id="Policy2" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span></span>Privacy Policy</button>
+				 <button id="Policy2" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Privacy Policy</span></button>
 
 				 <button id="Policy3" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Terms and Conditions</span></button>
 			</div>
@@ -394,7 +395,7 @@
 
 	$("#first-button").add("#Policy1").add("#Policy2").add("#Policy3").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("#Security").offset().top
+	        scrollTop: $("#Security").offset().top +300
 	    }, 500);
 	});
 

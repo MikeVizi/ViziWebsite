@@ -197,8 +197,8 @@
 		    </div>
     	</div>
 	</div>
-	<div class="content-section-a" style="padding: 20px 0px 20px 0px">
-		<div class="container">
+	<div class="content-section-b" style="padding: 20px 0px 20px 0px">
+		<div class="container"  style="border-top: solid 2px #febc41">
 			<!-- blog post CTA -->
 			<div class="row col-md-6">
 				<h3 class="storySubheading">
@@ -212,7 +212,7 @@
 						</div>
 					</div>
 				  	<div>
-						<button type="button" name="submit" id="contact_submit" class="btn wow tada btn-embossed btn-primary pull-right">Subscribe</button>
+						<button type="button" name="submit" id="subscribe_submit" class="btn wow tada btn-embossed btn-primary pull-right Lumen-text">Subscribe</button>
 					</div>
 				</form>
 			</div>
@@ -221,7 +221,7 @@
 			</div>
 
 			<script>
-				$('#contact_submit').click(function(){
+				$('#subscribe_submit').click(function(){
 					var email = $('#InputEmail').val();
 					if(email==""){
 						alert("Please fill in all fields before submitting.");
@@ -237,7 +237,7 @@
 					    crossDomain: true,
 					    dataType: 'json',
 			            data: { 
-			                    "message_email" : email,
+			                    "message_subscribe" : email,
 			                    
 			                  },
 			            success: function( msg ) {
