@@ -26,3 +26,7 @@ $(function(){
 $(function(){       
     $("#generalPreview").load("/References/Findoutmore.html"); 
 });
+
+$(function(){       
+    $("#generalSubscribe").load("/References/Subscribe.html"); 
+});

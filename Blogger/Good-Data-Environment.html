@@ -151,67 +151,9 @@
 		    </div>
     	</div>
 	</div>
-	<div class="content-section-b" style="padding: 20px 0px 20px 0px">
-		<div class="container"  style="border-top: solid 2px #febc41">
-			<!-- blog post CTA -->
-			<div class="row col-md-6">
-				<h3 class="storySubheading">
-					Want to find out more about data visualisation in schools? Enter your email address below to sign-up to our monthly newsletter on everything data in education!
-				</h3>
-				<form role="form" method="post" >
-					<div class="form-group">
-						<div class="input-group">	
-							<input type="text" name="InputEmail" id="InputEmail" class="form-control" placeholder="Email" required>
-							<span class="input-group-addon"><i class="form-control-feedback"></i></span>
-						</div>
-					</div>
-				  	<div>
-						<button type="button" name="submit" id="subscribe_submit" class="btn wow tada btn-embossed btn-primary pull-right Lumen-text">Subscribe</button>
-					</div>
-				</form>
-			</div>
-
-			<div class="col-md-6 hidden-sm hidden-xs text-center">
-				<img style="width: 50%" src="../img/blog/newsletter.png">
-			</div>
-
-			<script>
-				$('#subscribe_submit').click(function(){
-					var email = $('#InputEmail').val();
-					if(email==""){
-						alert("Please fill in all fields before submitting.");
-						return false;
-					}
-					if(!isEmail(email)){
-						alert("Please enter a valid email address.");
-						return false;
-					}
-			        $.ajax({
-			            type: "POST",
-			            url: "https://vizi.school/website/message",
-					    crossDomain: true,
-					    dataType: 'json',
-			            data: { 
-			                    "message_subscribe" : email,
-			                    
-			                  },
-			            success: function( msg ) {
-			                window.location.href="https://vizi.education/Thanks.html";
-			            },
-						  error: function(){
-			                window.location.href="https://vizi.education/Thanks.html";
-						  }
-			        }); 
-				});
-				function isEmail(email) {
-				  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				  return regex.test(email);
-				}
-			</script>
-		</div>
-	</div>
-    	</div>
-	</div>
+	
+	<!-- Subscribe -->
+	<div id ="generalSubscribe"></div>
 
 	<!-- Contact -->
 	<div id ="generalContact"></div>
