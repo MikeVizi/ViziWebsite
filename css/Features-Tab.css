@@ -11,11 +11,11 @@
 .Features-btn {
 
     width: auto;
-    border-radius: 0px;
+    border-radius: 8px;
     text-align: center;
     background-color: white;
     color: black;
-    font-size: 150%;
+    font-weight: bold;
     display: inline-block;
 }
 

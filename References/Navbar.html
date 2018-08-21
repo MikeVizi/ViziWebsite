@@ -1,38 +1,57 @@
 <!-- NavBar-->	
+	<div class="loginBar">		
+		<div class="container">
+			<div style="margin: 10px 0 10px 0; float: right">
+				<ul class="loginList Lumen-text">
+					<li class="loginItem getVizi"> <a href="/get-vizi.html"  style="text-decoration: none; color: #2C3E50; font-weight: bold">Get Vizi</a></li>
+					<li class="Ham loginItem login"> <a href="https://vizi.school"  style="text-decoration: none; color: #2C3E50; font-weight: bold">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 	<nav class="navbar-default navbar-blue" role="navigation">		
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle Padding-large" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" id="paddingToggle" data-target=".navbar-ex1-collapse" style="padding-top: 25px">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="https://vizi.education"><img class="Logo-large" src="\img\Logo\Vizi-White.png" alt="Generic placeholder image"></a>
+				<a href="https://vizi.education"><img id="logo" class="Logo-large" src="\img\Logo\viziLong.png" alt="Generic placeholder image"></a>
 			</div>	
 
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse Padding-large">
-				<ul class="nav navbar-nav Lumen-text">
+				<ul class="nav navbar-nav Lumen-text" style="font-weight: bold">
+					<li class="menuItem Font-large hamNav"><a href="/Why-Vizi.html">Why Vizi</a></li>
 				    <li class="dropdown">
-				        <a id="navClick" class="dropdown-toggle Font-large Ham" data-toggle="dropdown" href="/Why-Vizi">About Us</a>
-				        <ul class="dropdown-menu dropdown-menu-right Lumen-text" style="margin-left: 20px; font-size: 25px; min-width: 250px">
-					        <li><a id="navOverview" style="display: none; padding-bottom: 10px" href="/Why-Vizi">Overview</a></li>
-					        <li><a href="/Markbook-story" style="padding-bottom: 10px">Markbook</a></li>
-					        <li><a href="/Dashboard-story" style="padding-bottom: 10px">Dashboard</a></li>
-					        <li><a href="/Feedback-story" style="padding-bottom: 10px">Feedback</a></li>
-					        <hr/>
-					        <li><a href="/Portals" style="padding-bottom: 10px">Parent/Student</a></li>
-					        <li><a href="/Resources" style="padding-bottom: 10px">Resources</a></li>
-					        <li><a href="/Support" style="padding-bottom: 10px">Support</a></li>
+				        <a id="navClick" style="cursor: default;" class="dropdown-toggle Font-large hamNav" data-toggle="dropdown">Products</a>
+				        <ul class="dropdown-menu dropdown-menu-right Lumen-text dropDownStyle">
+					        <li class="coreStyle">core</li>
+					        <li><a style="padding-bottom: 10px" href="/products/markbook.html">Performance</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/conduct-behaviour.html">Conduct</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/attendance.html">Attendance</a></li>
+					        <li class="coreStyle">add-ons</li>
+					        <li><a style="padding-bottom: 10px" href="/products/resources.html">Resource management</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/portals.html">Student and Parent</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/mis-explorer.html">MIS Explorer</a></li>
 				        </ul>
 				    </li>
-					<li class="menuItem Font-large Ham"><a href="/About-Us">Our story</a></li>
-					<li class="menuItem Font-large Ham"><a href="/Blog">Blog</a></li>
-					<li class="menuItem Font-large Ham" style='font-weight:400'><a href="/Getting-Vizi">Get Vizi</a></li>
-					<li class="menuItem Font-large Ham" style='font-weight:bold'><a href="https://vizi.school">Login</a></li>
-					<!--<li class="menuItem Lumen-text Font-large" style="font-weight:bold"><a href="https://vizi.school">Start for free!</a></li>-->
+				   	<li class="dropdown">
+				        <a id="navClick" style="cursor: default;" class="dropdown-toggle Font-large hamNav" data-toggle="dropdown">Get insight</a>
+				        <!-- optional dropdown - could just go directly to the getting insight page. -->
+				        <ul class="dropdown-menu dropdown-menu-right Lumen-text dropDownStyle">
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/dashboards.html">Dashboards</a></li>
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/feedback.html">Intelligent feedback</a></li>
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/school-management.html">School Management</a></li>
+				        </ul>
+				    </li>
+					<li class="menuItem Font-large hamNav"><a href="/Story.html">About Us</a></li>
+					<li class="menuItem Font-large hamNav"><a href="/Blog.html">Blog</a></li>
 				</ul>
 			</div>
+
 		</div>
 	</nav>
 
@@ -47,7 +66,7 @@ $('a[href*=#]').click(function SmoothScroll() {
 			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
 			if ($target.length) {
 					var targetOffset = $target.offset().top;
-					$('html,body').animate({scrollTop: targetOffset}, 600);
+					$('html,body').animate({scrollTop: targetOffset},);
 					return false;
 			}
 	}
@@ -58,18 +77,47 @@ $(function() {
     var Logo = $(".Logo-large");
     var Padding =$(".Padding-large")
   	var fontSize =$(".Font-large")
+	var paddingToggle = $("#paddingToggle")
+
+
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-
-        if (scroll >= 100) {
+        if (scroll >= 300) {
         	Logo.removeClass('Logo-large').addClass("Logo-small");
        		Padding.removeClass('Padding-large').addClass("Padding-small");
+        	paddingToggle.css("padding-top","5px");
+        	$("#logo").attr('src', '/img/Logo/viziShort.png');
+
         } else {
             Logo.removeClass("Logo-small").addClass('Logo-large');
            	Padding.removeClass('Padding-small').addClass("Padding-large");
+			paddingToggle.css("padding-top","25px");
+        	$("#logo").attr('src', '/img/Logo/viziLong.png');
         }
     });
 });
+
+// Add fixed class after scroll
+
+$(function() {	
+    var navbar = $(".navbar-default");	
+	var firstcontainer = $("#home")
+	
+    $(window).scroll(function() {	
+        var scroll = $(window).scrollTop();	
+	
+        if (scroll >= 80) {	
+        	navbar.css("position","fixed");
+        	navbar.css("top","0");
+        	firstcontainer.css("padding-top","80px");
+        } else {	
+            navbar.css("position","relative");	
+        	firstcontainer.css("padding-top","0px");
+
+        }	
+    });	
+});	
+
 
 // Add data-toggle - dropdown to navbar when below 1000px
 $('#navClick').on("click", function() {
@@ -80,7 +128,6 @@ $('#navClick').on("click", function() {
 	}
 	else {
 		$(".dropdown-toggle").attr("data-toggle", "dropdown");
-		$("#navOverview").css("display" , "");
 	}
 });
 </script>

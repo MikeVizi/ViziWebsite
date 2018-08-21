@@ -1,8 +1,8 @@
 <!-- social logos -->
 <div class="socialBtn">
-	<a href="https://twitter.com/ViziEducation" style="text-decoration: none" target="_blank"> <img style="height: 50px" src="\img\social\Twitter.png"> </a>
+	<a href="https://twitter.com/ViziEducation" style="text-decoration: none" target="_blank"> <img style="height: 40px" src="\img\social\Twitter.png"> </a>
 	<br><br>
-	<a href="https://medium.com/@ViziEducation" target="_blank"> <img style="height: 50px" src="\img\social\MediumS.png"> </a>
+	<a href="https://medium.com/@ViziEducation" target="_blank"> <img style="height: 40px" src="\img\social\MediumS.png"> </a>
 </div> 
 
 <!-- Contact button -->
@@ -15,7 +15,7 @@
 <!-- ArrowUp button -->
 <div class="arrowHidden hidden-xs hidden-sm" id="arrowBtn">
 	<a href="#intro">
-		<img class="img_scroll" style="height: 50px" src="\img\arrowUp.png">
+		<img class="img_scroll" style="height: 60px" src="\img\3Darrowsmoothup.png">
 	</a>
 </div>
 
@@ -67,4 +67,17 @@ $('a[href*=#]').click(function SmoothScroll() {
 	}
 });
 
+</script>
+
+<!-- Close banner and move contact button down -->
+<script type="text/javascript">
+$(function() {
+    var CTA = $(".contactBtn");
+    var CTAbanner = $(".CTAbanner");
+    $( "#ExitCTA" ).click(function() {
+        CTA.removeClass("ContactBtn").addClass("contactBtnCTA");
+        CTAbanner.removeClass("CTAbanner").addClass("CTAclosed");
+
+    });
+});
 </script>

@@ -30,3 +30,9 @@ $(function(){
 $(function(){       
     $("#generalSubscribe").load("/References/Subscribe.html"); 
 });
+
+
+$(function(){       
+    $("#generalBlogInsert").load("/References/blogInsert.html"); 
+});
+

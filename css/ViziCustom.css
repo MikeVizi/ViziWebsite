@@ -96,6 +96,14 @@ h2.blogSub {
     font-size: 30px;
 }
 
+h2.blogSubSub {
+    font-family: 'Quicksand', sans-serif;
+    color: #2c3e50;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+}
+
 .blogLogo {
   width:20%; 
   min-width: 200px; 
@@ -118,10 +126,16 @@ a.blogLink {
   color: #febc41
 }
 
+/*Homescreen blog cards*/
+.blogCard {
+  border: solid 8px #febc41;
+  background-color: white !important;
+}
+
 /*Custom navbar*/
 
 .navbar-transparent {
-  background-color: transparent;
+  background-color: #f8f8f8;
   -webkit-transition: 0.5s;
 }
 
@@ -130,7 +144,7 @@ a.blogLink {
   -webkit-transition: 0.5s;
 }
 
-/*Logo navbar*/
+/*Logo navbar - all things navbar*/
 
 .Logo-large {
 
@@ -172,7 +186,7 @@ a.blogLink {
 }
 
 @media(max-width: 1000px) {.Padding-large {
-  padding-top: 25px;
+  padding-top: 0px;
   -webkit-transition: 0.5s;
   }
 }
@@ -193,19 +207,18 @@ a.blogLink {
 
 .Font-large {
 
-  font-size: 24px;
+  font-size: 18px;
   -webkit-transition: 0.5s;
 }
 
 @media(max-width: 1000px) {.Font-large {
-  font-size: 24px;
+  font-size: 20px;
   -webkit-transition: 0.5s;
   }
 }
 
 .Font-small {
-
-  font-size: 22px;
+  font-size: 18px;
   -webkit-transition: 0.5s;
 }
 
@@ -230,7 +243,75 @@ a.blogLink {
   background-position: -100% 100%;
   background-image: linear-gradient(to right, transparent 50%, #febc41 50%);
   transition: all 0.3s ease-in;
+}
 
+.hamNav {
+  background-image: linear-gradient(to right, transparent 100%, green 50%);
+  background-origin: 0;
+  background-size: 200% 50%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-color: transparent;
+  transition: background-position 0.5s;
+
+}
+.hamNav:hover {
+
+  background-position: -100% 100%;
+  background-image: linear-gradient(to right, transparent 50%, #febc41 50%);
+  transition: all 0.3s ease-in;
+}
+
+@media(max-width: 1000px) {.hamNav {
+  background-image: none;
+  background-origin: 0;
+  background-size: 0%;
+  }
+}
+
+.HamBlue {
+  background-image: linear-gradient(to right, transparent 100%, green 50%);
+  background-origin: 0;
+  background-size: 200% 50%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-color: transparent;
+  transition: background-position 0.5s;
+
+}
+.HamBlue:hover {
+
+  background-position: -100% 100%;
+  background-image: linear-gradient(to right, transparent 50%, #34495e 50%);
+  transition: all 0.3s ease-in;
+}
+
+.dropDownStyle {
+  margin-left: 20px; 
+  font-size: 25px; 
+  min-width: 250px
+}
+
+@media (max-width: 1000px) {.dropDownStyle {
+  margin-left: 20px; 
+  font-size: 20px; 
+  min-width: 250px
+  }
+}
+
+.coreStyle {
+  padding: 10px 0px 10px 20px; 
+  font-weight: bold; 
+  color: #febc41; 
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {.coreStyle {
+  padding: 0px 0px 0px 0px; 
+  font-weight: bold; 
+  color: #febc41; 
+  font-size: 15px;
+  }
 }
 
 /*Question mark*/
@@ -365,7 +446,6 @@ a.CTAlink {
   display: none
 }
 
-
 /*Overlay*/
 .Feature-grab {
   margin-left: 0px;
@@ -437,7 +517,7 @@ a.CTAlink {
 .contactBtn {
   opacity: 0.9;
   position: fixed;
-  bottom: 80px;
+  bottom: 75px;
   right: 0px;
   z-index: 3;
 }
@@ -455,7 +535,7 @@ a.CTAlink {
 .contactBtnCTA {
   opacity: 0.9;
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   right: 0px;
   z-index: 3;
   transition: all 0.3s ease-in-out 0s;
@@ -464,6 +544,14 @@ a.CTAlink {
 .contactBtnHidden {
   display: none;
   transition: all 0.3s ease-in-out 0s;
+}
+
+/*contact container*/
+
+.contactContainer{
+  height: auto;
+  border-top: 0; 
+  border-bottom: 0;
 }
 
 /*Social buttons*/
@@ -485,7 +573,43 @@ a.CTAlink {
 /*Vizi button*/
 
 .viziBtn {
-  border-color: rgba(52, 73, 94, 0);
+  font-weight: bold !important;
+  text-decoration: none; 
+  color: #2C3E50;
+  margin-right: 20px;
+  border: solid 6px #18bc9c ;
+  border-radius: 10px;
+}
+
+.viziBtnBlue {
+  font-weight: bold !important;
+  text-decoration: none; 
+  color: #2C3E50;
+  margin-right: 20px;
+  border: solid 6px #34495e ;
+  border-radius: 10px;
+}
+
+.viziBtnBlue:hover {
+  color: #18bc9c;
+}
+
+
+.viziBtnDisabled {
+  font-weight: bold !important;
+  text-decoration: none; 
+  color: #2C3E50;
+  margin-right: 20px;
+  border: solid 6px grey ;
+  border-radius: 10px;
+}
+
+.viziBtn:hover {
+  color: #2c3e50;
+}
+
+.viziBtnDisabled:hover {
+  color: #2c3e50;
 }
 
 /*Scroll up arrow*/
@@ -507,6 +631,15 @@ a.CTAlink {
   max-width: 500px;
 }
 
+.demoImg {
+  width: 135%;
+}
+
+@media (max-width: 991px) {
+  .demoImg {
+    width: 100%;
+  }
+}
 /*Other page intro*/
 .introVizi {
   height: auto; /* Full Page */
@@ -518,7 +651,7 @@ a.CTAlink {
 
 .introVizi2 {
   height: auto; /* Full Page */
-  padding: 120px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
   color: #2c3e50;
   background: url(../img/intro/introVizi2.png) repeat center center;
   text-align: center;
@@ -526,7 +659,7 @@ a.CTAlink {
 
 .introVizi3 {
   height: auto; /* Full Page */
-  padding: 120px 0px 50px 0px;
+  padding: 100px 0px 100px 0px;
   color: #2c3e50;
   background: url(../img/intro/introVizi3.png) repeat center center;
   text-align: center;
@@ -540,7 +673,74 @@ a.CTAlink {
   text-align: center;
 }
 
+.introVizi5 {
+  height: auto; /* Full Page */
+  padding: 50px 0px 50px 0px;
+  color: #2c3e50;
+  background: url(../img/intro/generic.png) no-repeat bottom right;
+  text-align: center;
+}
 
+@media (max-width: 600px) {
+  .introVizi5 {
+  height: auto; /* Full Page */
+  padding: 120px 0px 50px 0px;
+  background: none;
+  color: #2c3e50;
+  text-align: center;
+}
+}
+
+.introVizi6 {
+  height: auto; /* Full Page */
+  padding: 50px 0px 50px 0px;
+  color: #2c3e50;
+  background-color: #f8f8f8 !important;
+  background: url(../img/intro/genericWhite.png) no-repeat bottom right;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .introVizi6 {
+  height: auto; /* Full Page */
+  padding: 80px 0px 80px 0px;
+  background: none;
+  background-color: #f8f8f8;
+  color: #2c3e50;
+  text-align: center;
+}
+}
+
+.introVizi7 {
+  height: auto; /* Full Page */
+  padding: 80px 0px 80px 0px;
+  color: #2c3e50;
+  background: url(../img/intro/genericPattern.png) no-repeat right;
+  background-size: cover;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .introVizi7 {
+  height: auto; /* Full Page */
+  padding: 80px 0px 50px 0px;
+  background-color: white;
+  background: none;
+  color: #2c3e50;
+  text-align: center;
+}
+}
+
+.joinerLine {
+  height: 80px; 
+  margin-bottom: -180px
+}
+
+@media (max-width: 991px) {
+  .joinerLine {
+    margin-bottom: -120px
+  }
+  }
 /*Other page footers and banners*/
 
 .bannerBackground1 {
@@ -570,11 +770,38 @@ a.CTAlink {
   background-color: #B0D2EB;
 }
 
+.bannerContainer {
+  display: flex;
+  width: 100%;
+}
+
+.bannerSplit {
+  min-height: 400px;
+  height: auto;
+  padding: 80px 80px 80px 80px;
+  flex:1; 
+}
+
+@media (max-width: 600px) {
+.bannerSplit {
+  min-height: 400px;
+  height: auto;
+  padding: 80px 30px 80px 30px;
+  flex:1;
+  }}
+
+
+.splitRight {
+background: linear-gradient(90deg, transparent 50%, #febc41 50%);
+
+}
+
  h2.viziBanner {
   font-family: 'Montserrat', sans-serif;
   font-size:40px;
-  font-weight:400;
+  font-weight:600;
   color: white;
+  word-wrap: break-word;
 }
 
 @media  (max-width: 550px){
@@ -613,6 +840,7 @@ select:focus {
   .tabs [class^="tab"] [type="radio"],
   .tabs [class*=" tab"] [type="radio"] {
     border-bottom: 4px solid #febc41);
+    border-radius: 4px;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -683,7 +911,8 @@ box-shadow: -10px 10px grey;
 
 .feedbackButtons {
   padding: 5px 10px 5px 10px;
-  font-size: 8px;
+  font-size: 5px;
+  border-radius: 8px;
 }
 
 .feedbackText {
@@ -713,6 +942,8 @@ box-shadow: -10px 10px grey;
 .markbookStyle {
 
 border-left: solid 2px #febc41; 
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
 border-right: solid 2px #febc41; 
 border-top: solid 2px #febc41; 
 background-color: white
@@ -720,45 +951,17 @@ background-color: white
 
 /*Markbook story*/
 
-.container .storyContainer {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+.timelineContainer {  
+  max-height: 500px
 }
 
 @media(max-width: 992px){
-  .storyContainer {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  .timelineContainer {
+    max-height: none;
+    height: auto !important;
   }
 }
 
-@media(max-width: 992px){
-  .storyLeft {
-  padding-left: 15px;
-  }
-}
-
-@media(min-width:992px) {
-  .storyLeft {
-  padding-left: 100px;
-  }
-}
-
-@media(max-width: 992px){
-  .storyRight {
-  padding-right: 15px;
-  }
-}
-
-@media(min-width:992px) {
-  .storyRight {
-  padding-right: 100px;
-  }
-}
 
 .viziBold {
   font-weight: bold;
@@ -819,33 +1022,33 @@ background-color: white
   }
 }
 
-/*Story Margin*/
-
-.storyMarginLeft {
-  margin-left: 50px;
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.storyMarginRight {
-  margin-right: 200px;
-}
-/* Lumen styles!! */
-
-@media (max-width: 992px) {
-  .storyMarginLeft {
-    margin-left: 0px
-  }
+.Aligner-item {
+  max-width: 50%;
 }
 
-@media (max-width: 992px) {
-  .storyMarginRight {
-    margin-right: 0px
-  }
+.Aligner-item--bottom {
+  align-self: flex-end;
 }
 
 /*More info button*/
 
 .moreBtn {
   color:  black;
+}
+
+/*Product selection boxes */
+
+.productSelect {
+  border-radius: 5px; 
+  background-color: white; 
+  border: solid 2px grey; 
+  padding-top: 20px;
 }
 
 /*Vizi styles*/
@@ -860,8 +1063,8 @@ h1.Lumen-Title {
 
 h2.Lumen-Header {
   font-family: 'Montserrat', sans-serif;
-  font-size:500%;
-    font-weight:600;
+  font-size:400%;
+  font-weight:600;
 }
 
 @media  (max-width: 500px){
@@ -876,9 +1079,9 @@ h2.Lumen-Header {
   font-weight:600;
 }
 
-@media  (max-width: 768px){
+@media  (max-width: 600px){
   h2.storyHeader { 
-      font-size: 10vw;
+      font-size: 9vw;
      }
  }
 
@@ -893,7 +1096,7 @@ h3.storySubheading {
 
  h2.Lumen-Question {
   font-family: 'Montserrat', sans-serif;
-  font-size:50px;
+  font-size:45px;
   font-weight:600;
 }
 
@@ -965,8 +1168,9 @@ h3.Lumen-SubHeading-thin {
 .Lumen-text{
 
   font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
 }
 
 .Lumen-profile {
@@ -1052,4 +1256,183 @@ img.Lumen-Centre {
 
 .viziScroll {
   font-style: italic;
+}
+
+/*Login and free buttons*/
+
+.loginBar {
+  margin-top: 0px;
+  background-color: #f8f8f8;
+}
+
+.loginList {
+  margin-bottom: 0;
+  padding-left: 10px;
+  list-style: none;
+  color: black;
+}
+
+li.loginItem {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.login {
+  border: solid 6px #febc41 ;
+  border-radius: 10px;
+}
+
+.getVizi {
+  margin-right: 20px;
+  border: solid 6px white ;
+  border-radius: 10px;
+}
+
+.hiddenPoints {
+    padding: 20px 10px 10px 10px; 
+    border-top: solid 1px #febc41; 
+    margin:0px 10px 0px 10px;
+}
+
+.hiddenPoint {
+    padding: 20px 10px 10px 10px; 
+    margin:0px 10px 0px 10px;
+}
+
+/*Switchs*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #febc41;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Highlight animation*/
+
+@keyframes highlight1 {
+    from {background-color: transparent;}
+    to {background-color: #febc41;}
+}
+
+/* The element to apply the animation to */
+.highlight1 {
+    animation-name: highlight1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    background-color: transparent;
+    -webkit-animation-name: highlight1; /* Safari 4.0 - 8.0 */
+}
+
+@keyframes highlight2 {
+    from {background-color: transparent;}
+    to {background-color: #febc41;}
+}
+
+/* The element to apply the animation to */
+.highlight2 {
+    animation-name: highlight2;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    background-color: transparent;
+    -webkit-animation-name: highlight2; /* Safari 4.0 - 8.0 */
+}
+
+@keyframes highlight3 {
+    from {background-color: transparent;}
+    to {background-color: #febc41;}
+}
+
+/* The element to apply the animation to */
+.highlight3 {
+    animation-name: highlight3;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    background-color: transparent;
+    -webkit-animation-name: highlight3; /* Safari 4.0 - 8.0 */
+}
+
+
+/*Aninmated line bounce under heading!*/
+
+body {margin: 0; padding: 0;}
+@keyframes loader-animation {
+  0% {
+    width: 0%;
+}
+        100%{
+    width: 100%
+  }
+
+
+
+}
+.loader {
+  height: 5px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.loader .bar {
+  border-radius: 8px;
+  position: absolute;
+  height: 4px;
+  background-color: #febc41;
+  animation-name: loader-animation;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease;
 }

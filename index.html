@@ -31,8 +31,8 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">	
+
     <!-- Custom CSS-->
     <link href="css/general.css" rel="stylesheet">
     <link href="css/ViziCustom.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
 </head>
 
-<body id="home">
+<body id="home" style="padding-top: 0px">
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -61,22 +61,105 @@
    	<div id ="generalNavbar"></div>
 
 	<!-- FullScreen -->
-    <div class="intro-header" id="intro">
-    <!-- Logo and strap line -->
-    	<div class="container" style="padding-top: 75px">
-			<div class="col-md-6 col-xs-12 wow fadeInRightBig text-left-md wrap_title" data-animation-delay="200">
-				<h2 class='Lumen-Header' style="color:#2C3E50;">
-					Better student insights <br>with Vizi.
-				</h2>
-				<div> 
-					<a class="btn btn-primary Lumen-text" href="#" data-toggle="modal" data-target="#PreviewModal">Request a demo!</a>
+    <div class="introVizi6" id="intro">
+    	<div class="container">
+    		<div class="row">
+				<div class="col-md-6 col-xs-12 text-left-md">
+					<h2 class='Lumen-Header fadeInRightBig wow' style="color:#2C3E50;">
+						Get better student insights <br>with Vizi!
+					</h2>
+					<div> 
+						<a class="Lumen-text btn viziBtn Ham wow buttonEntry" href="/why-vizi.html">Find out more</a>
+					</div>
+					<br>
+					<p class="Lumen-text fadeInRightBig wow">
+						<b>Create, manage and get insight from your <span class="highlight1">progress, <br>conduct</span> and <span class="highlight1">attendance</span> data, all in one place!</b>
+					</p>
+				</div>  
+				<div class="col-md-6 hidden-xs">
+					<img class="demoImg" src="img\screengrabs\dashboardDemo.PNG">
 				</div>
-				<h3 class='Lumen-Strap' style="padding-top:25px">
-					Get the most from your student data with next generation visualisations and intelligent feedback. 
-				</h3>
-			</div>  
-			<div>
-				<div class="col-md-6 col-xs-12" id="">
+			</div>
+			<div class="row">
+				<a href="#whatis">
+					<img style="height: 80px; margin-bottom: -120px" class="animated bounce" id="pageLinks" src="img\icon\joinerLine.png">
+<!-- 					<img style="height: 80px; margin-bottom: -115px" class="animated bounce" id="pageLinks" src="/img/gifs/markbookGif2.gif">
+ -->				</a>
+			</div>
+		</div>
+    </div>
+
+   	<div id ="generalCTA"></div>
+
+   	<!-- CTA banner -->
+   	<div id ="generalButtonsCTA"></div>
+
+   	<!-- Our products -->
+	<div  id="whatis" class="content-section-b" style="padding: 50px">
+        <div class="container">
+			<div class="col-md-12">
+				<div class="col-md-6 hidden-xs hidden-sm" style="margin-bottom: -200px; z-index: -1">   
+					<img style="width: 100%" src="img\Screengrabs\feedback\timelineDemo.png">
+				</div>
+				<div class="col-md-1">
+					
+				</div>
+	        	<div class="col-md-5" style=" text-align: justify;">
+	        		<div class="row">
+			            <div>  
+			                <h2 class="Lumen-Question" style="font-size: 28px">
+			                	1
+			                </h2>
+			                <br>
+			               	<p class="Lumen-text">
+			                	<b>All your educational data is recorded in <span class="wow highlight1">one place</span>, with <span class="wow highlight1">beautiful and simple interfaces.</span></b>
+			                </p>
+						</div>
+					</div>
+					<br><br>
+	        		<div class="row">
+			            <div>  
+			               	<h2 class="Lumen-Question" style="font-size: 28px">
+			                	2
+			                </h2>
+			                <br>
+			               	<p class="Lumen-text">
+			                	<b><span class="wow highlight2">Aggregate, integrate and compare</span> with no effort.</b>
+			                </p>
+						</div>		
+					</div>	
+					<br><br>
+					<div class="row">
+						<div>  
+			               	<h2 class="Lumen-Question" style="font-size: 28px">
+			                	3
+			                </h2>
+			                <br>
+			               	<p class="Lumen-text">
+								<b>Brilliant <span class="wow highlight3">real-time</span> and <span class="wow highlight3">automated insights</span> into your data to discover more about your students.</b>                
+							</p>
+						</div>		
+						<br><br>
+						<div style="padding-bottom: 20px"> 
+							<a class="Lumen-text btn viziBtnBlue" href="dashboards">Explore</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+
+	<!-- Testimonials -->
+	<div  id="Video" class="content-section-a">
+        <div class="container">
+        	<div class="row col-md-12" style="text-align: left;">
+				<h2 class="Lumen-Question">
+					Tired of entering data and getting nothing back?
+				</h2>      	
+			</div>
+            <div class="row"> 
+				<div class="col-md-6 col-xs-12">
 					<div class="videoWrapper verticalVizi">
 						<iframe src="https://player.vimeo.com/video/262428203" id="introVideoContainer" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 						</iframe>
@@ -87,206 +170,72 @@
 						</a>
 					</div>
 				</div>
-			</div>
-		</div>
-    </div>
-
-	<script src="https://player.vimeo.com/api/player.js"></script>
-		  	<script>
-		    var iframe = document.querySelector('iframe');
-		    var player = new Vimeo.Player(iframe);
-		    var markbookCTA = document.getElementById("markbookCTA");
-
-		    player.on('ended', function() {
-		      markbookCTA.classList.add ("markbookCTAReveal");
-		      markbookCTA.classList.remove ("markbookCTAHidden");
-		    });
-	</script>
-
-   	<div id ="generalCTA"></div>
-
-   	<!-- CTA banner -->
-   	<div id ="generalButtonsCTA"></div>
-	
-   	<!-- Three offerings -->
-	<div  id="whatis" class="content-section-b clearfix" style="padding-top: 25px;" >
-        <div class="container">
-        	<div class="row">
-				<div class="col-md-4">   
-					<a href="WhyVizi" style="text-decoration: none">
-						<h2 class='Lumen-Header Ham' style="color:#18BC9C; font-size: 30px">Insights</h2>
-					</a>
-					<p class="Lumen-text" style="padding-bottom: 20px">
-						<span style="font-weight: bold">Automated</span>, <span style="font-weight: bold">intelligent</span> and <span style="font-weight: bold">real-time</span> feedback from your data.
+                <div class="col-md-6 col-xs-12 text-left-md verticalVizi100">   
+					<p class='Lumen-text' style="padding-top: 20px">		
+						So many systems require the entry of data, but make it difficult to get information out and even less so, meaningful information. 
+						<br><br>	
+						At Vizi, we want to change that. Using machine learning and data visualisation we take all the data you enter about your students and create meaningful information to help you make educational decisions. 
 					</p>
-					<div class="Feature-grab" style="text-align: center;">
-						<a href="Feedback-story">
-							<div class="Feature-grab-overlay">
-								<img style="width: 100%; max-width: 500px" src="img\screengrabs\feedback.png">
-							</div>
-							<div class="Feature-grab-details fadeIn-bottom">
-						        <h2 class="Lumen-Header" style="font-size: 30px">Find out more</h2>
-						    </div>
-						 </a>
+					<div> 
+						<a class="Lumen-text btn viziBtn Ham" href="#" data-toggle="modal" data-target="get-vizi">Start using for free!</a>
 					</div>
 				</div>
-
-				<div class="col-md-4">   
-					<a href="WhyVizi" style="text-decoration: none">
-						<h2 class='Lumen-Header Ham' style="color:#18BC9C; font-size: 30px">Analysis</h2>
-					</a>		
-					<p class="Lumen-text" style="padding-bottom: 20px">
-						<span style="font-weight: bold">Interactive</span>, <span style="font-weight: bold">customisable</span> and <span style="font-weight: bold">multi-level</span> dashboards.
-					</p>
-					<div class="Feature-grab" style="text-align: center;">
-						<a href="Dashboard-story">
-							<div class="Feature-grab-overlay">
-								<img style="width: 100%; max-width: 500px" src="img\screengrabs\dashboard.PNG">
-							</div>
-							<div class="Feature-grab-details fadeIn-bottom">
-						        <h2 class="Lumen-Header" style="font-size: 30px">Find out more</h2>
-						    </div>
-						 </a>
-					</div>
-				</div>
-				
-                <div class="col-md-4">   
-					<a href="WhyVizi" style="text-decoration: none">
-						<h2 class='Lumen-Header Ham' style="color:#18BC9C; font-size: 30px">Markbook</h2>
-					</a>
-					<p class="Lumen-text" style="padding-bottom: 20px">
-						<span style="font-weight: bold">Intuitive</span>, <span style="font-weight: bold">customisable</span> and <span style="font-weight: bold">accessible</span> markbook.
-					</p>
-					<div class="Feature-grab" style="text-align: center;">
-						<a href="Markbook-story">
-							<div class="Feature-grab-overlay">
-								<img style="width: 100%; max-width: 500px" src="img\screengrabs\markbook.png">
-							</div>
-							<div class="Feature-grab-details fadeIn-bottom">
-						        <h2 class="Lumen-Header" style="font-size: 30px">Find out more</h2>
-						    </div>
-						 </a>
-					</div>
-				</div>
-	        </div>
+        	</div>
         </div>
     </div>
 
-	<!-- Do more -->
-	<div id ="Domore" class="content-section-a">
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-md-12 wow bounce" style="padding-bottom: 40px">  
-	                    <h2 class="Lumen-Question">Do more with your data...</h2>
-				</div>
-			</div>			
-
-			<div class="row" style="padding-bottom: 20px">
-				<div class="col-md-4 col-xs-12 text-center-sm text-left-md">
-					<h3 class= 'Lumen-SubHeading'>Making data an everyday resource</h3>
-                    <p class="Lead Lumen-text">	
-						How often do you analyse your markbook? Why not every day? The answer for most teachers is time, there simply isn't enough. But with Vizi, this becomes possible. <span style="font-weight: bold; color: #febc41">Our aim is to make data an everyday resource, that doesn't require a huge investment of time.</span>
-						<br><br>
-						Vizi will look across students, subjects, years and more to spot patterns and correlations. <span style="font-weight: bold; color: #febc41">It will then deliver insightful and easy to understand feedback in real-time. </span>
-						<br><br>
-						Simple, dynamic and customisable dashboards allow you to view performance and analyse data, at every level in real-time. 
-					</p>
-				</div>
-				<div class="col-md-8 col-xs-12 text-center-sm" style="text-align: center;">
-					<img style="width: 100%; max-width: 600px" src="img/intro/everydayResource.png">
-				</div>
-			</div>
-			
-			<div class="col-sm-12 col-xs-12 text-center-sm hidden-md hidden-lg verticalVizi100">
-                 	<h3 class='Lumen-SubHeading'>Connect your data</h3>
-                    <p class="lead Lumen-text">
-						Vizi allows you to see <span style="font-weight: bold; color: #febc41">school, subject, year, form and set wide data... and it's all in the same place, all in the same format</span>. <br> <br>
-						Every teacher can see their students, their subjects and their groups, be that set, year group or house group!
-						And of course, <span style="font-weight: bold; color: #febc41">Vizi is available from any device, anywhere in the world.</span>
-					</p>
-			</div>
-			<div class="row" style="padding: 20px 0px 20px 0px">	
-				<div class="col-md-8 col-xs-12 text-center-sm" style="text-align: center;">
-					<img style="width: 100%; max-width: 600px" src="img/intro/connectedData.png">
-				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12 text-center-sm text-left-md hidden-xs hidden-sm">
-                 	<h3 class= 'Lumen-SubHeading'>Connected data</h3>
-                    <p class="lead Lumen-text">
-						Vizi allows you to see <span style="font-weight: bold; color: #febc41">school, subject, year, form and set wide data... and it's all in the same place, all in the same format</span>. Isn't that excellent. <br> <br>
-						Every teacher can see their students, their subjects and their groups, be that set, year group or house group!
-						And of course, <span style="font-weight: bold; color: #febc41">Vizi is available from any device, anywhere in the world.</span>
-					</p>
-				</div>
-			</div>
-
-			<div class="row" style="padding: 20px 0px 20px 0px">
-				<div class="col-md-4 col-sm-12 text-center-sm" >
-					<h3 class= 'Lumen-SubHeading'>Save your time!</h3>
-                    <p class="lead Lumen-text">
-						<span style="font-weight: bold; color: #febc41">Save your time for the important things.</span> Vizi is designed to be intuitive out of the box, allowing you to quickly and easily analyse your data.<br><br>
-						There is no need for every teacher to individually create new markbooks for all of their sets every year, or for someone else to put them altogether to understand how students are progressing. Timesaving features like <span style="font-weight: bold; color: #febc41">auto-grade, quick fill and assessment breakdowns</span> take the pain out of recording your marks. 
-					</p>
-				</div>
-				<div class="col-md-8 col-xs-12 text-center-sm" style="text-align: center;">
-					<img style="width: 100%; max-width: 600px" src="img/intro/timeSaving.png">
-				</div>
-			</div>
-
-			<div class="row" style="padding-top: 20px">
-				<div class="col-sm-12 col-xs-12 text-center-sm hidden-md hidden-lg">
-                 	<h3 class= 'Lumen-SubHeading'>Pre-empt changes in performance</h3>
-                    <p class="lead Lumen-text">
-                    	Vizi's primary aim is to help you improve student outcomes. Vizi does this by <span style="font-weight: bold; color: #febc41">providing you with timely and accurate information</span> about your students' performance that you may not otherwise have noticed. 
-                    	<br><br>
-                    	Vizi uses advanced predictive analytics to spot when trends are appearing, both positive and negative, allowing you to <span style="font-weight: bold; color: #febc41">act and have an impact before that important exam.</span> 
-					</p>
-				</div>
-				<div class="col-md-8 col-xs-12 text-center-sm text-right-md" style="text-align: center;">
-					<img style="width: 100%; max-width: 600px" src="img/intro/predictChange.png">
-				</div>
-				<div class="col-md-4 text-center-sm text-left-md hidden-xs hidden-sm">
-                 	<h3 class= 'Lumen-SubHeading'>Pre-empt changes in performance</h3>
-                    <p class="lead Lumen-text">
-                    	Vizi's primary aim is to help you improve student outcomes... and it does this by <span style="font-weight: bold; color: #febc41">providing you with timely and accurate information</span> about your students' performance that you may not otherwise have noticed. 
-                    	<br><br>
-                    	Vizi uses real-time analytics to spot when trends are appearing, both positive and negative, allowing you to <span style="font-weight: bold; color: #febc41">act and impact.</span> 
-					</p>
-				</div>
-				<div class="col-md-12 Lumen-text">
-					<a class="btn btn-primary Lumen-text" href="Why-Vizi">Why Vizi</a>
+    <div class="row">
+		<div class="col-md-6 bannerSplit" style="background-color: #febc41">
+			<div class="col-md-12">
+				<img src="/img/logo/blogLogo.png" style="height: 30px">
+        		<h2 class="Lumen-Question" style="margin-top: 5px">How can data visualisation be useful in education?</h2>
+				<p style="color:grey; font-size: 14px" class="Lumen-text"> 20th July 2017 <span style="color: #feb34c">|</span> Chris O'Mahony</p>
+				<br><br>
+				<p class="Lumen-text lead">
+					Having evidence in the form of data is a great start to answering these questions, and with a decent MIS or tracking system you can build up lots of nice data :). Often, it is interpreting that data that is the tricky bit. 
+				</p>
+				<br><br>
+				<div style="padding-bottom: 20px">
+					<a class="Lumen-text btn viziBtnBlue" href="Get-Vizi">Read more</a>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Blog carousel -->
-	<div class="bannerBackground3">
-		<div class="container">			
-			<div class="row">	
-				<h2 class="viziBanner">
-					Vizi works with all major MIS systems like CMIS, SIMs and Integris, so there is <b>no duplication of work.</b>
-				</h2>
-			</div>
+		<div class="col-md-6 bannerSplit">
+			<div class="col-md-12">
+				<img src="/img/logo/blogLogo.png" style="height: 30px">
+        		<h2 class="Lumen-Question" style="margin-top: 5px">Key priciples of good data visualisation.</h2>
+				<p style="color:grey; font-size: 14px" class="Lumen-text"> 20th July 2017 | Chris O'Mahony</p>
+				<br><br>
+				<p class="Lumen-text">
+					In this post we will be talking about the key principles of good data visualisation. A key goal at Vizi is to give educators the tools to draw insight from their data through data visualisations. By following these guidelines users can make the most of these tools.
+				</p>
+				<br><br>
+				<div style="padding-bottom: 20px">
+					<a class="Lumen-text btn viziBtnBlue" href="Get-Vizi">Read more</a>
+				</div>
+			</div>	
 		</div>
 	</div>
-	
+
 	<!-- banner -->
-	<div  id="whatis" class="content-section-b">
+	<div id="whatis" class="content-section-b">
         <div class="container">
             <div class="row"> 
-                <div class="col-md-6 wrap_title wow text-left-md wrap_title"  >   
-					<h2 class="Lumen-Question">We want to make the markbook a resource, one that doesn't require a huge investment of time.</h2>
-					<p class='Lumen-text' style="font-size:150%">
-						Performance data shouldn't be used as a hammer to critisise, but a constant resource that can be used to drive improvement.
+                <div class="col-md-6 wrap_title text-left-md wrap_title verticalVizi50">   
+					<h2 class="Lumen-Question">We want to make the school data an everyday resource.</h2>
+					<br>
+					<p class="Lumen-text">
+						A resource that doesn't require a huge investment of time and that is available to every teacher and educator in a click of a button.
+						<br><br>
+						Data visualisation and machine learning makes your data come to life and helps to improve student outcomes.
 					</p>
+					<br>
+					<a class="Lumen-text btn viziBtn Ham" href="#" data-toggle="modal" data-target="why-vizi">Why use Vizi?</a>
 				</div>
-				<div class="col-md-6 hidden-xs verticalVizi50">   
-					<img style="width: 100%" src="img\intro\moreMarkbook2.png">
+				<div class="col-md-6 hidden-xs verticalVizi50">
+					<img class="demoImg" src="/img/screengrabs/markbook/groupOverlay.png">
 				</div>
         	</div>
-        	<div></div>
-	    		<a class="btn btn-primary Lumen-text" href="Getting-Vizi">Sign up for free! </a>
-	    	</div>
         </div>
     </div>
 
@@ -304,9 +253,6 @@
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/script.js"></script>
 
-	<!-- References	 -->
-
-	<!-- Smoothscroll -->
 	<script type="text/javascript" src="js/jquery.corner.js"></script> 
 	<script src="js/wow.min.js"></script>
 	<script>
@@ -314,13 +260,11 @@
 	</script>
 	<script src="js/classie.js"></script>
 
-
 	<!-- Magnific Popup core JS file -->
 	<script src="js/jquery.magnific-popup.js"></script> 
 
 	<!-- Click Hide -->
    	<script>
-   	
    	$(document).on('click',function(){
    		var mobile_menu_visible = $('.collapse.in').length == 1
 
@@ -331,7 +275,16 @@
 	});
 	</script>
 
+	<!-- arrow bounce -->
+	<script type="text/javascript">
+	window.setInterval(bounceArrow, 5000);
+	  function bounceArrow() {
+	    $('#pageLinks').removeClass('animated bounce').delay(1000).queue(function(next) {
+	      $(this).addClass('animated bounce');
+	      next();
+	    });
+	  }
+	</script>
 </body>
-
 </html>
 
