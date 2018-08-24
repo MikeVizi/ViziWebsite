@@ -5,8 +5,8 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="img/flavicon_v01.png" />
-	<link rel="shortcut icon" href="img/Flavicon_v01.png" type="image/x-icon"> 
+	<link rel="shortcut icon" type="image/x-icon" href="/img/flavicon_v01.png" />
+	<link rel="shortcut icon" href="/img/Flavicon_v01.png" type="image/x-icon"> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -17,42 +17,42 @@
     <title>Vizi | Security</title>
 	
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/ViziCustom.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/ViziCustom.css" rel="stylesheet">
  
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	
+   	<!-- jquery load -->
+	<script src="/js/jquery-1.10.2.js"></script>
+	<script src="/js/viziCallUps.js"></script>
+	<script type="text/javascript" src="/js/enjoyhint.js"></script>
 
     <!-- Custom CSS-->
-    <link href="css/general.css" rel="stylesheet">
-
-    <!-- Blog -->
-    <link href="css/Blog.css" rel="stylesheet">
-
-    <!-- Blog -->
-    <link href="css/Features-Tab.css" rel="stylesheet">
+    <link href="/css/general.css" rel="stylesheet">
+    <link href="/css/Blog.css" rel="stylesheet">
+    <link href="/css/Features-Tab.css" rel="stylesheet">
 
     <!--scrollbar -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css" />
 	
 	<!-- Owl-Carousel -->	
-    <link href="css/custom.css" rel="stylesheet">
-	<link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+	<link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.theme.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/animate.css" rel="stylesheet">
 	
 	<!-- Magnific Popup core CSS file -->
-	<link rel="stylesheet" href="css/magnific-popup.css"> 
+	<link rel="stylesheet" href="/css/magnific-popup.css"> 
 	
 	<!-- Modernizr /-->
-	<script src="js/modernizr-2.8.3.min.js"></script>  
-	<!-- jquery load -->
-	<script src="js/jquery-1.10.2.js"></script>
+	<script src="/js/modernizr-2.8.3.min.js"></script>  
+	<script src="/js/jquery-1.10.2.js"></script>
 
 </head>
 
@@ -65,10 +65,7 @@
 	
 
  <!-- NavBar-->
-	<nav class="navbar-default" role="navigation" style ='background-color: #B0D2EB;'>		
-		<div id ="generalNavbar"></div>
-	</nav>
-
+<div id ="generalNavbar"></div>
 
 <!-- intro -->
 <div id ="Security" class="introVizi3"">
@@ -91,37 +88,39 @@
 <div>
 	<div style="position: sticky; top:60px; z-index: 1" id="subnav">
 		<div class="container" style="background-color: white; padding-left: 0px">
-			<div class="Selector-Buttons  mcs-horizontal-example">
-				 <button id="first-button" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Data Security</span></button>
+			<div class="col-md-12">
+				<div class="Selector-Buttons  mcs-horizontal-example">
+					 <button id="first-button" class="btn btn-activated Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="0"><span>Data Security</span></button>
 
-				 <button id="Policy1" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>GDPR</span></button>
+					 <button id="Policy1" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="1"><span>GDPR</span></button>
 
-				 <button id="Policy2" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Privacy Policy</span></button>
+					 <button id="Policy2" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="2"><span>Privacy Policy</span></button>
 
-				 <button id="Policy3" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Terms and Conditions</span></button>
+					 <button id="Policy3" class="btn Features-btn Lumen-text" data-target="#myCarousel" data-slide-to="3"><span>Terms and Conditions</span></button>
+				</div>
 			</div>
 		 </div>
 	 </div>
 
 	<!-- Carousel -->
-
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	  <div class="carousel-inner" style="height: auto; min-height: 500px; padding-bottom: 100px">
+	 	<div class="carousel-inner" style="height: auto; min-height: 500px; padding-bottom: 100px">
 
 	  	<div class="item active">
 			<div class="container">
-			<div class="row text-left-md"">
-				<h2 class='Lumen-Header'>Data Security</h2>
-			</div>
-				<div class="row" style="padding-left: 10px"> 
-					<p class="Lumen-text" style='text-align:left'> <br>
-					Data security is a priority at Vizi. Vizi's data is stored in the cloud, designed to ensure high performance and resilience. We partner with Amazon Web Services (AWS) - the world's leading cloud provider, to globally offer a secure, high-performance, load-balanced architecture.<br><br>
-					Vizi uses end-to-end HTTPS and IP restrictions to ensure your data is always encrypted and only accessible to authorised users.
-					</p>
-				</div>			
+				<div class="col-md-12">
+					<div class="row text-left-md"">
+						<h2 class='Lumen-Header'>Data Security</h2>
+					</div>
+					<div class="row" style="padding-left: 10px"> 
+						<p class="Lumen-text" style='text-align:left'> <br>
+						Data security is a priority at Vizi. Vizi's data is stored in the cloud, designed to ensure high performance and resilience. We partner with Amazon Web Services (AWS) - the world's leading cloud provider, to globally offer a secure, high-performance, load-balanced architecture.<br><br>
+						Vizi uses end-to-end HTTPS and IP restrictions to ensure your data is always encrypted and only accessible to authorised users.
+						</p>
+					</div>			
+				</div>
 			</div>
 		</div>
-
 
 	    <div class="item">
 			<div class="container">
@@ -507,11 +506,11 @@
 	<div id ="generalFooter"></div>
 
     <!-- JavaScript -->
-    <script src="js/bootstrap.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/Features-Carousel.js"></script>
-	<script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/bootstrap.js"></script>
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/script.js"></script>
+	<script src="/js/Features-Carousel.js"></script>
+	<script src="/js/jquery.mCustomScrollbar.js"></script>
 
 	<!-- References	 -->
 	<!-- Footer -->
@@ -546,14 +545,14 @@
     </script>
 
 	<!-- Smoothscroll -->
-	<script type="text/javascript" src="js/jquery.corner.js"></script> 
-	<script src="js/wow.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.corner.js"></script> 
+	<script src="/js/wow.min.js"></script>
 	<script>
 	 new WOW().init();
 	</script>
-	<script src="js/classie.js"></script>
+	<script src="/js/classie.js"></script>
 	<!-- Magnific Popup core JS file -->
-	<script src="js/jquery.magnific-popup.js"></script> 
+	<script src="/js/jquery.magnific-popup.js"></script> 
 
 	<!-- In page jquery -->
    	
@@ -614,8 +613,6 @@
 	})(jQuery);
 
 	</script>
-
-
 
 </body>
 

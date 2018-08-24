@@ -446,6 +446,14 @@ a.CTAlink {
   display: none
 }
 
+
+.questionReveal {
+  display: all;
+}
+
+.questionHidden {
+  display: none
+}
 /*Overlay*/
 .Feature-grab {
   margin-left: 0px;
@@ -526,7 +534,7 @@ a.CTAlink {
   .contactBtn {
   opacity: 0.9;
   position: fixed;
-  bottom: 15px;
+  bottom: 0px;
   right: 0px;
   z-index: 3;;
   }
@@ -1063,7 +1071,7 @@ h1.Lumen-Title {
 
 h2.Lumen-Header {
   font-family: 'Montserrat', sans-serif;
-  font-size:400%;
+  font-size:300%;
   font-weight:600;
 }
 
@@ -1075,7 +1083,7 @@ h2.Lumen-Header {
 
  h2.storyHeader {
   font-family: 'Montserrat', sans-serif;
-  font-size:50px;
+  font-size:40px;
   font-weight:600;
 }
 
@@ -1096,7 +1104,7 @@ h3.storySubheading {
 
  h2.Lumen-Question {
   font-family: 'Montserrat', sans-serif;
-  font-size:45px;
+  font-size:40px;
   font-weight:600;
 }
 
@@ -1409,30 +1417,31 @@ input:checked + .slider:before {
 
 /*Aninmated line bounce under heading!*/
 
-body {margin: 0; padding: 0;}
+
 @keyframes loader-animation {
+
   0% {
     width: 0%;
-}
-        100%{
-    width: 100%
   }
 
-
-
+        100%{
+    width: 90%
+  }
 }
+
 .loader {
   height: 5px;
-  width: 100%;
+  width: 50%;
   padding-bottom: 20px;
 }
 .loader .bar {
   border-radius: 8px;
   position: absolute;
   height: 4px;
-  background-color: #febc41;
+  background-color: #18BC9C;
   animation-name: loader-animation;
   animation-fill-mode: forwards;
   animation-duration: 4s;
   animation-timing-function: ease;
 }
+

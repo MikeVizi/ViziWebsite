@@ -80,7 +80,7 @@
 					<img class="demoImg" src="img\screengrabs\dashboardDemo.PNG">
 				</div>
 			</div>
-			<div class="row">
+			<div class="row hidden-xs hidden-sm">
 				<a href="#whatis">
 					<img style="height: 80px; margin-bottom: -120px" class="animated bounce" id="pageLinks" src="img\icon\joinerLine.png">
 <!-- 					<img style="height: 80px; margin-bottom: -115px" class="animated bounce" id="pageLinks" src="/img/gifs/markbookGif2.gif">
@@ -95,16 +95,16 @@
    	<div id ="generalButtonsCTA"></div>
 
    	<!-- Our products -->
-	<div  id="whatis" class="content-section-b" style="padding: 50px">
+	<div  id="whatis" class="content-section-b" style="padding-top:100px; padding-bottom: 100px">
         <div class="container">
 			<div class="col-md-12">
 				<div class="col-md-6 hidden-xs hidden-sm" style="margin-bottom: -200px; z-index: -1">   
 					<img style="width: 100%" src="img\Screengrabs\feedback\timelineDemo.png">
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 hidden-sm hidden-xs">
 					
 				</div>
-	        	<div class="col-md-5" style=" text-align: justify;">
+	        	<div class="col-md-5 col-sm-12 col-xs-12" style=" text-align: justify;">
 	        		<div class="row">
 			            <div>  
 			                <h2 class="Lumen-Question" style="font-size: 28px">
@@ -153,10 +153,37 @@
 	<!-- Testimonials -->
 	<div  id="Video" class="content-section-a">
         <div class="container">
-        	<div class="row col-md-12" style="text-align: left;">
-				<h2 class="Lumen-Question">
-					Tired of entering data and getting nothing back?
-				</h2>      	
+        	<div class="row col-md-12" style="text-align: left; min-height: 120px">
+
+				<div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+				  	<div class="carousel-inner" style="min-height: auto; width: auto">
+					    <div class="item active">
+							<h2 class="Lumen-Question"> 
+								How does stress effect performance?
+							</h2>
+						</div>
+					    <div class="item">
+							<h2 class="Lumen-Question"> 
+								How does mental health fluctuate through a year?
+							</h2>
+						</div>
+						<div class="item">
+							<h2 class="Lumen-Question"> 
+					What causes peaks and troughs in performance before and after exams?
+							</h2>
+						</div>
+					<div class="item">
+							<h2 class="Lumen-Question"> 
+					What topics are the least and most understood?
+							</h2>
+						</div>
+					<div class="item">
+							<h2 class="Lumen-Question"> 
+					What is the impact of tech and teaching methods?
+							</h2>
+						</div>
+					</div>
+				</div>
 			</div>
             <div class="row"> 
 				<div class="col-md-6 col-xs-12">
@@ -170,11 +197,12 @@
 						</a>
 					</div>
 				</div>
-                <div class="col-md-6 col-xs-12 text-left-md verticalVizi100">   
-					<p class='Lumen-text' style="padding-top: 20px">		
-						So many systems require the entry of data, but make it difficult to get information out and even less so, meaningful information. 
+                <div class="col-md-6 col-xs-12 text-left-md verticalVizi100 Lumen-text">   
+					<p style="padding-top: 20px">		
+						What if you could answer these questions, in real-time...
 						<br><br>	
-						At Vizi, we want to change that. Using machine learning and data visualisation we take all the data you enter about your students and create meaningful information to help you make educational decisions. 
+						<span class="viziBold"> We use machine learning and data visualisation to get you these answers, simply and easily.</span>
+						<br><br>
 					</p>
 					<div> 
 						<a class="Lumen-text btn viziBtn Ham" href="#" data-toggle="modal" data-target="get-vizi">Start using for free!</a>

@@ -1,4 +1,4 @@
-<!-- NavBar-->	
+	<!-- NavBar-->	
 	<div class="loginBar">		
 		<div class="container">
 			<div style="margin: 10px 0 10px 0; float: right">
@@ -28,13 +28,13 @@
 				    <li class="dropdown">
 				        <a id="navClick" style="cursor: default;" class="dropdown-toggle Font-large hamNav" data-toggle="dropdown">Products</a>
 				        <ul class="dropdown-menu dropdown-menu-right Lumen-text dropDownStyle">
-					        <li class="coreStyle">core</li>
-					        <li><a style="padding-bottom: 10px" href="/products/markbook.html">Performance</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/conduct-behaviour.html">Conduct</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/attendance.html">Attendance</a></li>
-					        <li class="coreStyle">add-ons</li>
-					        <li><a style="padding-bottom: 10px" href="/products/resources.html">Resource management</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/portals.html">Student and Parent</a></li>
+					        <li class="hidden-xs coreStyle">core</li>
+					        <li><a style="padding-bottom: 10px" href="/products/markbook.html">Intelligent markbook</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/conduct-behaviour.html">Conduct tracker</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/attendance.html">Attendance tracker</a></li>
+					        <li class="hidden-xs coreStyle">add-ons</li>
+					        <li><a style="padding-bottom: 10px" href="/products/resources.html">Manage resources</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/portals.html">Connect with students and parents</a></li>
 					        <li><a style="padding-bottom: 10px" href="/products/mis-explorer.html">MIS Explorer</a></li>
 				        </ul>
 				    </li>
@@ -56,8 +56,6 @@
 	</nav>
 
 <script type="text/javascript">
-	// Navbar JS	
-
 //SmoothScroll
 $('a[href*=#]').click(function SmoothScroll() {
 	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -98,7 +96,6 @@ $(function() {
 });
 
 // Add fixed class after scroll
-
 $(function() {	
     var navbar = $(".navbar-default");	
 	var firstcontainer = $("#home")
@@ -117,7 +114,6 @@ $(function() {
         }	
     });	
 });	
-
 
 // Add data-toggle - dropdown to navbar when below 1000px
 $('#navClick').on("click", function() {
