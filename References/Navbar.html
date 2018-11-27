@@ -3,7 +3,7 @@
 		<div class="container">
 			<div style="margin: 10px 0 10px 0; float: right">
 				<ul class="loginList Lumen-text">
-					<li class="loginItem getVizi"> <a href="/get-vizi.html"  style="text-decoration: none; color: #2C3E50; font-weight: bold">Get Vizi</a></li>
+					<li class="loginItem getVizi"> <a href="/get-vizi"  style="text-decoration: none; color: #2C3E50; font-weight: bold">Get Vizi</a></li>
 					<li class="Ham loginItem login"> <a href="https://vizi.school"  style="text-decoration: none; color: #2C3E50; font-weight: bold">Login</a></li>
 				</ul>
 			</div>
@@ -19,36 +19,36 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="https://vizi.education"><img id="logo" class="Logo-large" src="\img\Logo\viziLong.png" alt="Generic placeholder image"></a>
+				<a href="https://vizi.education"><img id="logo" class="Logo-large" src="\img\logo\viziLong.png" alt="Generic placeholder image"></a>
 			</div>	
 
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse Padding-large">
 				<ul class="nav navbar-nav Lumen-text" style="font-weight: bold">
-					<li class="menuItem Font-large hamNav"><a href="/Why-Vizi.html">Why Vizi</a></li>
+					<li id="whyMenu" class="menuItem Font-large hamNav"><a href="/why-vizi">Why Vizi</a></li>
 				    <li class="dropdown">
-				        <a id="navClick" style="cursor: default;" class="dropdown-toggle Font-large hamNav" data-toggle="dropdown">Products</a>
+				        <a id="productMenu" style="cursor: default;" class="navClick dropdown-toggle Font-large hamNav" data-toggle="dropdown">Products</a>
 				        <ul class="dropdown-menu dropdown-menu-right Lumen-text dropDownStyle">
 					        <li class="hidden-xs coreStyle">core</li>
-					        <li><a style="padding-bottom: 10px" href="/products/markbook.html">Intelligent markbook</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/conduct-behaviour.html">Conduct tracker</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/attendance.html">Attendance tracker</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/markbook">Intelligent markbook</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/conduct-behaviour">Conduct tracker<span class="pull-right" style="font-size:14px; color: #B0D2EB">BETA</span></a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/attendance">Attendance tracker<span class="pull-right" style="font-size:14px; color: #B0D2EB">BETA</span></a></li>
 					        <li class="hidden-xs coreStyle">add-ons</li>
-					        <li><a style="padding-bottom: 10px" href="/products/resources.html">Manage resources</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/portals.html">Connect with students and parents</a></li>
-					        <li><a style="padding-bottom: 10px" href="/products/mis-explorer.html">MIS Explorer</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/resources">Manage resources<span class="pull-right" style="font-size:14px; color: #B0D2EB">BETA</span></a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/portals">Connect with students and parents</a></li>
+					        <li><a style="padding-bottom: 10px" href="/products/mis-explorer">MIS Explorer</a></li>
 				        </ul>
 				    </li>
 				   	<li class="dropdown">
-				        <a id="navClick" style="cursor: default;" class="dropdown-toggle Font-large hamNav" data-toggle="dropdown">Get insight</a>
+				        <a id="insightMenu" style="cursor: default;" class="navClick dropdown-toggle Font-large hamNav" data-toggle="dropdown">Get insight</a>
 				        <!-- optional dropdown - could just go directly to the getting insight page. -->
 				        <ul class="dropdown-menu dropdown-menu-right Lumen-text dropDownStyle">
-					        <li><a style="padding-bottom: 10px" href="/getting-insight/dashboards.html">Dashboards</a></li>
-					        <li><a style="padding-bottom: 10px" href="/getting-insight/feedback.html">Intelligent feedback</a></li>
-					        <li><a style="padding-bottom: 10px" href="/getting-insight/school-management.html">School Management</a></li>
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/dashboards">Dashboards</a></li>
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/feedback">Intelligent feedback</a></li>
+					        <li><a style="padding-bottom: 10px" href="/getting-insight/school-management">School Management</a></li>
 				        </ul>
 				    </li>
-					<li class="menuItem Font-large hamNav"><a href="/Story.html">About Us</a></li>
-					<li class="menuItem Font-large hamNav"><a href="/Blog.html">Blog</a></li>
+					<li id="storyMenu" class="menuItem Font-large hamNav"><a href="/story">About Us</a></li>
+					<li id="blogMenu" class="menuItem Font-large hamNav"><a href="/blog">Blog</a></li>
 				</ul>
 			</div>
 
@@ -84,13 +84,13 @@ $(function() {
         	Logo.removeClass('Logo-large').addClass("Logo-small");
        		Padding.removeClass('Padding-large').addClass("Padding-small");
         	paddingToggle.css("padding-top","5px");
-        	$("#logo").attr('src', '/img/Logo/viziShort.png');
+        	$("#logo").attr('src', '/img/logo/viziShort.png');
 
         } else {
             Logo.removeClass("Logo-small").addClass('Logo-large');
            	Padding.removeClass('Padding-small').addClass("Padding-large");
 			paddingToggle.css("padding-top","25px");
-        	$("#logo").attr('src', '/img/Logo/viziLong.png');
+        	$("#logo").attr('src', '/img/logo/viziLong.png');
         }
     });
 });
@@ -116,7 +116,7 @@ $(function() {
 });	
 
 // Add data-toggle - dropdown to navbar when below 1000px
-$('#navClick').on("click", function() {
+$('.navClick').on("click", function() {
 	var width = $(window).width();
 
 	if ( width >= 1000) {
@@ -127,3 +127,49 @@ $('#navClick').on("click", function() {
 	}
 });
 </script>
+
+<!-- Navbar underliner -->
+
+<!-- If find id=blog in page, then underline id blog.
+ -->
+<script type="text/javascript">
+  $(document).ready(function(){
+		
+	if($('#Blog').length){
+		$("#blogMenu").css("border-bottom","solid 4px #febc41");
+		} 
+		else {
+
+			if($('#story').length){
+			$("#storyMenu").css("border-bottom","solid 4px #febc41");
+	
+				} else {
+			if($('#product').length){
+			$("#productMenu").css("border-bottom","solid 4px #febc41");
+	
+				} else {
+
+				if($('#product').length){
+				$("#productMenu").css("border-bottom","solid 4px #febc41");
+		
+					} else {
+						
+					if($('#insight').length){
+					$("#insightMenu").css("border-bottom","solid 4px #febc41");
+		
+					} else {
+					
+										if($('#whyVizi').length){
+					$("#whyMenu").css("border-bottom","solid 4px #febc41");
+		
+							} 
+						};
+					};
+				};			
+  			};
+  		};
+  	});  
+
+</script>
+
+

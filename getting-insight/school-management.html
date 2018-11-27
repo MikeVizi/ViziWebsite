@@ -5,8 +5,8 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="/img/flavicon_v01.png" />
-	<link rel="shortcut icon" href="/img/Flavicon_v01.png" type="image/x-icon"> 
+	<link rel="shortcut icon" type="image/x-icon" href="/img/Flavicon_Skeleton.png" />
+	<link rel="shortcut icon" href="/img/Flavicon_Skeleton.png" type="image/x-icon"> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -15,9 +15,15 @@
     <meta name="author" content="Vizi Education">
 
     <title>Vizi | School Management</title>
-	
+   
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/ViziCustom.css" rel="stylesheet">
+    <link href="/css/Features-Tab.css" rel="stylesheet">
+
+    <!-- jquery load -->
+	<script src="/js/jquery-1.10.2.js"></script>
+	<script src="/js/viziCallUps.js"></script>
  
     <!-- Custom Google Web Font -->
     <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -25,37 +31,30 @@
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">	
-	
+
     <!-- Custom CSS-->
-    <link href="/css/ViziCustom.css" rel="stylesheet">
     <link href="/css/general.css" rel="stylesheet">
 
     <!-- Blog -->
     <link href="/css/Blog.css" rel="stylesheet">
-    <link href="/css/Features-Tab.css" rel="stylesheet">
-
-    <!--scrollbar -->
-    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css" />
 	
-	<!-- Owl-Carousel -->	
+	<!-- Owl-Carousel -->
     <link href="/css/custom.css" rel="stylesheet">
 	<link href="/css/owl.carousel.css" rel="stylesheet">
     <link href="/css/owl.theme.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 	<link href="/css/animate.css" rel="stylesheet">
-	
+
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="/css/magnific-popup.css"> 
 	
 	<!-- Modernizr /-->
 	<script src="/js/modernizr-2.8.3.min.js"></script>  
-	<!-- jquery load -->
-	<script src="/js/jquery-1.10.2.js"></script>
-	<script src="/js/viziCallUps.js"></script>
 
-	</head>
 
-	<body id="home">
+</head>
+
+<body id="home">
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -67,6 +66,7 @@
 		
 	<!-- Buttons-->
 	<div id ="generalButtons"></div>
+	<div id="insight"></div>
 
 	<!-- intro -->
 	<div id ="intro" class="introVizi6">
@@ -80,16 +80,11 @@
 						Use Vizi to <span class="highlight1">manage students</span>, complete <span class="highlight1">calendars</span>, keep track of <span class="highlight1">tasks</span> and <span class="highlight1">much more</span>. 
 					</p>
 					<br>
-					<a class="Lumen-text btn viziBtn Ham" href="Get-Vizi">Start using for free!</a>
+					<a class="Lumen-text btn viziBtn Ham" href="/get-vizi">Start using for free!</a>
 		        </div>
 				<div class="col-md-6 col-sm-12 col-xs-12 text-center-sm">
 					<img style="width: 130%" src="\img\screengrabs\portal\studentDemo.png">
 				</div>
-			</div>
-			<div class="row col-md-12">
-				<a href="#first">
-					<img style="height: 80px; margin-bottom: -240px" class="animated bounce" id="pageLinks" src="..\img\icon\JoinerLine.png">
-				</a>
 			</div>
 		</div>
 	</div>
@@ -99,7 +94,7 @@
 		<div class="container">
 			<div class="row" style="padding: 40px 0 40px 0">
 				<div class="col-md-6 viziVertical100">
-					<img style="width: 120%; margin-left: -130px" src="\img\screengrabs\portal\studentDemo.png">
+					<img style="width: 120%; margin-left: -130px" src="\img\screengrabs\management\managementDemo.png">
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12 text-left-md">
 					<div class="tabs">
@@ -207,7 +202,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-	             			<a class="Lumen-text btn viziBtn Ham" href="Why-Vizi/get-vizi">Start for free</a>
+	             			<a class="Lumen-text btn viziBtn Ham" href="/get-vizi">Start for free</a>
 			          	</div>	
 					</div>
 				</div>
@@ -230,38 +225,6 @@
 	<script src="/js/script.js"></script>
 	<script src="/js/Features-Carousel.js"></script>
 	<script src="/js/jquery.mCustomScrollbar.js"></script>
-
-	<!-- References	 -->
-	<!-- Footer -->
-	<script> 
-    $(function(){       
-      $("#generalFooter").load("References/Footer.html"); 
-    });
-    </script>
-
-    <!-- Contact -->
-    <script> 
-    $(function(){       
-	   $("#generalContact").load("References/Contact.html"); 
-		
-    });
-    </script>
-
-    <!-- Navbar -->
-	<script> 
-    $(function(){       
-	   $("#generalNavbar").load("References/Navbar.html"); 
-		
-    });
-    </script>
-
-     <!-- buttons -->
-	<script> 
-    $(function(){       
-	   $("#generalButtons").load("References/Buttons.html"); 
-		
-    });
-    </script>
 
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="/js/jquery.corner.js"></script> 

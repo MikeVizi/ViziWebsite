@@ -61,8 +61,8 @@ h1 {
   position: absolute;
   bottom:;
   width: 100%;
-  -webkit-transform: translateY(calc(70px + 1em));
-          transform: translateY(calc(70px + 1em));
+  -webkit-transform: translateY(calc(60px + 1em));
+          transform: translateY(calc(60px + 1em));
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -95,7 +95,8 @@ h1 {
 
 
 .example-2 .wrapper {
-  background: url(../img/intro/Lumen_Backgroundv02.jpg) center/cover no-repeat
+  background: url(../img/intro/Lumen_Backgroundv02.jpg) center/cover no-repeat;
+  border-radius: 10px;
 }
 .example-2 .wrapper:hover .menu-content span {
   -webkit-transform: translate(-50%, -10px);
@@ -132,8 +133,8 @@ h1 {
 }
 .example-2 .data {
   color: #fff;
-  -webkit-transform: translateY(calc(70px + 4em));
-          transform: translateY(calc(70px + 4em));
+  -webkit-transform: translateY(calc(60px + 4em));
+          transform: translateY(calc(60px + 4em));
 }
 
 @media(max-width: 991px) {.example-2 .data {

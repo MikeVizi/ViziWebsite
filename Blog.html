@@ -5,8 +5,8 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-<link rel="shortcut icon" type="image/x-icon" href="img/flavicon_v01.png" />
-<link rel="shortcut icon" href="img/Flavicon_v01.png" type="image/x-icon"> 
+<link rel="shortcut icon" type="image/x-icon" href="img/Flavicon_Skeleton.png" />
+<link rel="shortcut icon" href="img/Flavicon_Skeleton.png" type="image/x-icon"> 
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -25,10 +25,13 @@
 
 <!-- Custom Google Web Font -->
 <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Montserrat: 100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
 
 <!-- Custom CSS-->
 <link href="css/general.css" rel="stylesheet">
@@ -64,14 +67,20 @@
 	<div id ="generalButtons"></div>
 	
 	<!-- intro -->
-	<div id ="intro" class="introVizi3">
+	<div id ="intro" class="introVizi8">
 	    <div class="container">
             <div class="row"> 
                 <div class="col-md-12 wrap_title wow text-left-md wrap_title">   
-					<h2 class="section-heading; Lumen-Header" ">The <img class="blogLogo" src="img\Logo\Vizi-DarkBlue.png" alt="Generic placeholder image">  blog </h2>
-					<p class='Lumen-text' style="font-size:150%">
-					<br>The Vizi blog talks about data in education and the latest news relating to Vizi.
-					</p>
+					<h1 class="blogHeader">The blog.</h1>
+				</div>
+				<div class="dropdown" style="text-align: left; padding-left: 15px; font-family: quicksand">
+				  <button class="btn btn-primary dropdown-toggle" style="background-color: transparent; color: inherit; border-radius: 3px; font-weight: 600; border: solid 3px grey" type="button" data-toggle="dropdown">Filter posts
+				  <span class="caret"></span></button>
+				  <ul class="dropdown-menu" style="cursor: pointer;">
+				    <li><a id="allButton">All</a></li>
+				    <li><a id="blogPostsButton">Blog posts</a></li>
+				    <li><a id="howToButton">How-to articles</a></li>
+				  </ul>
 				</div>
             </div>	
 		 </div>
@@ -80,124 +89,201 @@
 
 	<div id ="Blog" class="content-section-b" style="border-top: 0; border-bottom: 0;">
         <div class="container">
-            <div class="row"> 
+
 				<!-- post -->
-				<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="col-md-6 col-sm-12 col-xs-12 howTo" style="padding: 20px">
 					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
-					    <div class="wrapper" style="background-image: url(img/blog/oneToNine.png)"> 
+					    <div class="wrapper" style="background-image: url(img/blog/gradeTypes.png)"> 
 					      	<div class="header-blog">
 					        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-					          		<p>2nd April 2018</p>
+					          		<p>4th November 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 10 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #18bc9c">How-to</span>
+					          		</p>
+					        	</div>
+					      	</div>
+					      	<div class="data">
+					        	<div class="content">
+					          		<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">Grading your assessments</h2>
+					          		<p class="Lumen-text hidden-xs">Breaking down an assessment into smaller chunks can be hugely useful...</p>
+					          		<a href="blogger/grading-assessment" class="button Lumen-text" style="text-align: left">Read more</a>
+					        	</div>
+					      	</div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12 howTo" style="padding: 20px">
+					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
+					    <div class="wrapper" style="background-image: url(img/blog/breakdowns.png)"> 
+					      	<div class="header-blog">
+					        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
+					          		<p>2nd November 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 10 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #18bc9c">How-to</span>
+					          		</p>
+					        	</div>
+					      	</div>
+					      	<div class="data">
+					        	<div class="content">
+					          		<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">Using assessment breakdowns in Vizi.</h2>
+					          		<p class="Lumen-text hidden-xs">Breaking down an assessment into smaller chunks can be hugely useful...</p>
+					          		<a href="blogger/using-breakdowns" class="button Lumen-text" style="text-align: left">Read more</a>
+					        	</div>
+					      	</div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12 howTo" style="padding: 20px">
+					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
+					    <div class="wrapper" style="background-image: url(img/blog/createAssessment.png)"> 
+					      	<div class="header-blog">
+					        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
+					          		<p>30th October 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 5 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #18bc9c">How-to</span>
+					          	</p>
+					        	</div>
+					      	</div>
+					      	<div class="data">
+					        	<div class="content">
+					          		<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">Creating an assessment</h2>
+					          		<p class="Lumen-text hidden-xs">Building up progress data is done through creating assessments for your groups. An...</p>
+					          		<a href="blogger/creating-assessment" class="button Lumen-text" style="text-align: left">Read more</a>
+					        	</div>
+					      	</div>
+					    </div>
+					</div>
+				</div>
+				<!-- post -->
+				<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
+					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
+					    <div class="wrapper" style="background-image: url(img/blog/backgroundDazzle.png)"> 
+					      	<div class="header-blog">
+					        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
+					          		<p>19th September 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 10 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+					          		</p>
 					        	</div>
 					      	</div>
 					      	<div class="data">
 					        	<div class="content">
 					          		<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">How can data-viz help improve student outcomes?</h2>
 					          		<p class="Lumen-text hidden-xs">What is the most effective technology to use of this group of students? How can...</p>
-					          		<a href="Blogger/using-data-viz-to-improve-outcomes.html" class="button Lumen-text" style="text-align: left">Read more</a>
+					          		<a href="blogger/using-data-viz-to-improve-outcomes" class="button Lumen-text" style="text-align: left">Read more</a>
 					        	</div>
 					      	</div>
 					    </div>
 					</div>
 				</div>
-				<div class="col-md-6 col-sm-12 col-xs-12 right-hand-post">
+				<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
 					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
 					    <div class="wrapper" style="background-image: url(img/blog/oneToNine.png)"> 
 					      	<div class="header-blog">
 					        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-					          		<p>2nd April 2018</p>
+					          		<p>2nd April 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 5 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+					          	</p>
 					        	</div>
 					      	</div>
 					      	<div class="data">
 					        	<div class="content">
 					          		<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">Time to get my head around the 9-1 grading system</h2>
 					          		<p class="Lumen-text hidden-xs">This blog post looks at the recently introduced 1-9 grading system and our resident...</p>
-					          		<a href="Blogger/Getting-to-know-1-9" class="button Lumen-text" style="text-align: left">Read more</a>
+					          		<a href="blogger/getting-to-know-1-9" class="button Lumen-text" style="text-align: left">Read more</a>
 					        	</div>
 					      	</div>
 					    </div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row" style="padding-top: 50px">
 			<!-- post -->
-				<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
 					<div class="example-2 card" style="max-width: 672px; min-width: 250px">
 					    <div class="wrapper" style="background-image: url(img/blog/environment.png)"> 
 					      	<div class="header-blog">
 						        <div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-						          <p>4th Jan 2018</p>
+						          <p>4th Jan 2018<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 5 mins</span>
+					          		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+					          	</p>
 						        </div>
 					      	</div>
 					   		<div class="data">
 					        	<div class="content">
 						        <h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">6 steps to creating a good data environment</h2>
 							        <p class="Lumen-text hidden-xs">Today, we take a closer look at the principles required to make a good environment...</p>
-							         <a href="Blogger/Good-Data-Environment" class="button Lumen-text" style="text-align: left">Read more</a>
+							         <a href="blogger/good-data-environment" class="button Lumen-text" style="text-align: left">Read more</a>
 					        	</div>
 					      	</div>
 					    </div>
 					</div>
 				</div>
-				<div class="col-md-6 col-sm-12 col-xs-12right-hand-post">
+				<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
 				  	<div class="example-2 card" style="max-width: 672px; min-width: 250px">
 				    	<div class="wrapper" style="background-image: url(img/blog/dataVisTwo.png)"> 
 				      		<div class="header-blog">
 				        		<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-				          			<p>22nd August 2017</p>
+				          			<p>22nd August 2017<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 5 mins</span>
+					         		<br>
+					          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+					          		</p>
 				        		</div>
 				      		</div>
 				      		<div class="data">
 				        		<div class="content">
 				          			<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">What makes good data visualisation? (Part 2)</h2>
 				          			<p class="Lumen-text hidden-xs">Every addition in complexity to a visualisation should add value. For every extra...</p>
-				          			<a href="Blogger/Data-Vis-Part-2" class="button Lumen-text" style="text-align: left">Read more</a>
+				          			<a href="blogger/data-vis-part-2" class="button Lumen-text" style="text-align: left">Read more</a>
 				        		</div>
 				      		</div>
 				    	</div>
 				  	</div>
 				</div>
-			</div>
 
-			<div class="row" style="padding-top: 50px">
 			<!-- post -->
-			<div class="col-md-6 col-sm-12 col-xs-12">
+			<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
 			  	<div class="example-2 card" style="max-width: 672px; min-width: 250px">
 			    	<div class="wrapper" style="background-image: url(img/blog/dataVisOne.png)"> 
 			      		<div class="header-blog">
 			        		<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-			          		<p>18th August 2017</p>
+			          		<p>18th August 2017<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 10 mins</span>
+			          		<br>
+			          		<span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+			          		</p>
 			        		</div>
 			      		</div>
 			      		<div class="data">
 			        		<div class="content">
 			          			<h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px">What makes good data visualisation? (Part 1)</h2>
 			          			<p class="Lumen-text hidden-xs">The hierarchy of visualisation accuracy is a concept that explains the most...</p>
-			          			<a href="Blogger/Data-Vis-Part-1" class="button Lumen-text" style="text-align: left">Read more</a>
+			          			<a href="/blogger/data-vis-part-1" class="button Lumen-text" style="text-align: left">Read more</a>
 			        		</div>
 			      		</div>
 			    	</div>
 			  	</div>
 			</div>
-			<div class="col-md-6 col-sm-12 col-xs-12 right-hand-post">
+			<div class="col-md-6 col-sm-12 col-xs-12 blogPost" style="padding: 20px">
 				<div class="example-2 card" style="max-width: 672px; min-width: 250px">
 				    <div class="wrapper" style="background-image: url(img/blog/welcome.png)"> 
 				      	<div class="header-blog">
 				        	<div class="Lumen-text" style="padding:15px 0 0 30px; color: white">	
-				          	<p>20th July 2017</p>
+				          	<p>20th July 2017<span class="pull-right" style="padding-right: 20px; color:lightgrey"><i class="fas fa-glasses"></i>&nbsp 10 mins</span>
+					        <br>
+					        <span style="font-family: Montserrat; font-weight: bolder; font-size: 12px; color: #febc41">Blog post</span>
+				          	</p>
 				        	</div>
 				      	</div>
 				      	<div class="data">
 				        	<div class="content">
 					          <h2 class="Lumen-Header" style="font-size: 30px; margin-bottom: 20px"> An Introduction from the founders of Vizi</h2>
 					          <p class="Lumen-text hidden-xs">Greetings! A warm welcome to Vizi Education. Here at Vizi we are embarking on...</p>
-					          <a href="Blogger/Welcome" class="button Lumen-text" style="text-align: left">Read more</a>
+					          <a href="/blogger/welcome" class="button Lumen-text" style="text-align: left">Read more</a>
 				        	</div>
 				      	</div>
 				   	</div>
 				</div>
-			</div>
 			</div>
 			 <!-- //row -->
 	    </div>
@@ -216,7 +302,7 @@
 			        <h3 class="Lumen-SubHeading" style="text-align: center;">See our latest blog post on <span style="font-size: 40px">data visualisation</span> best practice!</h4>
 			    </div>
 			    <div class="modal-body" style="padding-top: 100px">
-			        <a class="blogbutton" href="Blogger/Data-Vis-Part-1" style="width: 300px; font-size: 40px; text-decoration: none ">vizi blog</a>
+			        <a class="blogbutton" href="blogger/Data-Vis-Part-1" style="width: 300px; font-size: 40px; text-decoration: none ">vizi blog</a>
 			    </div>
 		      	<div class="modal-footer" style="border: 0px">
 		        	<p></p>
@@ -257,6 +343,30 @@
 	});
 
 	</script>
+
+<!-- 	Filter blog posts
+ -->
+ 	<script type="text/javascript">
+ 		// if click id="blogPostsButton" then hide id="howTo" and unhide id="blogPost"
+ 		// if click id="howToButton" then hide id="blogPost" and unhide id="howTo"
+ 		// if click id="All" then unhide All
+
+ 		$('#blogPostsButton').click(function() {
+    		$('.howTo').hide();
+    		$('.blogPost').show();
+			});	
+
+ 		 $('#howToButton').click(function() {
+    		$('.blogPost').hide();
+    		$('.howTo').show();
+			});	
+
+ 		 $('#allButton').click(function() {
+    		$('.blogPost').show();
+    		$('.howTo').show();
+			});	
+ 	</script>
+
 
 </body>
 

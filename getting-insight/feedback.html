@@ -5,8 +5,8 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="/img/flavicon_v01.png" />
-	<link rel="shortcut icon" href="/img/Flavicon_v01.png" type="image/x-icon"> 
+	<link rel="shortcut icon" type="image/x-icon" href="/img/Flavicon_Skeleton.png" />
+	<link rel="shortcut icon" href="/img/Flavicon_Skeleton.png" type="image/x-icon"> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -67,6 +67,7 @@
 
 	<!-- Buttons-->
 	<div id ="generalButtons"></div>
+	<div id="insight"></div>
 
 	<!-- Intro -->
 	<div id ="intro" class="introVizi5">
@@ -79,7 +80,7 @@
 						</h2>
 						<br>
 						<p class='Lumen-text'>
-							Vizi analyses your markbook for you, giving you real-time feedback on student performance. 
+							Vizi analyses your markbook, behavioural and attendance data, giving you real-time feedback on student performance. 
 						</p>
 						<br>
 						<a class="Lumen-text btn viziBtn Ham" href="/Get-Vizi">Start using for free!</a>
@@ -109,7 +110,7 @@
 	    	<div class="row">
 	    		<div class="col-md-6">
 	             	<div>
-	             		<h2 class="Lumen-Header" style="font-size: 30px;">Vizi automatically generates feedback based on the performance, attendance and conduct data you enter. It spots trends and patterns you might not notice!</h2>
+	             		<h2 class="Lumen-Header" style="font-size: 30px;">Vizi uses machine learning to automatically generate feedback based on the performance, attendance and conduct data you enter. It spots trends and patterns you might not notice!</h2>
 	             	</div>
 	            </div>
 	           	<div class="col-md-6 hidden-sm hidden-xs" style="text-align: right;">
@@ -227,19 +228,19 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12 text-center-sm text-right-md">
-					<a href="/Why-Vizi/Feedback"> <img style="width: 80%" src="\img\screengrabs\feedback\timelineDemo.png"></a>
+					<a href="/Why-Vizi/Feedback"> <img style="width: 80%" src="/img/screengrabs/feedback/timelineDemo.png"></a>
 				</div>
 			</div>	
 			<div class="row">
 				<div class="col-md-4">
-	             	<a class="Lumen-text btn viziBtn Ham" href="Why-Vizi/get-vizi">Start for free</a>
+	             	<a class="Lumen-text btn viziBtn Ham" href="/get-vizi">Start for free</a>
 	          	</div>	
 			</div>
 		</div>
 	</div>
 
 	<!-- Do more -->
-	<div id ="story" class="content-section-a">
+	<div id ="second" class="content-section-a">
 	    <div class="container">	
 			<!-- row -->
 			<div class="row" style="height: auto; min-height: 450px">
@@ -315,7 +316,7 @@
 									</p>
 									<a class="btn btn-info feedbackButtons Lumen-text" href="#" data-toggle="modal" data-target="#markModal" style="font-size: 12px">Find out more</a>
 										<!-- Preview modal -->
-									<div id="markModal" class="modal fade" role="dialog">
+									<div id="markModal" class="modal fade " role="dialog">
 									    <div class="modal-dialog" >
 										    <div class="modal-content Lumen-text" style="padding: 10px 20px 10px 20px">
 										    	<div class="tableName" style="border-bottom: solid 1px grey; padding-bottom: 10px; font-weight: bold">
@@ -324,6 +325,7 @@
 										    	<p style="padding-top: 10px">
 										    		Consecutively improving grades have been recorded for the following assessments:
 										    	</p>
+										    	<div class="mcs-horizontal-example">
 											    <table class="table viziTable Lumen-text" style="text-align: left">
 													<tr class="tableHeader">
 														<th scope="col">Due date</th>
@@ -346,6 +348,7 @@
 														<td>A</td>
 													</tr>
 												</table>
+											</div>
 										    </div>
 									    </div>
 									</div> 
@@ -369,28 +372,30 @@
 										    	<p style="padding-top: 10px">
 										    		Consecutively declining grades have been recorded for the following assessments:
 										    	</p>
-											    <table class="table viziTable Lumen-text" style="text-align: left">
-													<tr class="tableHeader">
-														<th scope="col">Due date</th>
-														<th scope="col">Assessment</th>
-														<th scope="col">Grade</th>
-													</tr>
-													<tr>
-														<td>Today</td>
-														<td>Angles</td>
-														<td>A</td>
-													</tr>
-													<tr>
-														<td>Yesterday</td>
-														<td>Mechanics</td>
-														<td>B</td>
-													</tr>
-													<tr>
-														<td>3 days ago</td>
-														<td>Triangles</td>
-														<td>C</td>
-													</tr>
-												</table>
+										    	<div class="mcs-horizontal-example">
+												    <table class="table viziTable Lumen-text" style="text-align: left">
+														<tr class="tableHeader">
+															<th scope="col">Due date</th>
+															<th scope="col">Assessment</th>
+															<th scope="col">Grade</th>
+														</tr>
+														<tr>
+															<td>Today</td>
+															<td>Angles</td>
+															<td>A</td>
+														</tr>
+														<tr>
+															<td>Yesterday</td>
+															<td>Mechanics</td>
+															<td>B</td>
+														</tr>
+														<tr>
+															<td>3 days ago</td>
+															<td>Triangles</td>
+															<td>C</td>
+														</tr>
+													</table>
+												</div>
 										    </div>
 									    </div>
 									</div> 
@@ -406,7 +411,7 @@
 									<a class="btn btn-info feedbackButtons Lumen-text" href="#" data-toggle="modal" data-target="#sarahModal" style="font-size: 12px">Find out more</a>
 										<!-- Preview modal -->
 									<div id="sarahModal" class="modal fade" role="dialog">
-									    <div class="modal-dialog" >
+									    <div class="modal-dialog">
 										    <div class="modal-content Lumen-text" style="padding: 10px 20px 10px 20px">
 										    	<div class="tableName" style="border-bottom: solid 1px grey; padding-bottom: 10px; font-weight: bold">
 										    		Top performance over the past 5 assessments
@@ -414,38 +419,40 @@
 										    	<p style="padding-top: 10px">
 										    		Sarah has acheived the highest performance over the following assessments:
 										    	</p>
-											    <table class="table viziTable Lumen-text" style="text-align: left">
-													<tr class="tableHeader">
-														<th scope="col">Due date</th>
-														<th scope="col">Assessment</th>
-														<th scope="col">Grade</th>
-													</tr>
-													<tr>
-														<td>Today</td>
-														<td>Angles</td>
-														<td>A</td>
-													</tr>
-													<tr>
-														<td>Yesterday</td>
-														<td>Mechanics</td>
-														<td>B</td>
-													</tr>
-													<tr>
-														<td>3 days ago</td>
-														<td>Triangles</td>
-														<td>A*</td>
-													</tr>
-													<tr>
-														<td>5 days ago</td>
-														<td>Equations</td>
-														<td>A*</td>
-													</tr>
-													<tr>
-														<td>10 days ago</td>
-														<td>Algebra</td>
-														<td>A</td>
-													</tr>
-												</table>
+										    	<div class="mcs-horizontal-example">
+												    <table class="table viziTable Lumen-text" style="text-align: left">
+														<tr class="tableHeader">
+															<th scope="col">Due date</th>
+															<th scope="col">Assessment</th>
+															<th scope="col">Grade</th>
+														</tr>
+														<tr>
+															<td>Today</td>
+															<td>Angles</td>
+															<td>A</td>
+														</tr>
+														<tr>
+															<td>Yesterday</td>
+															<td>Mechanics</td>
+															<td>B</td>
+														</tr>
+														<tr>
+															<td>3 days ago</td>
+															<td>Triangles</td>
+															<td>A*</td>
+														</tr>
+														<tr>
+															<td>5 days ago</td>
+															<td>Equations</td>
+															<td>A*</td>
+														</tr>
+														<tr>
+															<td>10 days ago</td>
+															<td>Algebra</td>
+															<td>A</td>
+														</tr>
+													</table>
+												</div>
 										    </div>
 									    </div>
 									</div> 
@@ -549,7 +556,7 @@
 					Get going, for free <span style="font-weight: bold">:)</span>.
 				</h2>
 				<br><br>
-				<a class="Lumen-text btn viziBtn Ham" href="Get-Vizi">Get Vizi</a>			
+				<a class="Lumen-text btn viziBtn Ham" href="/get-vizi">Get Vizi</a>			
 			</div>	
 		</div>
 		<div id ="generalBlogInsert">

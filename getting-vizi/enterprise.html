@@ -5,8 +5,8 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="/img/flavicon_v01.png" />
-	<link rel="shortcut icon" href="/img/Flavicon_v01.png" type="image/x-icon"> 
+	<link rel="shortcut icon" type="image/x-icon" href="/img/Flavicon_Skeleton.png" />
+	<link rel="shortcut icon" href="/img/Flavicon_Skeleton.png" type="image/x-icon"> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -84,11 +84,11 @@
 	<div id="contact" class="content-section-a" style="border-top: 0; border-bottom: 0">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 Lumen-text" style="padding-bottom: 15px">
-					<p>
-						Products you are interested in
-					</p>
-					<div class="col-md-12 productSelect">
+				<div class="col-md-6 col-sm-12 Lumen-text">
+						<p>
+							Products you are interested in
+						</p>
+					<div class="col-md-12 col-xs-12 productSelect" >
 			            <div class="col-xs-6">
 			            	<p>
 			            		<b>Progress</b>
@@ -125,47 +125,54 @@
 					</div>
 				</div>
 
-				<div class="col-md-6 Lumen-text" style="padding-bottom: 15px">
+				<div class="col-md-6 col-sm-12 Lumen-text">
 					<p>
 						Add-ons you are interested in
 					</p>
-					<div class="col-md-12 productSelect">
-			            <div class="col-xs-6">
-			            	<p>
-			            		<b>MIS</b>
-							</p>
+					<div class="col-md-12 col-xs-12 productSelect">
+						<div class="row">
+				            <div class="col-xs-6">
+				            	<p>
+				            		<b>MIS</b>
+								</p>
+							</div>
+							<div class="col-xs-6">
+								<label class="switch">
+								  <input type="checkbox" checked>
+								  <span class="slider round"></span>
+								</label>
+							</div>	
 						</div>
-						<div class="col-xs-6">
-							<label class="switch">
-							  <input type="checkbox" checked>
-							  <span class="slider round"></span>
-							</label>
-						</div>	
-			            <div class="col-xs-6">
-			            	<p>
-			            		<b>Student and Parent</b>
-							</p>
+						<div class="row">
+				            <div class="col-xs-6">
+				            	<p>
+				            		<b>Student and Parent</b>
+								</p>
+							</div>
+							<div class="col-xs-6">
+								<label class="switch">
+								  <input type="checkbox" checked>
+								  <span class="slider round"></span>
+								</label>
+							</div>	
 						</div>
-						<div class="col-xs-6">
-							<label class="switch">
-							  <input type="checkbox" checked>
-							  <span class="slider round"></span>
-							</label>
-						</div>	
-			            <div class="col-xs-6">
-			            	<p>
-			            		<b>Resources</b>
-							</p>
+						<div class="row">
+				            <div class="col-xs-6">
+				            	<p>
+				            		<b>Resources</b>
+								</p>
+							</div>
+							<div class="col-xs-6">
+								<label class="switch">
+								  <input type="checkbox" checked>
+								  <span class="slider round"></span>
+								</label>
+							</div>	
 						</div>
-						<div class="col-xs-6">
-							<label class="switch">
-							  <input type="checkbox" checked>
-							  <span class="slider round"></span>
-							</label>
-						</div>	
 					</div>
 				</div>
-
+			</div>
+			<div class="row">
 				<div class="col-md-12">
 						<div class="form-group" style="padding-top:20px">
 							<label for="InputName" class="Lumen-text" style='color:#2c3e50'>Your Name</label>
@@ -186,7 +193,7 @@
 						<div class="form-group">
 							<label for="InputEmail" class="Lumen-text" style='color:#2c3e50'>School</label>
 							<div class="input-group">
-								<input type="email" name="InputSchool" id="InputSchool" class="form-control" placeholder="Your email" required>
+								<input type="school" name="InputSchool" id="InputSchool" class="form-control" placeholder="Your email" required>
 								<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 							</div>
 						</div>
@@ -194,7 +201,7 @@
 						<div class="form-group">
 							<label for="InputEmail" class="Lumen-text" style='color:#2c3e50'>Position</label>
 							<div class="input-group">
-								<input type="email" name="InputPosition" id="InputPosition" class="form-control" placeholder="Your email" required>
+								<input type="position" name="InputPosition" id="InputPosition" class="form-control" placeholder="Your email" required>
 								<span class="input-group-addon"><i class="form-control-feedback"></i></span>
 							</div>
 						</div>
@@ -259,10 +266,10 @@
 	                    "message_body" : message,
 	                  },
 	            success: function( msg ) {
-	                window.location.href="https://vizi.education/Thanks.html";
+	                window.location.href="https://vizi.education/thanks.html";
 	            },
 				  error: function(){
-	                window.location.href="https://vizi.education/Thanks.html";
+	                window.location.href="https://vizi.education/thanks.html";
 				  }
 	        }); 
 		});

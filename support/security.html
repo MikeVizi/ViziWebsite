@@ -19,6 +19,8 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/ViziCustom.css" rel="stylesheet">
+	<script src="/js/jquery-1.10.2.js"></script>
+
  
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -28,7 +30,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	
    	<!-- jquery load -->
-	<script src="/js/jquery-1.10.2.js"></script>
 	<script src="/js/viziCallUps.js"></script>
 	<script type="text/javascript" src="/js/enjoyhint.js"></script>
 
@@ -52,17 +53,15 @@
 	
 	<!-- Modernizr /-->
 	<script src="/js/modernizr-2.8.3.min.js"></script>  
-	<script src="/js/jquery-1.10.2.js"></script>
 
 </head>
 
 <body id="home">
 
 <!-- Preloader -->
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
-	
+<div id="preloader">
+	<div id="status"></div>
+</div>
 
  <!-- NavBar-->
 <div id ="generalNavbar"></div>
@@ -115,6 +114,8 @@
 					<div class="row" style="padding-left: 10px"> 
 						<p class="Lumen-text" style='text-align:left'> <br>
 						Data security is a priority at Vizi. Vizi's data is stored in the cloud, designed to ensure high performance and resilience. We partner with Amazon Web Services (AWS) - the world's leading cloud provider, to globally offer a secure, high-performance, load-balanced architecture.<br><br>
+						In the event of a security breach (a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data. This includes breaches that are the result of both accidental and deliberate causes) Vizi will notify all clients immediately of any such breach and work with the client and AWS to resolve the breach as quickly as possible.
+						<br><br>
 						Vizi uses end-to-end HTTPS and IP restrictions to ensure your data is always encrypted and only accessible to authorised users.
 						</p>
 					</div>			
@@ -263,6 +264,7 @@
 
 								<br><br>
 							</p>
+							<b>2.7 Rights to access</b>
 							<div style="padding-left: 45px">
 								<ul style="list-style-position: outside;">
 									<li>Right of access – you have the right to obtain data about yourself that has been processed by Vizi Education, and, where that is the case, access to the personal data and the following information:
@@ -337,6 +339,11 @@
 							<b>2.11 Usage data</b>
 							<p>
 								When using the Vizi Application, we may collect navigational/usage data. This data is anonymised to is not considered personal data. This information can consist of information such as geographical location, browser type, referral source, length of visit, pages viewed and phone make and model. We use navigational/usage information to optimise the application and never share this data with external parties. 
+								<br><br>
+							</p>
+							<b>2.11 Breach of data</b>
+							<p>
+								In the event of a security breach (a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data. This includes breaches that are the result of both accidental and deliberate causes) Vizi will notify all clients immediately of any such breach and work with the client and AWS to resolve the breach as quickly as possible. 
 								<br><br>
 							</p>
 						</div>
@@ -502,7 +509,6 @@
 	<div id ="generalContact"></div>
 
 	<!-- Footer -->
-		
 	<div id ="generalFooter"></div>
 
     <!-- JavaScript -->
@@ -511,38 +517,6 @@
 	<script src="/js/script.js"></script>
 	<script src="/js/Features-Carousel.js"></script>
 	<script src="/js/jquery.mCustomScrollbar.js"></script>
-
-	<!-- References	 -->
-	<!-- Footer -->
-	<script> 
-    $(function(){       
-      $("#generalFooter").load("References/Footer.html"); 
-    });
-    </script>
-
-    <!-- Contact -->
-    <script> 
-    $(function(){       
-	   $("#generalContact").load("References/Contact.html"); 
-		
-    });
-    </script>
-
-    <!-- Navbar -->
-	<script> 
-    $(function(){       
-	   $("#generalNavbar").load("References/Navbar.html"); 
-		
-    });
-    </script>
-
-     <!-- buttons -->
-	<script> 
-    $(function(){       
-	   $("#generalButtons").load("References/Buttons.html"); 
-		
-    });
-    </script>
 
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="/js/jquery.corner.js"></script> 
